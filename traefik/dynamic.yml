@@ -1,0 +1,292 @@
+# Traefik Dynamic Configuration for DGH Feedback System
+
+# HTTP to HTTPS redirect
+http:
+  routers:
+    # Redirect HTTP to HTTPS
+    http-catchall:
+      rule: hostregexp(`{host:.+}`)
+      entrypoints:
+        - web
+      middlewares:
+        - redirect-to-https
+      service: api@internal
+    
+    # API Gateway routes
+    api-gateway-secure:
+      rule: Host(`localhost`) && PathPrefix(`/auth`)
+      entrypoints:
+        - websecure
+      service: api-gateway
+      middlewares:
+        - security-headers
+        - rate-limit
+        - cors
+      tls: {}
+    
+    # Feedback API routes
+    feedback-api-secure:
+      rule: Host(`localhost`) && PathPrefix(`/api/v1`)
+      entrypoints:
+        - websecure
+      service: feedback-api
+      middlewares:
+        - security-headers
+        - rate-limit
+        - cors
+        - auth-forward
+      tls: {}
+    
+    # Health check routes (no auth required)
+    health-routes:
+      rule: Host(`localhost`) && (PathPrefix(`/health`) || PathPrefix(`/version`) || PathPrefix(`/metrics`))
+      entrypoints:
+        - websecure
+      service: feedback-api
+      middlewares:
+        - security-headers
+        - cors
+      tls: {}
+    
+    # Prometheus routes
+    prometheus-secure:
+      rule: Host(`localhost`) && PathPrefix(`/prometheus`)
+      entrypoints:
+        - websecure
+      service: prometheus
+      middlewares:
+        - security-headers
+        - prometheus-strip-prefix
+      tls: {}
+    
+    # Grafana routes
+    grafana-secure:
+      rule: Host(`localhost`) && PathPrefix(`/grafana`)
+      entrypoints:
+        - websecure
+      service: grafana
+      middlewares:
+        - security-headers
+        - grafana-strip-prefix
+      tls: {}
+
+  # Services
+  services:
+    api-gateway:
+      loadBalancer:
+        servers:
+          - url: "http://api-gateway:8000"
+        healthCheck:
+          path: "/health"
+          interval: "30s"
+          timeout: "5s"
+    
+    feedback-api:
+      loadBalancer:
+        servers:
+          - url: "http://feedback-api:8000"
+        healthCheck:
+          path: "/health"
+          interval: "30s"
+          timeout: "5s"
+    
+    prometheus:
+      loadBalancer:
+        servers:
+          - url: "http://prometheus:9090"
+        healthCheck:
+          path: "/-/healthy"
+          interval: "30s"
+          timeout: "5s"
+    
+    grafana:
+      loadBalancer:
+        servers:
+          - url: "http://grafana:3000"
+        healthCheck:
+          path: "/api/health"
+          interval: "30s"
+          timeout: "5s"
+
+  # Middlewares
+  middlewares:
+    # HTTPS redirect
+    redirect-to-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
+    
+    # Security headers
+    security-headers:
+      headers:
+        accessControlAllowMethods:
+          - GET
+          - POST
+          - PUT
+          - DELETE
+          - OPTIONS
+        accessControlAllowHeaders:
+          - "Content-Type"
+          - "Authorization"
+          - "X-Requested-With"
+          - "Accept"
+          - "Origin"
+        accessControlAllowOriginList:
+          - "http://localhost:3000"
+          - "http://localhost:8080"
+          - "https://localhost:3000"
+          - "https://localhost:8080"
+        accessControlMaxAge: 100
+        addVaryHeader: true
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+        customResponseHeaders:
+          X-Frame-Options: "SAMEORIGIN"
+          X-Content-Type-Options: "nosniff"
+          X-XSS-Protection: "1; mode=block"
+          Referrer-Policy: "strict-origin-when-cross-origin"
+          Content-Security-Policy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' ws: wss:;"
+          Strict-Transport-Security: "max-age=31536000; includeSubDomains"
+        sslRedirect: false
+        forceSTSHeader: false
+    
+    # Rate limiting
+    rate-limit:
+      rateLimit:
+        burst: 100
+        average: 50
+        period: "1m"
+    
+    # CORS
+    cors:
+      headers:
+        accessControlAllowMethods:
+          - GET
+          - POST
+          - PUT
+          - DELETE
+          - OPTIONS
+        accessControlAllowOriginList:
+          - "http://localhost:3000"
+          - "http://localhost:8080" 
+          - "https://localhost:3000"
+          - "https://localhost:8080"
+        accessControlAllowHeaders:
+          - "Content-Type"
+          - "Authorization"
+          - "X-Requested-With"
+          - "Accept"
+          - "Origin"
+        accessControlMaxAge: 86400
+        addVaryHeader: true
+    
+    # Authentication forward
+    auth-forward:
+      forwardAuth:
+        address: "http://api-gateway:8000/auth/verify"
+        trustForwardHeader: true
+        authResponseHeaders:
+          - "X-User-Name"
+          - "X-User-Role"
+          - "X-User-ID"
+    
+    # Strip prefix for Prometheus
+    prometheus-strip-prefix:
+      stripPrefix:
+        prefixes:
+          - "/prometheus"
+    
+    # Strip prefix for Grafana
+    grafana-strip-prefix:
+      stripPrefix:
+        prefixes:
+          - "/grafana"
+    
+    # Basic auth for monitoring (optional)
+    monitoring-auth:
+      basicAuth:
+        users:
+          - "admin:$2y$10$..."  # Generated password hash
+    
+    # Compress responses
+    compression:
+      excludedContentTypes:
+        - "text/event-stream"
+    
+    # Request/Response modification
+    request-modifier:
+      headers:
+        customRequestHeaders:
+          X-Real-IP: "{{.ClientIP}}"
+          X-Request-Start: "{{.StartUTC}}"
+    
+    # Error pages
+    error-pages:
+      errors:
+        status:
+          - "404"
+          - "503"
+        service: error-service
+        query: "/{status}.html"
+
+# TLS Configuration
+tls:
+  options:
+    default:
+      minVersion: "VersionTLS12"
+      maxVersion: "VersionTLS13"
+      cipherSuites:
+        - "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+        - "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305"
+        - "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+        - "TLS_RSA_WITH_AES_256_GCM_SHA384"
+        - "TLS_RSA_WITH_AES_128_GCM_SHA256"
+      curvePreferences:
+        - "CurveP521"
+        - "CurveP384"
+      sniStrict: false
+    
+    # Modern TLS configuration
+    modern:
+      minVersion: "VersionTLS13"
+      maxVersion: "VersionTLS13"
+      curvePreferences:
+        - "X25519"
+        - "CurveP256"
+      sniStrict: true
+
+  # Certificates
+  certificates:
+    # Self-signed certificate for development
+    - certFile: "/certs/localhost.crt"
+      keyFile: "/certs/localhost.key"
+      stores:
+        - default
+    
+    # Wildcard certificate (if available)
+    - certFile: "/certs/wildcard.crt"
+      keyFile: "/certs/wildcard.key"
+      stores:
+        - default
+
+# TCP Configuration (for database connections if needed)
+tcp:
+  routers:
+    postgres-router:
+      rule: "HostSNI(`*`)"
+      entryPoints:
+        - postgres
+      service: postgres-service
+      tls:
+        passthrough: true
+  
+  services:
+    postgres-service:
+      loadBalancer:
+        servers:
+          - address: "postgres:5432"
+
+# UDP Configuration (if needed for future features)
+udp:
+  routers: {}
+  services: {}

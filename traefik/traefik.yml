@@ -1,0 +1,90 @@
+# Traefik Configuration
+api:
+  dashboard: true
+  debug: false
+  insecure: true
+
+# Entry points
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+  traefik:
+    address: ":8080"
+
+# Providers
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+    network: dgh_network
+  file:
+    filename: /etc/traefik/dynamic.yml
+    watch: true
+
+# Metrics for Prometheus
+metrics:
+  prometheus:
+    addEntryPointsLabels: true
+    addServicesLabels: true
+    manualRouting: true
+
+# Access logs
+accessLog:
+  format: json
+  fields:
+    headers:
+      defaultMode: keep
+
+# Global logs
+log:
+  level: INFO
+  format: json
+
+# Global configuration
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false
+
+# Middlewares
+middlewares:
+  security-headers:
+    headers:
+      customRequestHeaders:
+        X-Forwarded-Proto: "https"
+      customResponseHeaders:
+        X-Frame-Options: "DENY"
+        X-Content-Type-Options: "nosniff"
+        X-XSS-Protection: "1; mode=block"
+        Referrer-Policy: "strict-origin-when-cross-origin"
+        Content-Security-Policy: "default-src 'self'"
+      sslRedirect: false
+      forceSTSHeader: false
+      
+  rate-limit:
+    rateLimit:
+      burst: 100
+      average: 50
+      
+  cors:
+    headers:
+      accessControlAllowMethods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+        - OPTIONS
+      accessControlAllowOriginList:
+        - "http://localhost:3000"
+        - "http://localhost:8080"
+      accessControlAllowHeaders:
+        - "Content-Type"
+        - "Authorization"
+        - "X-Requested-With"
+      accessControlMaxAge: 86400
+      addVaryHeader: true
+
+# Health check
+ping:
+  entryPoint: "traefik"
