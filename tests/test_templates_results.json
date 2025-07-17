@@ -1,0 +1,39 @@
+{
+  "total_tests": 8,
+  "passed_tests": 8,
+  "success_rate": 100.0,
+  "results": [
+    {
+      "test": "Test 1: Création des 15 templates (5 types × 3 langues)",
+      "passed": true
+    },
+    {
+      "test": "Test 2: Variables dynamiques dans templates",
+      "passed": true
+    },
+    {
+      "test": "Test 3: Sélection automatique de langue",
+      "passed": true
+    },
+    {
+      "test": "Test 4: Templates vocaux TwiML",
+      "passed": true
+    },
+    {
+      "test": "Test 5: Personnalisation avec données patients réelles",
+      "passed": true
+    },
+    {
+      "test": "Test 6: Cohérence des messages entre langues",
+      "passed": true
+    },
+    {
+      "test": "Test 7: Gestion des erreurs et fallbacks",
+      "passed": true
+    },
+    {
+      "test": "Test 8: Performance et optimisation",
+      "passed": true
+    }
+  ]
+}

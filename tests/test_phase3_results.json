@@ -1,0 +1,134 @@
+{
+  "timestamp": "2025-07-17T19:09:42.179881",
+  "success_rate": 83.33333333333334,
+  "total_tests": 6,
+  "passed_tests": 5,
+  "results": [
+    {
+      "test": "Page d'accueil Phase 3",
+      "success": true,
+      "details": {
+        "success": true,
+        "status_code": 200,
+        "data": {
+          "endpoints": {
+            "templates": {
+              "send_personalized_call": "/api/templates/call",
+              "send_personalized_sms": "/api/templates/sms",
+              "test_templates": "/api/templates/test",
+              "validate_templates": "/api/templates/validate"
+            },
+            "test_communication": "/test/communication",
+            "test_twiml": "/test/twiml",
+            "twiml_voice": "/twiml/voice",
+            "webhook_sms": "/webhook/sms",
+            "webhook_voice": "/webhook/voice"
+          },
+          "features": {
+            "auto_language": "Détection automatique",
+            "personalization": "Variables dynamiques",
+            "templates": "15 templates (5 types × 3 langues)",
+            "twiml_voice": "Templates vocaux TwiML"
+          },
+          "service": "Hospital Reminders API - Phase 3",
+          "status": "active",
+          "version": "3.0.0"
+        }
+      }
+    },
+    {
+      "test": "Validation des templates",
+      "success": true,
+      "details": {
+        "success": true,
+        "status_code": 200,
+        "data": {
+          "status": "success",
+          "validation": {
+            "issues": [],
+            "status": "valid"
+          }
+        }
+      }
+    },
+    {
+      "test": "SMS personnalisé - Rendez-vous",
+      "success": true,
+      "details": {
+        "success": true,
+        "status_code": 200,
+        "data": {
+          "result": {
+            "character_count": 216,
+            "error": null,
+            "language": "fr",
+            "message_sid": "SMf8948bd17578329bfd8390117dce631d",
+            "message_type": "appointment_reminder",
+            "success": true
+          },
+          "status": "success"
+        }
+      }
+    },
+    {
+      "test": "Appel personnalisé - Médicament",
+      "success": true,
+      "details": {
+        "success": true,
+        "status_code": 200,
+        "data": {
+          "result": {
+            "call_sid": "CA0ba61f888fd13a643eb11f067c5fef37",
+            "error": null,
+            "language": "fr",
+            "message_type": "medication_reminder",
+            "success": true,
+            "twiml_url": "https://bunny-meet-verbally.ngrok-free.app/twiml/voice?twiml=%3CResponse%3E%3CSay+voice%3D%27alice%27+language%3D%27fr-FR%27%3EBonjour+Marie+Dubois.+Ceci+est+un+rappel+pour+prendre+votre+m%C3%A9dicament+Aspirine%2C+dosage+100mg.+Il+est+important+de+respecter+votre+traitement+m%C3%A9dical.+H%C3%B4pital+G%C3%A9n%C3%A9ral+de+Douala.%3C%2FSay%3E%3C%2FResponse%3E&lang=fr"
+          },
+          "status": "success"
+        }
+      }
+    },
+    {
+      "test": "Test complet du système",
+      "success": false,
+      "details": {
+        "success": false,
+        "error": "HTTPConnectionPool(host='localhost', port=5000): Read timed out. (read timeout=10)"
+      }
+    },
+    {
+      "test": "Statut de santé Phase 3",
+      "success": true,
+      "details": {
+        "success": true,
+        "status_code": 200,
+        "data": {
+          "features": {
+            "languages": [
+              "fr",
+              "en",
+              "es"
+            ],
+            "message_types": [
+              "appointment_reminder",
+              "medication_reminder",
+              "follow_up",
+              "emergency_alert",
+              "health_tip"
+            ],
+            "templates_count": 15,
+            "templates_valid": true
+          },
+          "service": "Hospital Reminders API - Phase 3",
+          "status": "healthy",
+          "template_validation": {
+            "issues": [],
+            "status": "valid"
+          },
+          "version": "3.0.0"
+        }
+      }
+    }
+  ]
+}
