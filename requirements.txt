@@ -1,0 +1,29 @@
+# Dépendances Python pour le système de rappels hospitaliers
+
+# Base de données et ORM
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+
+# Communication externe
+twilio>=8.10.0
+googletrans==4.0.0rc1
+flask>=2.3.0
+
+# Gestion des dates et fuseaux horaires
+pytz>=2023.3
+python-dateutil>=2.8.2
+
+# Configuration et variables d'environnement
+python-dotenv>=1.0.0
+
+# Tests et développement
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Outils de développement
+ipython>=8.14.0
+fastapi~=0.116.1
+scheduler~=0.8.8
+pydantic~=2.11.7
+requests~=2.32.4
+httpx~=0.13.3

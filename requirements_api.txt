@@ -1,0 +1,93 @@
+# Requirements pour l'API de rappels
+
+# Framework web
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Base de données
+asyncpg==0.29.0
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.23
+alembic==1.12.1
+
+# Redis et cache
+redis==5.0.1
+hiredis==2.2.3
+
+# Communication
+twilio==8.10.0
+requests==2.31.0
+httpx==0.25.2
+
+# Validation et sérialisation
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Utilitaires
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Dates et temps
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Logging et monitoring
+structlog==23.2.0
+prometheus-client==0.19.0
+
+# Tests
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+factory-boy==3.3.0
+
+# Développement
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0
+mypy==1.7.1
+
+# Variables d'environnement
+python-dotenv==1.0.0
+
+# Sécurité
+cryptography==41.0.7
+bcrypt==4.1.2
+
+# Utilitaires système
+psutil==5.9.6
+click==8.1.7
+
+# Documentation
+mkdocs==1.5.3
+mkdocs-material==9.4.8
+
+# Formats de données
+orjson==3.9.10
+pyyaml==6.0.1
+
+# Gestion des erreurs
+sentry-sdk[fastapi]==1.38.0
+
+# Planification et tâches
+celery==5.3.4
+kombu==5.3.4
+
+# Métriques et observabilité
+opentelemetry-api==1.21.0
+opentelemetry-sdk==1.21.0
+opentelemetry-instrumentation-fastapi==0.42b0
+
+# Validation d'email et téléphone
+email-validator==2.1.0
+phonumbers==8.13.26
+
+# Gestion des fichiers
+aiofiles==23.2.1
+
+# Compression
+gzip==1.0
+
+# Timezone
+tzdata==2023.3
