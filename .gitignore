@@ -1,0 +1,247 @@
+# DGH Feedback System - Git Ignore File
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.staging
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*.log.*
+log_*.txt
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+.dockerignore
+
+# Backup files
+backups/
+*.backup
+*.bak
+*.tmp
+
+# SSL Certificates (keep structure, ignore actual certificates)
+traefik/certs/*.crt
+traefik/certs/*.key
+traefik/certs/*.pem
+traefik/certs/*.p12
+traefik/certs/*.pfx
+
+# Monitoring data
+prometheus_data/
+grafana_data/
+monitoring_report_*.txt
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Redis dump
+dump.rdb
+
+# PostgreSQL
+*.sql
+!init.sql
+
+# Node.js (if any frontend is added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build artifacts
+*.tar.gz
+*.zip
+*.tar
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Security sensitive files
+*.key
+*.crt
+*.pem
+secrets/
+.secrets
+
+# Development docker overrides
+docker-compose.override.yml
+docker-compose.dev.yml
+
+# API documentation builds
+docs/_build/
+docs/build/
+
+# Local development
+.local/
+local/
+
+# Profile data
+*.prof
+
+# Generated files
+generated/
+auto-generated/
+
+# Cache directories
+.cache/
+cache/
+
+# Lock files
+*.lock
+
+# Editor config
+.editorconfig
+
+# Linting
+.pylintrc
+.flake8
+.bandit
+
+# Testing
+test-results/
+test-reports/
+
+# Terraform (if infrastructure as code is added later)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes (if K8s deployment is added later)
+*.kubeconfig
+kube-config
+
+# Local scripts that shouldn't be committed
+local_*.sh
+dev_*.sh
+test_local_*.sh
+
+# Data files that might be too large
+data/
+datasets/
+*.csv
+!sample_data.csv
+
+# Machine learning models
+*.model
+*.pkl
+*.pickle
+models/
+
+# Documentation builds
+site/
+docs/site/
+
+# Runtime files
+*.pid
+*.sock
+
+# Application specific
+uploads/
+media/
+static_collected/
+
+# Config overrides
+config.local.yml
+config.override.yml
+
+# Backup and restore scripts with sensitive data
+restore_*.sh
+backup_with_credentials_*.sh

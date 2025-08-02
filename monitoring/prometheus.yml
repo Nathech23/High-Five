@@ -1,0 +1,127 @@
+# Prometheus Configuration for DGH Feedback System
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'dgh-feedback-monitor'
+
+# Alerting configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+# Rule files
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# Scrape configurations
+scrape_configs:
+  # Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+    metrics_path: /metrics
+    scrape_interval: 15s
+
+  # API Gateway
+  - job_name: 'api-gateway'
+    static_configs:
+      - targets: ['api-gateway:8000']
+    metrics_path: /metrics
+    scrape_interval: 30s
+    scrape_timeout: 10s
+    honor_labels: true
+    params:
+      format: ['prometheus']
+
+  # Feedback API
+  - job_name: 'feedback-api'
+    static_configs:
+      - targets: ['feedback-api:8000']
+    metrics_path: /metrics
+    scrape_interval: 30s
+    scrape_timeout: 10s
+    honor_labels: true
+    params:
+      format: ['prometheus']
+
+  # Traefik
+  - job_name: 'traefik'
+    static_configs:
+      - targets: ['traefik:8080']
+    metrics_path: /metrics
+    scrape_interval: 30s
+
+  # PostgreSQL Exporter (when available)
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres-exporter:9187']
+    metrics_path: /metrics
+    scrape_interval: 30s
+    honor_labels: true
+
+  # Redis Exporter (when available)
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis-exporter:9121']
+    metrics_path: /metrics
+    scrape_interval: 30s
+    honor_labels: true
+
+  # MongoDB Exporter (when available)
+  - job_name: 'mongodb'
+    static_configs:
+      - targets: ['mongodb-exporter:9216']
+    metrics_path: /metrics
+    scrape_interval: 30s
+    honor_labels: true
+
+  # Node Exporter for system metrics (when available)
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    metrics_path: /metrics
+    scrape_interval: 30s
+
+  # Docker metrics (via cAdvisor when available)
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']
+    metrics_path: /metrics
+    scrape_interval: 30s
+
+  # Health check endpoints
+  - job_name: 'health-checks'
+    static_configs:
+      - targets: 
+          - 'api-gateway:8000'
+          - 'feedback-api:8000'
+    metrics_path: /health
+    scrape_interval: 60s
+    scrape_timeout: 5s
+    
+  # Custom application metrics
+  - job_name: 'dgh-custom-metrics'
+    static_configs:
+      - targets: ['feedback-api:8000']
+    metrics_path: /metrics/custom
+    scrape_interval: 60s
+    honor_labels: true
+
+# Storage configuration
+storage:
+  tsdb:
+    path: /prometheus/
+    retention.time: 15d
+    retention.size: 10GB
+
+# Web configuration
+web:
+  console.libraries: /etc/prometheus/console_libraries
+  console.templates: /etc/prometheus/consoles
+  enable-lifecycle: true
+  page-title: "DGH Feedback System Monitoring"
+  
