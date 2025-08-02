@@ -1,0 +1,107 @@
+{
+  "timestamp": "2025-08-01T18:47:57.620404",
+  "config": {
+    "fusion_strategy": "evidence_based",
+    "min_consensus_threshold": 0.6,
+    "conflict_resolution_enabled": true
+  },
+  "metrics": {
+    "total_fusions": 7,
+    "avg_consensus_level": 0.5232745995090996,
+    "avg_confidence": 1.0261247502666493,
+    "conflicts_detected": 17,
+    "conflicts_resolved": 0,
+    "source_utilization": {
+      "who_guidelines": 7,
+      "pubmed_research": 7,
+      "cochrane_review": 7,
+      "expert_system": 5,
+      "outdated_source": 2
+    },
+    "fusion_latency_ms": 15.36144529070173,
+    "quality_improvement": 0.0
+  },
+  "fusion_history": [
+    {
+      "query": "traitement paludisme enfant artemether-lumefantrine",
+      "timestamp": "2025-08-01 18:47:57.511131",
+      "sources_count": 5,
+      "conflicts_count": 3,
+      "consensus_level": 1.4,
+      "confidence": 1.26
+    },
+    {
+      "query": "efficacité artemether-lumefantrine méta-analyse",
+      "timestamp": "2025-08-01 18:47:57.528172",
+      "sources_count": 5,
+      "conflicts_count": 3,
+      "consensus_level": 0.08494021962557892,
+      "confidence": 0.8720559557865586
+    },
+    {
+      "query": "traitement urgent paludisme grave",
+      "timestamp": "2025-08-01 18:47:57.552254",
+      "sources_count": 5,
+      "conflicts_count": 3,
+      "consensus_level": 0.08430870364456891,
+      "confidence": 0.855
+    },
+    {
+      "query": "traitement paludisme artemether-lumefantrine",
+      "timestamp": "2025-08-01 18:47:57.577200",
+      "sources_count": 4,
+      "conflicts_count": 2,
+      "consensus_level": 0.11455775776451631,
+      "confidence": 0.8864606726819153
+    },
+    {
+      "query": "traitement paludisme artemether-lumefantrine",
+      "timestamp": "2025-08-01 18:47:57.585452",
+      "sources_count": 4,
+      "conflicts_count": 2,
+      "consensus_level": 1.75,
+      "confidence": 1.575
+    },
+    {
+      "query": "traitement paludisme artemether-lumefantrine",
+      "timestamp": "2025-08-01 18:47:57.605061",
+      "sources_count": 4,
+      "conflicts_count": 2,
+      "consensus_level": 0.11455775776451631,
+      "confidence": 0.855
+    },
+    {
+      "query": "traitement paludisme artemether-lumefantrine",
+      "timestamp": "2025-08-01 18:47:57.618125",
+      "sources_count": 4,
+      "conflicts_count": 2,
+      "consensus_level": 0.11455775776451631,
+      "confidence": 0.8793566233980715
+    }
+  ],
+  "source_utilization_summary": {
+    "total_sources": 5,
+    "most_used_sources": [
+      [
+        "who_guidelines",
+        7
+      ],
+      [
+        "pubmed_research",
+        7
+      ],
+      [
+        "cochrane_review",
+        7
+      ],
+      [
+        "expert_system",
+        5
+      ],
+      [
+        "outdated_source",
+        2
+      ]
+    ]
+  }
+}

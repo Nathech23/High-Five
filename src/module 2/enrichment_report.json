@@ -1,0 +1,38 @@
+{
+  "enrichment_summary": {
+    "total_articles": 2,
+    "validated_articles": 2,
+    "rejected_articles": 0,
+    "success_rate": 1.0,
+    "avg_reliability_score": 0.7749999999999999,
+    "processing_time": 0.0010907649993896484
+  },
+  "articles_by_specialty": {
+    "endocrinologie": 1,
+    "infectiologie": 1
+  },
+  "articles_by_source": {
+    "who": 1,
+    "cdc": 1
+  },
+  "articles_by_language": {
+    "fr": 2
+  },
+  "validation_results": {
+    "diabetes_who_001": {
+      "is_valid": true,
+      "reliability_score": 0.7999999999999999,
+      "validation_level": "intermediate",
+      "issues_count": 0,
+      "recommendations_count": 0
+    },
+    "malaria_cdc_002": {
+      "is_valid": true,
+      "reliability_score": 0.75,
+      "validation_level": "intermediate",
+      "issues_count": 0,
+      "recommendations_count": 0
+    }
+  },
+  "timestamp": "2025-08-01T14:07:25.466396"
+}

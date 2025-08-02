@@ -1,0 +1,210 @@
+{
+  "timestamp": "2025-08-02T05:16:09.910542",
+  "total_tests": 28,
+  "successful_tests": 8,
+  "success_rate": 28.57142857142857,
+  "execution_time_seconds": 2.371056079864502,
+  "categories": {
+    "ML Production (1-10)": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "LLM Avancé (11-18)": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "MLOps Monitoring (19-24)": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "API Robuste (25-28)": [
+      25,
+      26,
+      27,
+      28
+    ]
+  },
+  "detailed_results": {
+    "1_hyperparameter_tuning": {
+      "success": false,
+      "error": "No module named 'xgboost'"
+    },
+    "2_ensemble_stacking": {
+      "success": false,
+      "error": "cannot access local variable 'AdvancedEnsembleSystem' where it is not associated with a value"
+    },
+    "3_specialized_models": {
+      "success": false,
+      "error": "cannot access local variable 'AdvancedEnsembleSystem' where it is not associated with a value"
+    },
+    "4_drift_detection": {
+      "success": false,
+      "error": "No module named 'xgboost'"
+    },
+    "5_auto_retraining": {
+      "success": false,
+      "error": "cannot access local variable 'AdvancedEnsembleSystem' where it is not associated with a value"
+    },
+    "6_inference_optimization": {
+      "success": false,
+      "error": "cannot access local variable 'AdvancedEnsembleSystem' where it is not associated with a value"
+    },
+    "7_intelligent_cache": {
+      "success": false,
+      "error": "cannot access local variable 'AdvancedEnsembleSystem' where it is not associated with a value"
+    },
+    "8_confidence_scoring": {
+      "success": false,
+      "error": "cannot access local variable 'AdvancedEnsembleSystem' where it is not associated with a value"
+    },
+    "9_batch_realtime": {
+      "success": false,
+      "error": "cannot access local variable 'AdvancedEnsembleSystem' where it is not associated with a value"
+    },
+    "10_accuracy_validation": {
+      "success": false,
+      "error": "cannot access local variable 'AdvancedEnsembleSystem' where it is not associated with a value"
+    },
+    "11_llm_agent": {
+      "success": true,
+      "analysis_keys": [
+        "analyse",
+        "recommandations",
+        "confiance",
+        "knowledge_used",
+        "analysis_timestamp"
+      ],
+      "has_recommendations": false
+    },
+    "12_rag_knowledge": {
+      "success": true,
+      "knowledge_items_count": 4,
+      "search_results_count": 1,
+      "sample_titles": [
+        "Température de stockage du sang"
+      ]
+    },
+    "13_specialized_prompts": {
+      "success": true,
+      "available_prompts": [
+        "stock_analysis",
+        "incident_classification",
+        "alert_generation",
+        "contextual_recommendations",
+        "multimodal_analysis"
+      ],
+      "stock_prompt_length": 784,
+      "incident_prompt_length": 468
+    },
+    "14_intelligent_alerts": {
+      "success": true,
+      "alert_id": "3ad758466cc2",
+      "priority": "medium",
+      "has_recommendations": false
+    },
+    "15_incident_classification": {
+      "success": true,
+      "category": "autre",
+      "severity": "medium",
+      "urgency_score": 0.5
+    },
+    "16_contextual_recommendations": {
+      "success": true,
+      "has_immediate_actions": false,
+      "has_short_term_actions": false,
+      "recommendation_count": 0
+    },
+    "17_multimodal_analysis": {
+      "success": true,
+      "sentiment_score": 0.3333333333333333,
+      "anomaly_score": 0.0,
+      "has_correlations": false
+    },
+    "18_llm_cost_optimization": {
+      "success": true,
+      "cache_hit_rate": 0.5,
+      "tokens_saved": 0,
+      "estimated_cost_saved": 0.0
+    },
+    "19_model_versioning": {
+      "success": false,
+      "error": "No module named 'schedule'"
+    },
+    "20_monitoring_drift": {
+      "success": false,
+      "error": "No module named 'schedule'"
+    },
+    "21_ab_testing": {
+      "success": false,
+      "error": "No module named 'schedule'"
+    },
+    "22_degradation_alerts": {
+      "success": false,
+      "error": "No module named 'schedule'"
+    },
+    "23_business_impact": {
+      "success": false,
+      "error": "No module named 'schedule'"
+    },
+    "24_ml_documentation": {
+      "success": false,
+      "error": "No module named 'schedule'"
+    },
+    "25_endpoint_optimization": {
+      "success": false,
+      "error": "No module named 'slowapi'"
+    },
+    "26_auth_rate_limiting": {
+      "success": false,
+      "error": "No module named 'slowapi'"
+    },
+    "27_api_documentation": {
+      "success": false,
+      "error": "No module named 'slowapi'"
+    },
+    "28_service_integration": {
+      "success": false,
+      "error": "No module named 'slowapi'"
+    }
+  },
+  "failed_tests": [
+    "1_hyperparameter_tuning",
+    "2_ensemble_stacking",
+    "3_specialized_models",
+    "4_drift_detection",
+    "5_auto_retraining",
+    "6_inference_optimization",
+    "7_intelligent_cache",
+    "8_confidence_scoring",
+    "9_batch_realtime",
+    "10_accuracy_validation",
+    "19_model_versioning",
+    "20_monitoring_drift",
+    "21_ab_testing",
+    "22_degradation_alerts",
+    "23_business_impact",
+    "24_ml_documentation",
+    "25_endpoint_optimization",
+    "26_auth_rate_limiting",
+    "27_api_documentation",
+    "28_service_integration"
+  ]
+}

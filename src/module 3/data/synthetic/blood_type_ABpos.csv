@@ -1,0 +1,381 @@
+timestamp,hospital,blood_type,stock_initial,demand,supply,stock_final,temperature,days_to_expiry,quality_score,urgency,quality_comment,day_of_week,hour,month,is_weekend,is_holiday_season,special_event,weather
+2022-01-02 21:36:33,Clinique des Spécialités,AB+,37,6,0,31,3.3,6,100.0,normale,"Excellent état, conservation parfaite",6,21,1,True,True,normal,ensoleillé
+2022-01-06 14:02:49,Hôpital Laquintinie,AB+,45,6,18,57,3.5,5,96.7,normale,Hémoglobine dans les normes,3,14,1,False,True,normal,nuageux
+2022-01-11 22:32:54,Centre Médical d'Excellence,AB+,53,10,11,54,3.5,23,97.4,normale,Parfait pour transfusion immédiate,1,22,1,False,True,normal,ensoleillé
+2022-01-15 06:28:59,Hôpital Laquintinie,AB+,27,3,0,24,4.3,19,100.0,normale,Contrôle bactériologique négatif,5,6,1,True,True,normal,ensoleillé
+2022-01-16 01:33:23,Hôpital Laquintinie,AB+,14,6,0,8,3.9,3,89.9,critique,URGENT: Stock critique - Urgent: vérifier température stockage,6,1,1,True,True,accident_route,ensoleillé
+2022-01-16 11:29:04,Hôpital de District Bonassama,AB+,39,6,12,45,3.6,5,100.0,normale,"État satisfaisant, contrôle qualité OK",6,11,1,True,True,normal,ensoleillé
+2022-01-23 11:43:35,Clinique des Spécialités,AB+,76,6,0,70,4.6,21,98.3,normale,Attention: proche expiration,6,11,1,True,True,normal,ensoleillé
+2022-01-25 13:35:33,Hôpital Général Douala,AB+,60,3,0,57,3.7,4,86.1,normale,"Bon état général, légère variation température",1,13,1,False,True,normal,pluvieux
+2022-01-26 11:18:01,Hôpital de District Bonassama,AB+,18,10,0,8,4.5,9,100.0,critique,"URGENT: Stock critique - État satisfaisant, contrôle qualité OK",2,11,1,False,True,normal,pluvieux
+2022-01-28 14:51:13,Centre Médical d'Excellence,AB+,56,7,28,77,3.1,6,100.0,normale,Attention: proche expiration,4,14,1,False,True,normal,ensoleillé
+2022-01-29 11:19:23,Hôpital Général Douala,AB+,24,8,0,16,3.9,4,82.0,faible,Attention: proche expiration,5,11,1,True,True,normal,nuageux
+2022-02-03 06:07:14,Clinique des Spécialités,AB+,60,2,0,58,3.9,4,84.6,normale,Contrôle bactériologique négatif,3,6,2,False,False,normal,pluvieux
+2022-02-09 21:19:46,Hôpital Militaire,AB+,63,2,0,61,4.0,38,100.0,normale,Urgent: vérifier température stockage,2,21,2,False,False,normal,ensoleillé
+2022-02-11 06:21:53,Clinique des Spécialités,AB+,42,6,0,36,3.9,6,100.0,normale,Contrôle bactériologique négatif,4,6,2,False,False,normal,nuageux
+2022-02-13 07:00:55,Hôpital de District Bonassama,AB+,32,7,0,25,3.9,41,100.0,normale,"État satisfaisant, contrôle qualité OK",6,7,2,True,False,normal,ensoleillé
+2022-02-16 10:17:21,Hôpital Militaire,AB+,51,7,0,44,3.9,5,96.0,normale,Urgent: vérifier température stockage,2,10,2,False,False,normal,pluvieux
+2022-02-19 08:14:32,Hôpital Militaire,AB+,22,7,0,15,3.5,50,100.0,faible,Parfait pour transfusion immédiate,5,8,2,True,False,normal,nuageux
+2022-02-20 18:05:23,Hôpital Laquintinie,AB+,46,4,0,42,2.4,10,95.9,normale,"Excellent état, conservation parfaite",6,18,2,True,False,normal,ensoleillé
+2022-02-21 09:50:42,Hôpital de District Bonassama,AB+,85,7,29,107,3.7,1,60.3,attention,"Bon état général, légère variation température",0,9,2,False,False,normal,pluvieux
+2022-02-23 07:07:00,Hôpital Général Douala,AB+,64,6,19,77,3.0,37,93.8,normale,Attention: proche expiration,2,7,2,False,False,normal,pluvieux
+2022-02-23 17:12:39,Hôpital Laquintinie,AB+,60,11,0,49,4.2,52,100.0,normale,"Excellent état, conservation parfaite",2,17,2,False,False,normal,orageux
+2022-02-25 00:52:36,Hôpital Laquintinie,AB+,12,11,24,25,4.4,5,100.0,normale,Urgent: vérifier température stockage,4,0,2,False,False,normal,orageux
+2022-02-26 17:22:08,Centre Médical d'Excellence,AB+,30,3,0,27,3.5,51,100.0,normale,"Bon état général, légère variation température",5,17,2,True,False,normal,pluvieux
+2022-03-03 17:31:45,Hôpital Laquintinie,AB+,59,10,22,71,4.0,33,100.0,normale,Parfait pour transfusion immédiate,3,17,3,False,False,normal,orageux
+2022-03-06 22:21:44,Centre Médical d'Excellence,AB+,43,3,0,40,4.9,18,94.7,normale,"Excellent état, conservation parfaite",6,22,3,True,False,normal,ensoleillé
+2022-03-07 20:42:12,Hôpital Laquintinie,AB+,41,11,0,30,3.4,1,63.6,attention,Parfait pour transfusion immédiate,0,20,3,False,False,normal,pluvieux
+2022-03-08 01:59:14,Hôpital Général Douala,AB+,23,3,21,41,3.4,10,100.0,normale,"Bon état général, légère variation température",1,1,3,False,False,normal,ensoleillé
+2022-03-08 11:56:28,Hôpital Laquintinie,AB+,40,6,23,57,4.2,1,59.3,attention,Contrôle bactériologique négatif,1,11,3,False,False,normal,pluvieux
+2022-03-11 08:40:09,Hôpital Militaire,AB+,49,6,0,43,4.3,15,100.0,normale,"État satisfaisant, contrôle qualité OK",4,8,3,False,False,normal,nuageux
+2022-03-12 00:48:48,Hôpital Militaire,AB+,19,1,0,18,3.5,18,100.0,faible,"Bon état général, légère variation température",5,0,3,True,False,normal,pluvieux
+2022-03-12 05:34:03,Hôpital Laquintinie,AB+,14,6,0,8,3.2,13,100.0,critique,"URGENT: Stock critique - Excellent état, conservation parfaite",5,5,3,True,False,normal,ensoleillé
+2022-03-14 23:32:49,Hôpital Général Douala,AB+,22,10,13,25,4.6,23,90.5,normale,"Excellent état, conservation parfaite",0,23,3,False,False,urgence_médicale,nuageux
+2022-03-16 05:41:04,Hôpital Militaire,AB+,31,15,17,33,3.9,33,100.0,normale,Attention: proche expiration,2,5,3,False,False,normal,nuageux
+2022-03-17 16:21:27,Centre Médical d'Excellence,AB+,62,8,21,75,4.3,22,99.4,normale,Hémoglobine dans les normes,3,16,3,False,False,normal,orageux
+2022-03-18 02:50:15,Clinique des Spécialités,AB+,27,12,28,43,3.6,14,99.6,normale,Attention: proche expiration,4,2,3,False,False,normal,ensoleillé
+2022-03-18 21:01:26,Centre Médical d'Excellence,AB+,55,6,19,68,4.0,6,88.2,normale,Attention: proche expiration,4,21,3,False,False,normal,pluvieux
+2022-03-21 09:43:54,Hôpital Laquintinie,AB+,58,0,0,58,3.5,4,92.9,normale,Parfait pour transfusion immédiate,0,9,3,False,False,normal,orageux
+2022-03-22 20:45:19,Clinique des Spécialités,AB+,62,6,20,76,4.7,6,100.0,normale,"Excellent état, conservation parfaite",1,20,3,False,False,normal,orageux
+2022-03-25 02:55:50,Clinique des Spécialités,AB+,12,10,0,2,4.5,8,96.8,critique,"URGENT: Stock critique - Excellent état, conservation parfaite",4,2,3,False,False,normal,ensoleillé
+2022-03-25 08:13:47,Hôpital Laquintinie,AB+,61,9,19,71,4.2,1,67.3,attention,Hémoglobine dans les normes,4,8,3,False,False,normal,pluvieux
+2022-03-25 20:33:15,Hôpital de District Bonassama,AB+,42,7,22,57,4.3,18,97.9,normale,Hémoglobine dans les normes,4,20,3,False,False,normal,pluvieux
+2022-03-29 05:42:53,Hôpital Général Douala,AB+,26,4,0,22,3.8,44,99.3,normale,"État satisfaisant, contrôle qualité OK",1,5,3,False,False,normal,nuageux
+2022-03-30 13:32:58,Clinique des Spécialités,AB+,48,11,0,37,3.5,31,96.2,normale,Attention: proche expiration,2,13,3,False,False,normal,ensoleillé
+2022-04-02 11:36:20,Clinique des Spécialités,AB+,29,4,0,25,4.0,4,77.0,normale,Hémoglobine dans les normes,5,11,4,True,False,normal,ensoleillé
+2022-04-10 14:06:12,Hôpital Laquintinie,AB+,28,7,0,21,4.8,15,100.0,normale,Hémoglobine dans les normes,6,14,4,True,False,normal,pluvieux
+2022-04-10 17:23:25,Centre Médical d'Excellence,AB+,37,6,0,31,4.3,8,95.3,normale,Parfait pour transfusion immédiate,6,17,4,True,False,normal,pluvieux
+2022-04-12 13:39:27,Hôpital Laquintinie,AB+,40,11,15,44,4.6,32,100.0,normale,Attention: proche expiration,1,13,4,False,False,normal,ensoleillé
+2022-04-13 01:41:37,Hôpital de District Bonassama,AB+,27,7,0,20,3.9,28,95.8,normale,Parfait pour transfusion immédiate,2,1,4,False,False,normal,pluvieux
+2022-04-15 03:40:12,Hôpital Laquintinie,AB+,25,5,0,20,3.6,1,66.5,attention,Attention: proche expiration,4,3,4,False,False,normal,ensoleillé
+2022-04-15 05:40:05,Hôpital Militaire,AB+,26,3,0,23,4.2,15,100.0,normale,"Bon état général, légère variation température",4,5,4,False,False,normal,orageux
+2022-04-16 07:33:37,Hôpital de District Bonassama,AB+,30,6,0,24,3.4,13,99.0,normale,Parfait pour transfusion immédiate,5,7,4,True,False,normal,ensoleillé
+2022-04-18 20:51:09,Hôpital Militaire,AB+,69,4,0,65,4.0,9,100.0,normale,Parfait pour transfusion immédiate,0,20,4,False,False,normal,ensoleillé
+2022-04-19 00:25:53,Hôpital Laquintinie,AB+,30,7,0,23,4.3,2,82.8,normale,Hémoglobine dans les normes,1,0,4,False,False,normal,orageux
+2022-04-20 19:23:59,Clinique des Spécialités,AB+,71,11,17,77,4.2,30,94.9,normale,Contrôle bactériologique négatif,2,19,4,False,False,normal,orageux
+2022-04-21 10:16:16,Clinique des Spécialités,AB+,35,9,17,43,4.2,32,97.5,normale,Hémoglobine dans les normes,3,10,4,False,False,normal,ensoleillé
+2022-04-23 21:58:31,Clinique des Spécialités,AB+,48,9,22,61,4.2,28,97.5,normale,Hémoglobine dans les normes,5,21,4,True,False,normal,pluvieux
+2022-04-25 01:45:50,Hôpital Laquintinie,AB+,26,7,0,19,3.8,21,94.9,faible,Parfait pour transfusion immédiate,0,1,4,False,False,normal,orageux
+2022-04-25 12:37:24,Hôpital Laquintinie,AB+,67,3,0,64,3.9,4,81.3,normale,Parfait pour transfusion immédiate,0,12,4,False,False,normal,ensoleillé
+2022-04-25 17:33:05,Hôpital Laquintinie,AB+,72,10,0,62,4.0,32,98.0,normale,Contrôle bactériologique négatif,0,17,4,False,False,normal,nuageux
+2022-04-28 09:16:47,Hôpital Militaire,AB+,57,6,0,51,3.9,16,100.0,normale,Contrôle bactériologique négatif,3,9,4,False,False,normal,pluvieux
+2022-04-28 18:10:05,Hôpital Militaire,AB+,66,8,0,58,3.9,7,98.3,normale,Parfait pour transfusion immédiate,3,18,4,False,False,normal,ensoleillé
+2022-04-29 17:10:07,Hôpital Laquintinie,AB+,46,2,12,56,3.2,1,56.5,attention,Contrôle bactériologique négatif,4,17,4,False,False,normal,ensoleillé
+2022-04-29 23:48:29,Centre Médical d'Excellence,AB+,32,12,15,35,4.4,5,95.5,normale,"Bon état général, légère variation température",4,23,4,False,False,normal,orageux
+2022-04-30 21:30:06,Centre Médical d'Excellence,AB+,18,9,17,26,4.4,16,100.0,normale,"Bon état général, légère variation température",5,21,4,True,False,normal,pluvieux
+2022-05-03 16:14:06,Hôpital Général Douala,AB+,67,8,21,80,4.8,33,95.4,normale,Attention: proche expiration,1,16,5,False,False,normal,ensoleillé
+2022-05-04 14:55:06,Hôpital Général Douala,AB+,42,7,0,35,3.5,68,91.9,normale,Hémoglobine dans les normes,2,14,5,False,False,normal,ensoleillé
+2022-05-07 12:48:50,Hôpital Laquintinie,AB+,23,7,0,16,3.4,13,100.0,faible,"Bon état général, légère variation température",5,12,5,True,False,normal,nuageux
+2022-05-10 12:58:51,Hôpital Général Douala,AB+,39,8,0,31,4.7,3,85.7,normale,Urgent: vérifier température stockage,1,12,5,False,False,normal,ensoleillé
+2022-05-10 13:33:03,Hôpital de District Bonassama,AB+,61,5,0,56,4.6,33,100.0,normale,Parfait pour transfusion immédiate,1,13,5,False,False,normal,orageux
+2022-05-14 10:05:21,Hôpital Général Douala,AB+,52,5,0,47,4.3,2,88.4,normale,Contrôle bactériologique négatif,5,10,5,True,False,normal,ensoleillé
+2022-05-15 05:21:35,Hôpital Militaire,AB+,14,6,0,8,3.7,6,93.5,critique,URGENT: Stock critique - Urgent: vérifier température stockage,6,5,5,True,False,normal,nuageux
+2022-05-20 00:29:05,Hôpital Laquintinie,AB+,28,9,0,19,3.3,2,75.3,faible,Urgent: vérifier température stockage,4,0,5,False,False,normal,ensoleillé
+2022-05-24 12:34:16,Hôpital Général Douala,AB+,55,5,0,50,4.7,7,96.2,normale,Attention: proche expiration,1,12,5,False,False,normal,ensoleillé
+2022-05-27 20:20:46,Hôpital Général Douala,AB+,46,3,0,43,4.7,10,100.0,normale,"Bon état général, légère variation température",4,20,5,False,False,normal,ensoleillé
+2022-05-29 18:34:57,Hôpital Laquintinie,AB+,19,2,0,17,3.1,2,83.6,faible,"Excellent état, conservation parfaite",6,18,5,True,False,normal,ensoleillé
+2022-05-30 16:40:28,Hôpital Laquintinie,AB+,68,9,0,59,3.2,9,95.7,normale,Hémoglobine dans les normes,0,16,5,False,False,normal,nuageux
+2022-06-03 21:43:49,Centre Médical d'Excellence,AB+,42,13,12,41,4.7,14,91.8,normale,Attention: proche expiration,4,21,6,False,False,normal,pluvieux
+2022-06-04 15:14:21,Clinique des Spécialités,AB+,45,5,15,55,4.1,8,100.0,normale,Contrôle bactériologique négatif,5,15,6,True,False,normal,nuageux
+2022-06-05 20:21:01,Centre Médical d'Excellence,AB+,41,3,0,38,4.1,4,83.1,normale,Urgent: vérifier température stockage,6,20,6,True,False,normal,ensoleillé
+2022-06-06 05:43:39,Hôpital Militaire,AB+,17,6,18,29,4.2,4,91.4,normale,Attention: proche expiration,0,5,6,False,False,normal,nuageux
+2022-06-16 13:47:22,Hôpital Laquintinie,AB+,59,7,26,78,3.7,18,100.0,normale,Parfait pour transfusion immédiate,3,13,6,False,False,normal,ensoleillé
+2022-06-17 02:34:57,Hôpital Laquintinie,AB+,23,10,0,13,3.6,16,96.3,faible,Contrôle bactériologique négatif,4,2,6,False,False,normal,pluvieux
+2022-06-20 02:49:56,Clinique des Spécialités,AB+,22,10,26,38,4.6,20,96.9,normale,"État satisfaisant, contrôle qualité OK",0,2,6,False,False,normal,nuageux
+2022-06-21 08:08:27,Hôpital Laquintinie,AB+,50,10,14,54,4.2,17,93.9,normale,Attention: proche expiration,1,8,6,False,False,normal,ensoleillé
+2022-06-27 10:01:31,Hôpital Militaire,AB+,56,10,0,46,3.6,9,98.3,normale,Hémoglobine dans les normes,0,10,6,False,False,normal,pluvieux
+2022-06-30 17:06:48,Clinique des Spécialités,AB+,41,5,0,36,4.9,1,60.6,attention,Hémoglobine dans les normes,3,17,6,False,False,normal,pluvieux
+2022-06-30 23:10:02,Clinique des Spécialités,AB+,10,9,0,1,3.7,2,85.9,critique,URGENT: Stock critique - Parfait pour transfusion immédiate,3,23,6,False,False,normal,ensoleillé
+2022-07-02 22:26:03,Hôpital de District Bonassama,AB+,43,5,24,62,4.3,11,100.0,normale,Urgent: vérifier température stockage,5,22,7,True,True,normal,nuageux
+2022-07-03 21:04:56,Hôpital Militaire,AB+,42,10,0,32,4.4,23,94.2,normale,"Bon état général, légère variation température",6,21,7,True,True,normal,ensoleillé
+2022-07-05 11:18:14,Clinique des Spécialités,AB+,50,11,0,39,4.6,11,97.4,normale,"Excellent état, conservation parfaite",1,11,7,False,True,normal,orageux
+2022-07-05 16:26:45,Hôpital Laquintinie,AB+,29,7,20,42,3.4,4,81.6,normale,"État satisfaisant, contrôle qualité OK",1,16,7,False,True,normal,ensoleillé
+2022-07-07 06:54:46,Clinique des Spécialités,AB+,107,12,0,95,3.4,2,81.0,normale,"Excellent état, conservation parfaite",3,6,7,False,True,normal,pluvieux
+2022-07-07 11:12:10,Hôpital Laquintinie,AB+,37,6,0,31,3.8,25,98.8,normale,"Excellent état, conservation parfaite",3,11,7,False,True,normal,pluvieux
+2022-07-12 20:05:36,Centre Médical d'Excellence,AB+,24,2,0,22,5.4,45,100.0,normale,"État satisfaisant, contrôle qualité OK",1,20,7,False,True,normal,ensoleillé
+2022-07-16 07:26:53,Hôpital de District Bonassama,AB+,33,12,0,21,4.1,1,50.2,attention,"Bon état général, légère variation température",5,7,7,True,True,normal,ensoleillé
+2022-07-17 15:25:34,Hôpital Général Douala,AB+,44,7,17,54,3.5,17,100.0,normale,"Excellent état, conservation parfaite",6,15,7,True,True,normal,ensoleillé
+2022-07-18 03:42:30,Clinique des Spécialités,AB+,29,8,0,21,4.6,15,94.1,normale,"Excellent état, conservation parfaite",0,3,7,False,True,normal,ensoleillé
+2022-07-20 13:54:59,Clinique des Spécialités,AB+,50,10,0,40,4.5,6,100.0,normale,Contrôle bactériologique négatif,2,13,7,False,True,normal,orageux
+2022-07-22 22:06:04,Hôpital de District Bonassama,AB+,86,9,0,77,3.7,1,63.3,attention,Urgent: vérifier température stockage,4,22,7,False,True,normal,pluvieux
+2022-07-24 03:51:40,Hôpital Militaire,AB+,21,11,14,24,4.2,31,100.0,normale,Parfait pour transfusion immédiate,6,3,7,True,True,normal,nuageux
+2022-07-24 12:34:02,Hôpital de District Bonassama,AB+,51,6,25,70,3.8,2,82.4,normale,"Bon état général, légère variation température",6,12,7,True,True,normal,nuageux
+2022-07-25 13:32:37,Hôpital Général Douala,AB+,67,5,21,83,3.8,9,96.9,normale,Contrôle bactériologique négatif,0,13,7,False,True,normal,orageux
+2022-07-28 01:48:40,Centre Médical d'Excellence,AB+,33,10,0,23,4.3,29,92.9,normale,"État satisfaisant, contrôle qualité OK",3,1,7,False,True,normal,pluvieux
+2022-07-29 13:14:18,Hôpital Militaire,AB+,48,5,0,43,3.9,13,100.0,normale,"Excellent état, conservation parfaite",4,13,7,False,True,normal,ensoleillé
+2022-07-31 08:56:52,Hôpital de District Bonassama,AB+,23,6,0,17,3.7,10,100.0,faible,"Bon état général, légère variation température",6,8,7,True,True,normal,pluvieux
+2022-08-01 10:19:19,Clinique des Spécialités,AB+,55,3,27,79,3.8,1,60.5,attention,"État satisfaisant, contrôle qualité OK",0,10,8,False,True,normal,nuageux
+2022-08-05 17:03:22,Hôpital de District Bonassama,AB+,54,11,17,60,3.8,6,100.0,normale,Hémoglobine dans les normes,4,17,8,False,True,normal,ensoleillé
+2022-08-06 08:19:16,Centre Médical d'Excellence,AB+,65,5,0,60,4.2,1,50.2,attention,Hémoglobine dans les normes,5,8,8,True,True,normal,ensoleillé
+2022-08-11 16:15:42,Hôpital Général Douala,AB+,92,15,25,102,3.9,23,100.0,normale,"Excellent état, conservation parfaite",3,16,8,False,True,normal,ensoleillé
+2022-08-11 23:45:31,Hôpital de District Bonassama,AB+,25,2,0,23,3.8,1,55.3,attention,Urgent: vérifier température stockage,3,23,8,False,True,normal,nuageux
+2022-08-12 12:46:58,Hôpital de District Bonassama,AB+,69,7,0,62,3.7,3,81.2,normale,Attention: proche expiration,4,12,8,False,True,normal,orageux
+2022-08-14 16:33:53,Hôpital Général Douala,AB+,59,6,0,53,4.7,1,58.3,attention,"Bon état général, légère variation température",6,16,8,True,True,normal,ensoleillé
+2022-08-18 01:29:42,Hôpital de District Bonassama,AB+,29,16,0,13,3.4,1,67.1,faible,"État satisfaisant, contrôle qualité OK",3,1,8,False,True,normal,pluvieux
+2022-08-20 00:34:09,Hôpital Général Douala,AB+,17,7,0,10,5.0,47,93.2,faible,Hémoglobine dans les normes,5,0,8,True,True,normal,nuageux
+2022-08-21 04:08:40,Centre Médical d'Excellence,AB+,13,3,0,10,2.9,1,53.0,faible,Hémoglobine dans les normes,6,4,8,True,True,normal,pluvieux
+2022-08-21 10:07:56,Hôpital Laquintinie,AB+,18,7,0,11,4.0,6,100.0,faible,"Excellent état, conservation parfaite",6,10,8,True,True,normal,ensoleillé
+2022-08-21 20:30:04,Hôpital Militaire,AB+,47,5,0,42,4.0,20,94.2,normale,Urgent: vérifier température stockage,6,20,8,True,True,normal,ensoleillé
+2022-08-21 22:42:33,Centre Médical d'Excellence,AB+,51,5,21,67,4.5,19,100.0,normale,"Excellent état, conservation parfaite",6,22,8,True,True,normal,nuageux
+2022-08-22 07:44:10,Hôpital Général Douala,AB+,101,10,23,114,3.4,11,95.6,normale,"Bon état général, légère variation température",0,7,8,False,True,normal,ensoleillé
+2022-08-22 09:44:37,Hôpital de District Bonassama,AB+,51,6,21,66,3.9,28,100.0,normale,Parfait pour transfusion immédiate,0,9,8,False,True,normal,nuageux
+2022-08-22 21:55:57,Hôpital de District Bonassama,AB+,68,10,0,58,4.7,19,100.0,normale,Urgent: vérifier température stockage,0,21,8,False,True,normal,ensoleillé
+2022-08-26 07:06:18,Clinique des Spécialités,AB+,69,10,19,78,4.5,1,61.6,attention,"État satisfaisant, contrôle qualité OK",4,7,8,False,True,normal,ensoleillé
+2022-08-29 07:05:13,Hôpital Général Douala,AB+,70,2,29,97,4.9,13,98.3,normale,"État satisfaisant, contrôle qualité OK",0,7,8,False,True,épidémie,ensoleillé
+2022-08-31 07:18:16,Hôpital Général Douala,AB+,70,4,0,66,3.8,12,89.4,normale,Hémoglobine dans les normes,2,7,8,False,True,normal,pluvieux
+2022-09-02 00:48:42,Clinique des Spécialités,AB+,14,8,0,6,4.2,5,99.2,critique,URGENT: Stock critique - Parfait pour transfusion immédiate,4,0,9,False,False,normal,orageux
+2022-09-04 00:27:11,Hôpital Général Douala,AB+,15,6,13,22,4.5,1,60.1,attention,Urgent: vérifier température stockage,6,0,9,True,False,normal,ensoleillé
+2022-09-05 03:14:11,Hôpital Militaire,AB+,18,5,22,35,4.0,2,91.9,normale,Urgent: vérifier température stockage,0,3,9,False,False,normal,pluvieux
+2022-09-09 14:22:40,Hôpital Laquintinie,AB+,46,7,22,61,3.7,9,100.0,normale,"Excellent état, conservation parfaite",4,14,9,False,False,normal,nuageux
+2022-09-12 17:43:35,Clinique des Spécialités,AB+,37,3,0,34,4.7,14,95.6,normale,Urgent: vérifier température stockage,0,17,9,False,False,normal,orageux
+2022-09-15 20:25:05,Hôpital Militaire,AB+,87,8,21,100,4.4,18,100.0,normale,"État satisfaisant, contrôle qualité OK",3,20,9,False,False,normal,pluvieux
+2022-09-20 20:56:19,Hôpital Militaire,AB+,53,13,0,40,3.7,1,55.1,attention,Hémoglobine dans les normes,1,20,9,False,False,normal,ensoleillé
+2022-09-25 00:44:09,Centre Médical d'Excellence,AB+,25,6,0,19,3.7,24,100.0,faible,Contrôle bactériologique négatif,6,0,9,True,False,normal,pluvieux
+2022-09-27 18:26:54,Hôpital Laquintinie,AB+,48,3,19,64,4.7,33,100.0,normale,Parfait pour transfusion immédiate,1,18,9,False,False,normal,pluvieux
+2022-10-01 01:05:57,Hôpital de District Bonassama,AB+,19,3,0,16,4.7,17,98.7,faible,Hémoglobine dans les normes,5,1,10,True,False,normal,ensoleillé
+2022-10-01 03:49:49,Centre Médical d'Excellence,AB+,14,6,0,8,4.0,16,100.0,critique,URGENT: Stock critique - Parfait pour transfusion immédiate,5,3,10,True,False,normal,orageux
+2022-10-01 08:40:42,Clinique des Spécialités,AB+,24,5,0,19,4.4,1,56.6,faible,Attention: proche expiration,5,8,10,True,False,normal,nuageux
+2022-10-04 08:48:05,Hôpital Laquintinie,AB+,40,6,15,49,3.9,6,95.3,normale,"État satisfaisant, contrôle qualité OK",1,8,10,False,False,normal,ensoleillé
+2022-10-05 09:32:29,Hôpital Laquintinie,AB+,68,8,0,60,4.3,10,100.0,normale,Contrôle bactériologique négatif,2,9,10,False,False,normal,pluvieux
+2022-10-06 20:58:30,Hôpital Laquintinie,AB+,52,7,18,63,3.8,1,62.6,attention,"État satisfaisant, contrôle qualité OK",3,20,10,False,False,normal,ensoleillé
+2022-10-10 15:32:58,Clinique des Spécialités,AB+,29,9,0,20,4.0,3,93.3,normale,"Excellent état, conservation parfaite",0,15,10,False,False,normal,ensoleillé
+2022-10-13 00:26:34,Hôpital Laquintinie,AB+,32,9,0,23,4.3,27,100.0,normale,Parfait pour transfusion immédiate,3,0,10,False,False,normal,ensoleillé
+2022-10-17 14:04:35,Hôpital de District Bonassama,AB+,39,9,0,30,3.9,5,98.0,normale,Contrôle bactériologique négatif,0,14,10,False,False,normal,ensoleillé
+2022-10-18 15:53:09,Centre Médical d'Excellence,AB+,51,8,0,43,4.0,1,61.2,attention,Contrôle bactériologique négatif,1,15,10,False,False,normal,nuageux
+2022-10-20 03:35:27,Hôpital Laquintinie,AB+,23,9,0,14,3.1,7,100.0,faible,"Excellent état, conservation parfaite",3,3,10,False,False,normal,pluvieux
+2022-10-20 14:34:02,Hôpital Militaire,AB+,55,10,0,45,3.0,52,100.0,normale,"Excellent état, conservation parfaite",3,14,10,False,False,normal,ensoleillé
+2022-10-22 13:59:37,Clinique des Spécialités,AB+,49,4,18,63,4.1,17,98.8,normale,Urgent: vérifier température stockage,5,13,10,True,False,normal,ensoleillé
+2022-10-23 14:24:07,Hôpital Militaire,AB+,20,8,0,12,4.0,3,75.5,faible,"Excellent état, conservation parfaite",6,14,10,True,False,normal,pluvieux
+2022-10-23 15:01:44,Hôpital Laquintinie,AB+,28,6,0,22,4.1,68,100.0,normale,"Excellent état, conservation parfaite",6,15,10,True,False,accident_route,pluvieux
+2022-10-23 16:47:05,Clinique des Spécialités,AB+,43,5,0,38,4.0,15,95.5,normale,Contrôle bactériologique négatif,6,16,10,True,False,normal,pluvieux
+2022-10-24 06:39:13,Hôpital Militaire,AB+,48,3,0,45,2.7,8,97.0,normale,"État satisfaisant, contrôle qualité OK",0,6,10,False,False,normal,nuageux
+2022-10-26 07:54:27,Hôpital de District Bonassama,AB+,47,6,0,41,3.2,16,100.0,normale,"Excellent état, conservation parfaite",2,7,10,False,False,normal,nuageux
+2022-10-27 22:39:29,Hôpital Général Douala,AB+,67,8,0,59,4.6,6,99.5,normale,Urgent: vérifier température stockage,3,22,10,False,False,normal,pluvieux
+2022-10-29 20:52:14,Centre Médical d'Excellence,AB+,34,4,0,30,3.8,16,94.4,normale,"Bon état général, légère variation température",5,20,10,True,False,normal,ensoleillé
+2022-10-31 05:59:20,Clinique des Spécialités,AB+,23,4,0,19,4.7,15,100.0,faible,Attention: proche expiration,0,5,10,False,False,normal,ensoleillé
+2022-11-03 11:24:10,Clinique des Spécialités,AB+,34,8,0,26,3.6,10,100.0,normale,"Excellent état, conservation parfaite",3,11,11,False,False,normal,orageux
+2022-11-04 07:06:47,Hôpital Général Douala,AB+,28,10,26,44,3.0,13,100.0,normale,Urgent: vérifier température stockage,4,7,11,False,False,normal,orageux
+2022-11-04 10:21:13,Hôpital Militaire,AB+,45,7,0,38,3.8,56,96.3,normale,"Excellent état, conservation parfaite",4,10,11,False,False,épidémie,nuageux
+2022-11-06 07:43:25,Hôpital Laquintinie,AB+,22,9,0,13,3.7,13,100.0,faible,Parfait pour transfusion immédiate,6,7,11,True,False,normal,orageux
+2022-11-16 10:53:39,Hôpital Laquintinie,AB+,47,13,11,45,3.8,1,53.0,attention,"État satisfaisant, contrôle qualité OK",2,10,11,False,False,normal,nuageux
+2022-11-16 17:37:14,Hôpital Général Douala,AB+,36,9,0,27,3.9,18,100.0,normale,"Excellent état, conservation parfaite",2,17,11,False,False,normal,ensoleillé
+2022-11-28 05:53:51,Clinique des Spécialités,AB+,21,5,0,16,4.1,6,100.0,faible,"Bon état général, légère variation température",0,5,11,False,False,normal,pluvieux
+2022-11-28 19:35:45,Hôpital Général Douala,AB+,61,8,17,70,3.8,1,61.3,attention,Hémoglobine dans les normes,0,19,11,False,False,normal,orageux
+2022-12-01 10:27:58,Hôpital Militaire,AB+,78,2,0,76,4.1,19,100.0,normale,Hémoglobine dans les normes,3,10,12,False,True,normal,ensoleillé
+2022-12-05 04:19:06,Hôpital Général Douala,AB+,25,14,0,11,4.1,5,100.0,faible,Parfait pour transfusion immédiate,0,4,12,False,True,normal,ensoleillé
+2022-12-07 08:21:08,Centre Médical d'Excellence,AB+,74,10,0,64,3.6,11,100.0,normale,"Bon état général, légère variation température",2,8,12,False,True,normal,ensoleillé
+2022-12-08 07:24:57,Hôpital Militaire,AB+,47,9,24,62,4.3,28,91.5,normale,Contrôle bactériologique négatif,3,7,12,False,True,normal,ensoleillé
+2022-12-11 04:13:28,Hôpital Général Douala,AB+,19,5,0,14,3.4,8,99.1,faible,"Excellent état, conservation parfaite",6,4,12,True,True,normal,pluvieux
+2022-12-12 23:56:25,Clinique des Spécialités,AB+,30,10,32,52,4.5,64,94.7,normale,Hémoglobine dans les normes,0,23,12,False,True,normal,pluvieux
+2022-12-17 12:36:26,Clinique des Spécialités,AB+,61,9,16,68,4.4,18,97.8,normale,"Excellent état, conservation parfaite",5,12,12,True,True,normal,ensoleillé
+2022-12-19 16:38:44,Hôpital Général Douala,AB+,74,6,0,68,3.8,16,97.6,normale,"Excellent état, conservation parfaite",0,16,12,False,True,normal,orageux
+2022-12-21 18:27:36,Centre Médical d'Excellence,AB+,63,4,18,77,4.6,2,87.6,normale,Parfait pour transfusion immédiate,2,18,12,False,True,normal,orageux
+2022-12-24 08:49:40,Centre Médical d'Excellence,AB+,33,3,0,30,4.7,5,95.8,normale,"Excellent état, conservation parfaite",5,8,12,True,True,campagne_don,ensoleillé
+2022-12-24 13:54:54,Centre Médical d'Excellence,AB+,26,11,28,43,4.3,2,83.3,normale,"Bon état général, légère variation température",5,13,12,True,True,normal,ensoleillé
+2022-12-25 10:00:43,Hôpital Militaire,AB+,37,9,0,28,4.2,12,96.2,normale,"Excellent état, conservation parfaite",6,10,12,True,True,normal,pluvieux
+2022-12-31 08:50:47,Hôpital Général Douala,AB+,48,4,0,44,3.6,1,55.5,attention,Attention: proche expiration,5,8,12,True,True,normal,nuageux
+2023-01-05 14:02:41,Hôpital de District Bonassama,AB+,46,4,0,42,3.7,9,96.6,normale,"Bon état général, légère variation température",3,14,1,False,True,normal,ensoleillé
+2023-01-11 17:56:34,Hôpital Général Douala,AB+,96,12,0,84,3.9,6,100.0,normale,Hémoglobine dans les normes,2,17,1,False,True,normal,ensoleillé
+2023-01-12 04:46:40,Hôpital de District Bonassama,AB+,28,12,24,40,4.0,25,96.4,normale,"Excellent état, conservation parfaite",3,4,1,False,True,normal,ensoleillé
+2023-01-13 08:45:02,Clinique des Spécialités,AB+,75,7,0,68,3.6,5,100.0,normale,Hémoglobine dans les normes,4,8,1,False,True,normal,nuageux
+2023-01-15 12:16:14,Centre Médical d'Excellence,AB+,39,3,0,36,4.4,10,91.7,normale,Hémoglobine dans les normes,6,12,1,True,True,normal,ensoleillé
+2023-01-16 07:35:20,Centre Médical d'Excellence,AB+,27,3,0,24,4.6,63,100.0,normale,"Excellent état, conservation parfaite",0,7,1,False,True,normal,ensoleillé
+2023-01-17 02:55:40,Clinique des Spécialités,AB+,19,4,0,15,3.7,1,58.0,faible,"État satisfaisant, contrôle qualité OK",1,2,1,False,True,épidémie,orageux
+2023-01-19 18:46:00,Clinique des Spécialités,AB+,71,12,21,80,4.1,9,100.0,normale,"État satisfaisant, contrôle qualité OK",3,18,1,False,True,normal,pluvieux
+2023-01-20 17:18:35,Clinique des Spécialités,AB+,50,5,0,45,3.7,24,100.0,normale,Attention: proche expiration,4,17,1,False,True,normal,nuageux
+2023-01-21 23:51:04,Clinique des Spécialités,AB+,20,6,0,14,4.7,7,100.0,faible,Urgent: vérifier température stockage,5,23,1,True,True,normal,ensoleillé
+2023-01-22 07:39:14,Hôpital Général Douala,AB+,26,11,24,39,3.9,17,100.0,normale,Attention: proche expiration,6,7,1,True,True,normal,pluvieux
+2023-01-22 07:42:05,Clinique des Spécialités,AB+,41,3,0,38,4.1,22,99.3,normale,Attention: proche expiration,6,7,1,True,True,normal,nuageux
+2023-01-24 02:47:15,Hôpital Militaire,AB+,36,0,0,36,4.3,5,100.0,normale,"État satisfaisant, contrôle qualité OK",1,2,1,False,True,normal,pluvieux
+2023-01-25 18:39:39,Clinique des Spécialités,AB+,34,9,0,25,3.7,13,100.0,normale,Contrôle bactériologique négatif,2,18,1,False,True,normal,pluvieux
+2023-02-02 05:37:00,Clinique des Spécialités,AB+,39,12,0,27,3.7,14,100.0,normale,"État satisfaisant, contrôle qualité OK",3,5,2,False,False,normal,ensoleillé
+2023-02-03 15:26:56,Hôpital Général Douala,AB+,42,10,21,53,3.8,77,100.0,normale,"Excellent état, conservation parfaite",4,15,2,False,False,normal,ensoleillé
+2023-02-04 16:46:09,Clinique des Spécialités,AB+,36,5,0,31,4.1,14,100.0,normale,Urgent: vérifier température stockage,5,16,2,True,False,normal,pluvieux
+2023-02-05 07:17:59,Hôpital Militaire,AB+,20,3,0,17,3.4,34,100.0,faible,Contrôle bactériologique négatif,6,7,2,True,False,normal,ensoleillé
+2023-02-09 09:36:09,Hôpital de District Bonassama,AB+,70,12,18,76,4.2,1,57.7,attention,Parfait pour transfusion immédiate,3,9,2,False,False,normal,pluvieux
+2023-02-11 09:09:53,Hôpital de District Bonassama,AB+,21,6,0,15,3.9,1,57.8,faible,"Excellent état, conservation parfaite",5,9,2,True,False,normal,pluvieux
+2023-02-11 11:19:18,Hôpital de District Bonassama,AB+,42,5,23,60,4.0,16,100.0,normale,Attention: proche expiration,5,11,2,True,False,normal,ensoleillé
+2023-02-11 20:26:30,Hôpital Général Douala,AB+,55,2,24,77,2.7,19,100.0,normale,Parfait pour transfusion immédiate,5,20,2,True,False,normal,orageux
+2023-02-14 16:33:47,Centre Médical d'Excellence,AB+,58,10,0,48,4.1,2,83.0,normale,Attention: proche expiration,1,16,2,False,False,normal,nuageux
+2023-02-21 00:58:12,Hôpital Militaire,AB+,33,5,0,28,4.1,1,56.3,attention,"Bon état général, légère variation température",1,0,2,False,False,normal,pluvieux
+2023-03-01 04:38:38,Clinique des Spécialités,AB+,21,10,0,11,3.9,1,65.5,faible,"Excellent état, conservation parfaite",2,4,3,False,False,normal,pluvieux
+2023-03-04 07:43:44,Clinique des Spécialités,AB+,39,5,0,34,4.3,3,88.7,normale,"Excellent état, conservation parfaite",5,7,3,True,False,normal,nuageux
+2023-03-05 08:06:18,Clinique des Spécialités,AB+,37,6,0,31,3.9,47,100.0,normale,Parfait pour transfusion immédiate,6,8,3,True,False,normal,pluvieux
+2023-03-06 16:50:10,Clinique des Spécialités,AB+,34,4,0,30,3.5,17,95.1,normale,Contrôle bactériologique négatif,0,16,3,False,False,normal,pluvieux
+2023-03-08 09:48:31,Hôpital Laquintinie,AB+,43,8,0,35,3.7,9,95.6,normale,Contrôle bactériologique négatif,2,9,3,False,False,normal,ensoleillé
+2023-03-13 10:17:42,Hôpital Général Douala,AB+,20,8,0,12,4.1,22,94.2,faible,Urgent: vérifier température stockage,0,10,3,False,False,normal,ensoleillé
+2023-03-15 17:27:38,Clinique des Spécialités,AB+,57,9,0,48,3.8,3,75.0,normale,"Bon état général, légère variation température",2,17,3,False,False,normal,nuageux
+2023-03-16 13:39:49,Hôpital de District Bonassama,AB+,46,8,0,38,4.2,13,100.0,normale,"État satisfaisant, contrôle qualité OK",3,13,3,False,False,normal,ensoleillé
+2023-03-20 22:12:09,Centre Médical d'Excellence,AB+,47,9,0,38,4.0,25,98.6,normale,"État satisfaisant, contrôle qualité OK",0,22,3,False,False,normal,ensoleillé
+2023-03-21 00:27:10,Hôpital Militaire,AB+,9,6,0,3,4.8,9,99.0,critique,URGENT: Stock critique - Parfait pour transfusion immédiate,1,0,3,False,False,normal,nuageux
+2023-03-21 11:39:48,Centre Médical d'Excellence,AB+,48,8,0,40,4.3,2,78.9,normale,Hémoglobine dans les normes,1,11,3,False,False,normal,pluvieux
+2023-03-21 20:14:54,Centre Médical d'Excellence,AB+,35,8,0,27,3.8,11,99.3,normale,"Bon état général, légère variation température",1,20,3,False,False,normal,nuageux
+2023-03-22 21:40:54,Hôpital Laquintinie,AB+,38,9,0,29,4.0,16,100.0,normale,"Bon état général, légère variation température",2,21,3,False,False,normal,pluvieux
+2023-03-24 21:33:58,Hôpital Laquintinie,AB+,51,7,0,44,4.0,8,98.4,normale,"Excellent état, conservation parfaite",4,21,3,False,False,normal,ensoleillé
+2023-03-25 22:27:40,Centre Médical d'Excellence,AB+,33,5,0,28,4.5,3,86.0,normale,Contrôle bactériologique négatif,5,22,3,True,False,normal,ensoleillé
+2023-03-27 18:07:27,Hôpital Laquintinie,AB+,44,0,23,67,4.8,8,96.4,normale,Parfait pour transfusion immédiate,0,18,3,False,False,normal,ensoleillé
+2023-04-01 05:19:34,Clinique des Spécialités,AB+,17,6,0,11,4.0,39,98.4,faible,"Excellent état, conservation parfaite",5,5,4,True,False,normal,pluvieux
+2023-04-02 05:14:57,Hôpital Laquintinie,AB+,17,5,0,12,5.0,11,100.0,faible,"Excellent état, conservation parfaite",6,5,4,True,False,épidémie,pluvieux
+2023-04-02 15:41:44,Centre Médical d'Excellence,AB+,21,7,0,14,4.8,25,99.7,faible,Parfait pour transfusion immédiate,6,15,4,True,False,normal,pluvieux
+2023-04-03 02:54:13,Hôpital de District Bonassama,AB+,32,8,0,24,4.3,33,100.0,normale,Urgent: vérifier température stockage,0,2,4,False,False,normal,ensoleillé
+2023-04-03 10:49:35,Hôpital Général Douala,AB+,56,7,0,49,3.7,10,100.0,normale,"État satisfaisant, contrôle qualité OK",0,10,4,False,False,normal,orageux
+2023-04-04 07:04:26,Hôpital Général Douala,AB+,57,10,0,47,3.8,5,100.0,normale,Contrôle bactériologique négatif,1,7,4,False,False,normal,ensoleillé
+2023-04-04 21:53:12,Centre Médical d'Excellence,AB+,36,11,0,25,3.8,17,97.2,normale,Hémoglobine dans les normes,1,21,4,False,False,épidémie,ensoleillé
+2023-04-05 21:30:14,Clinique des Spécialités,AB+,77,9,0,68,4.8,87,100.0,normale,Hémoglobine dans les normes,2,21,4,False,False,normal,ensoleillé
+2023-04-06 08:51:10,Hôpital Laquintinie,AB+,68,4,0,64,5.4,3,85.3,normale,"Bon état général, légère variation température",3,8,4,False,False,normal,nuageux
+2023-04-07 06:40:20,Clinique des Spécialités,AB+,79,10,0,69,3.8,12,100.0,normale,Contrôle bactériologique négatif,4,6,4,False,False,normal,nuageux
+2023-04-08 04:15:30,Clinique des Spécialités,AB+,16,5,0,11,4.1,7,99.5,faible,"Bon état général, légère variation température",5,4,4,True,False,normal,ensoleillé
+2023-04-12 02:42:50,Hôpital Laquintinie,AB+,22,10,16,28,4.0,2,90.6,normale,"Excellent état, conservation parfaite",2,2,4,False,False,normal,nuageux
+2023-04-12 05:23:09,Hôpital de District Bonassama,AB+,31,0,19,50,4.1,8,100.0,normale,"État satisfaisant, contrôle qualité OK",2,5,4,False,False,normal,ensoleillé
+2023-04-12 23:29:20,Clinique des Spécialités,AB+,10,11,0,0,4.5,14,100.0,critique,"URGENT: Stock critique - Excellent état, conservation parfaite",2,23,4,False,False,normal,orageux
+2023-04-13 21:20:19,Hôpital Général Douala,AB+,67,10,0,57,4.7,20,100.0,normale,Parfait pour transfusion immédiate,3,21,4,False,False,normal,ensoleillé
+2023-04-15 11:34:57,Clinique des Spécialités,AB+,19,4,27,42,3.6,10,96.1,normale,Urgent: vérifier température stockage,5,11,4,True,False,normal,pluvieux
+2023-04-16 05:11:37,Hôpital de District Bonassama,AB+,21,7,0,14,3.6,53,100.0,faible,Urgent: vérifier température stockage,6,5,4,True,False,normal,pluvieux
+2023-04-17 02:27:43,Hôpital de District Bonassama,AB+,21,6,0,15,3.8,6,89.2,faible,Contrôle bactériologique négatif,0,2,4,False,False,normal,ensoleillé
+2023-04-19 00:29:16,Hôpital Laquintinie,AB+,31,7,0,24,3.3,9,100.0,normale,Attention: proche expiration,2,0,4,False,False,normal,orageux
+2023-04-20 23:00:49,Clinique des Spécialités,AB+,27,10,21,38,4.1,3,88.7,normale,Hémoglobine dans les normes,3,23,4,False,False,normal,ensoleillé
+2023-04-22 03:52:38,Hôpital de District Bonassama,AB+,7,7,0,0,4.8,12,100.0,critique,URGENT: Stock critique - Contrôle bactériologique négatif,5,3,4,True,False,normal,orageux
+2023-04-22 05:39:04,Clinique des Spécialités,AB+,11,3,23,31,4.3,1,51.4,attention,Attention: proche expiration,5,5,4,True,False,normal,ensoleillé
+2023-04-27 08:42:45,Hôpital Laquintinie,AB+,80,5,21,96,4.2,1,57.3,attention,Urgent: vérifier température stockage,3,8,4,False,False,normal,nuageux
+2023-04-28 07:22:14,Hôpital Général Douala,AB+,46,8,0,38,3.3,11,97.3,normale,"Excellent état, conservation parfaite",4,7,4,False,False,normal,ensoleillé
+2023-04-29 02:18:02,Hôpital Militaire,AB+,13,6,21,28,4.0,21,100.0,normale,"Bon état général, légère variation température",5,2,4,True,False,normal,nuageux
+2023-05-04 19:00:11,Centre Médical d'Excellence,AB+,80,10,0,70,3.8,2,85.9,normale,Parfait pour transfusion immédiate,3,19,5,False,False,normal,orageux
+2023-05-06 21:43:39,Hôpital Militaire,AB+,25,5,22,42,4.3,31,96.4,normale,Attention: proche expiration,5,21,5,True,False,normal,pluvieux
+2023-05-07 09:39:51,Hôpital Militaire,AB+,31,7,0,24,3.8,9,98.0,normale,Parfait pour transfusion immédiate,6,9,5,True,False,normal,nuageux
+2023-05-09 12:53:50,Clinique des Spécialités,AB+,40,8,21,53,4.1,7,85.5,normale,Attention: proche expiration,1,12,5,False,False,normal,ensoleillé
+2023-05-11 14:43:37,Clinique des Spécialités,AB+,43,12,0,31,2.9,21,100.0,normale,Hémoglobine dans les normes,3,14,5,False,False,normal,orageux
+2023-05-11 22:52:32,Centre Médical d'Excellence,AB+,36,7,0,29,4.1,9,100.0,normale,"Bon état général, légère variation température",3,22,5,False,False,normal,ensoleillé
+2023-05-13 07:53:42,Hôpital Général Douala,AB+,36,4,0,32,2.8,1,61.3,attention,Urgent: vérifier température stockage,5,7,5,True,False,normal,ensoleillé
+2023-05-13 18:05:46,Hôpital de District Bonassama,AB+,50,5,15,60,4.2,13,100.0,normale,"Excellent état, conservation parfaite",5,18,5,True,False,normal,ensoleillé
+2023-05-17 09:57:14,Hôpital Général Douala,AB+,49,9,26,66,4.0,1,59.3,attention,"Excellent état, conservation parfaite",2,9,5,False,False,normal,nuageux
+2023-05-20 23:33:51,Centre Médical d'Excellence,AB+,11,1,14,24,4.0,2,81.4,normale,Urgent: vérifier température stockage,5,23,5,True,False,normal,ensoleillé
+2023-05-23 05:02:47,Hôpital Général Douala,AB+,29,3,22,48,4.7,2,87.6,normale,Attention: proche expiration,1,5,5,False,False,épidémie,pluvieux
+2023-05-24 10:33:12,Hôpital Général Douala,AB+,47,6,22,63,4.0,5,100.0,normale,Contrôle bactériologique négatif,2,10,5,False,False,normal,nuageux
+2023-05-25 14:57:21,Hôpital Militaire,AB+,62,10,0,52,3.1,7,100.0,normale,"État satisfaisant, contrôle qualité OK",3,14,5,False,False,normal,ensoleillé
+2023-05-27 00:32:28,Hôpital de District Bonassama,AB+,16,4,0,12,4.1,6,100.0,faible,Parfait pour transfusion immédiate,5,0,5,True,False,normal,nuageux
+2023-05-30 22:52:24,Hôpital de District Bonassama,AB+,41,8,0,33,4.0,4,85.3,normale,Hémoglobine dans les normes,1,22,5,False,False,normal,ensoleillé
+2023-06-04 23:37:02,Centre Médical d'Excellence,AB+,26,7,21,40,4.3,18,100.0,normale,Urgent: vérifier température stockage,6,23,6,True,False,normal,pluvieux
+2023-06-05 03:24:19,Hôpital de District Bonassama,AB+,32,8,0,24,3.9,1,60.0,attention,"État satisfaisant, contrôle qualité OK",0,3,6,False,False,normal,pluvieux
+2023-06-07 00:40:29,Hôpital Général Douala,AB+,18,11,18,25,3.5,1,50.3,attention,Hémoglobine dans les normes,2,0,6,False,False,normal,ensoleillé
+2023-06-11 14:59:29,Hôpital Militaire,AB+,36,5,0,31,4.2,17,97.4,normale,"Excellent état, conservation parfaite",6,14,6,True,False,normal,pluvieux
+2023-06-13 11:32:59,Hôpital Militaire,AB+,33,9,0,24,4.2,3,83.8,normale,"État satisfaisant, contrôle qualité OK",1,11,6,False,False,normal,pluvieux
+2023-06-15 03:41:24,Centre Médical d'Excellence,AB+,21,9,0,12,4.4,34,100.0,faible,Attention: proche expiration,3,3,6,False,False,normal,pluvieux
+2023-06-15 07:00:58,Hôpital Militaire,AB+,35,6,0,29,3.8,34,95.8,normale,"État satisfaisant, contrôle qualité OK",3,7,6,False,False,normal,nuageux
+2023-06-15 09:44:13,Hôpital Laquintinie,AB+,40,8,20,52,4.5,5,97.6,normale,Contrôle bactériologique négatif,3,9,6,False,False,normal,pluvieux
+2023-06-15 19:19:08,Centre Médical d'Excellence,AB+,42,12,0,30,5.0,48,100.0,normale,"Excellent état, conservation parfaite",3,19,6,False,False,normal,ensoleillé
+2023-06-16 14:07:57,Hôpital Laquintinie,AB+,41,7,0,34,3.8,10,92.1,normale,Contrôle bactériologique négatif,4,14,6,False,False,normal,ensoleillé
+2023-06-16 19:05:02,Hôpital Général Douala,AB+,66,12,12,66,4.6,28,100.0,normale,Attention: proche expiration,4,19,6,False,False,normal,ensoleillé
+2023-06-17 12:20:44,Centre Médical d'Excellence,AB+,38,1,0,37,3.8,9,100.0,normale,"État satisfaisant, contrôle qualité OK",5,12,6,True,False,normal,pluvieux
+2023-06-17 21:20:21,Clinique des Spécialités,AB+,50,7,0,43,5.2,4,83.1,normale,"État satisfaisant, contrôle qualité OK",5,21,6,True,False,normal,nuageux
+2023-06-18 04:22:28,Hôpital Général Douala,AB+,17,6,0,11,3.7,1,71.1,faible,"Excellent état, conservation parfaite",6,4,6,True,False,normal,nuageux
+2023-06-23 14:35:38,Centre Médical d'Excellence,AB+,52,6,0,46,3.9,22,89.5,normale,"État satisfaisant, contrôle qualité OK",4,14,6,False,False,normal,pluvieux
+2023-06-23 16:14:17,Hôpital Général Douala,AB+,31,4,0,27,4.5,54,94.9,normale,Hémoglobine dans les normes,4,16,6,False,False,normal,ensoleillé
+2023-06-25 12:11:09,Clinique des Spécialités,AB+,36,8,0,28,4.4,39,98.5,normale,"Excellent état, conservation parfaite",6,12,6,True,False,normal,pluvieux
+2023-06-26 10:33:08,Clinique des Spécialités,AB+,50,8,0,42,3.4,2,85.6,normale,Urgent: vérifier température stockage,0,10,6,False,False,normal,ensoleillé
+2023-06-27 06:15:41,Hôpital Militaire,AB+,61,10,16,67,3.6,11,100.0,normale,Attention: proche expiration,1,6,6,False,False,normal,pluvieux
+2023-06-27 08:13:19,Clinique des Spécialités,AB+,57,11,25,71,4.5,42,91.9,normale,"Bon état général, légère variation température",1,8,6,False,False,normal,pluvieux
+2023-06-30 21:43:01,Hôpital de District Bonassama,AB+,34,9,0,25,4.8,7,100.0,normale,Hémoglobine dans les normes,4,21,6,False,False,normal,nuageux
+2023-07-01 14:35:40,Hôpital Militaire,AB+,24,4,0,20,3.9,30,100.0,normale,Contrôle bactériologique négatif,5,14,7,True,True,normal,nuageux
+2023-07-05 06:09:46,Clinique des Spécialités,AB+,80,7,0,73,3.6,26,97.8,normale,Urgent: vérifier température stockage,2,6,7,False,True,normal,pluvieux
+2023-07-07 01:52:50,Hôpital Laquintinie,AB+,17,6,0,11,3.7,9,96.3,faible,Attention: proche expiration,4,1,7,False,True,normal,ensoleillé
+2023-07-07 17:17:38,Centre Médical d'Excellence,AB+,52,4,14,62,3.5,6,100.0,normale,"Excellent état, conservation parfaite",4,17,7,False,True,normal,nuageux
+2023-07-08 00:59:54,Hôpital de District Bonassama,AB+,16,5,0,11,3.1,4,87.3,faible,Parfait pour transfusion immédiate,5,0,7,True,True,normal,ensoleillé
+2023-07-08 09:23:18,Hôpital Général Douala,AB+,32,13,0,19,3.8,20,100.0,faible,"État satisfaisant, contrôle qualité OK",5,9,7,True,True,normal,ensoleillé
+2023-07-08 17:23:40,Hôpital de District Bonassama,AB+,49,2,23,70,3.6,4,83.5,normale,Hémoglobine dans les normes,5,17,7,True,True,normal,pluvieux
+2023-07-10 21:01:37,Centre Médical d'Excellence,AB+,62,8,0,54,4.6,1,65.5,attention,Contrôle bactériologique négatif,0,21,7,False,True,normal,nuageux
+2023-07-11 19:09:59,Clinique des Spécialités,AB+,62,7,0,55,4.5,6,99.8,normale,"Bon état général, légère variation température",1,19,7,False,True,normal,ensoleillé
+2023-07-15 21:36:05,Hôpital Laquintinie,AB+,40,6,0,34,3.5,40,100.0,normale,Attention: proche expiration,5,21,7,True,True,urgence_médicale,orageux
+2023-07-16 07:06:45,Hôpital de District Bonassama,AB+,52,5,0,47,4.7,5,100.0,normale,Parfait pour transfusion immédiate,6,7,7,True,True,normal,nuageux
+2023-07-19 00:12:23,Hôpital Général Douala,AB+,20,11,14,23,3.6,6,100.0,normale,Contrôle bactériologique négatif,2,0,7,False,True,normal,ensoleillé
+2023-07-24 12:20:19,Centre Médical d'Excellence,AB+,59,12,23,70,4.1,2,87.7,normale,Hémoglobine dans les normes,0,12,7,False,True,normal,pluvieux
+2023-07-27 01:50:34,Hôpital de District Bonassama,AB+,30,9,20,41,3.7,8,97.7,normale,"État satisfaisant, contrôle qualité OK",3,1,7,False,True,normal,ensoleillé
+2023-07-27 03:33:10,Centre Médical d'Excellence,AB+,15,14,0,1,3.9,33,100.0,critique,URGENT: Stock critique - Urgent: vérifier température stockage,3,3,7,False,True,normal,nuageux
+2023-07-30 07:00:42,Hôpital de District Bonassama,AB+,28,6,15,37,4.6,26,100.0,normale,"État satisfaisant, contrôle qualité OK",6,7,7,True,True,normal,ensoleillé
+2023-08-01 00:26:11,Hôpital de District Bonassama,AB+,26,4,28,50,3.9,41,100.0,normale,"Bon état général, légère variation température",1,0,8,False,True,normal,nuageux
+2023-08-01 18:50:29,Centre Médical d'Excellence,AB+,83,2,29,110,4.2,4,81.1,normale,"État satisfaisant, contrôle qualité OK",1,18,8,False,True,campagne_don,pluvieux
+2023-08-02 09:37:59,Hôpital Militaire,AB+,69,11,18,76,3.4,7,94.2,normale,"Excellent état, conservation parfaite",2,9,8,False,True,normal,orageux
+2023-08-02 20:15:40,Hôpital Militaire,AB+,79,5,0,74,5.1,1,63.7,attention,"État satisfaisant, contrôle qualité OK",2,20,8,False,True,normal,orageux
+2023-08-04 05:20:48,Centre Médical d'Excellence,AB+,26,13,0,13,4.6,4,82.2,faible,"État satisfaisant, contrôle qualité OK",4,5,8,False,True,normal,pluvieux
+2023-08-04 14:03:11,Hôpital de District Bonassama,AB+,44,9,23,58,4.3,11,100.0,normale,Attention: proche expiration,4,14,8,False,True,normal,pluvieux
+2023-08-04 20:16:01,Hôpital Militaire,AB+,60,12,0,48,3.6,11,95.6,normale,"État satisfaisant, contrôle qualité OK",4,20,8,False,True,normal,pluvieux
+2023-08-07 14:05:42,Centre Médical d'Excellence,AB+,21,15,0,6,3.4,39,93.4,critique,URGENT: Stock critique - Attention: proche expiration,0,14,8,False,True,normal,pluvieux
+2023-08-08 23:52:44,Hôpital Général Douala,AB+,17,12,26,31,3.9,1,59.3,attention,Urgent: vérifier température stockage,1,23,8,False,True,urgence_médicale,ensoleillé
+2023-08-10 09:41:46,Hôpital de District Bonassama,AB+,45,11,0,34,2.9,4,93.0,normale,Contrôle bactériologique négatif,3,9,8,False,True,normal,pluvieux
+2023-08-11 04:07:36,Centre Médical d'Excellence,AB+,20,2,24,42,3.5,36,100.0,normale,"Bon état général, légère variation température",4,4,8,False,True,normal,ensoleillé
+2023-08-12 09:45:25,Clinique des Spécialités,AB+,27,11,17,33,5.0,1,64.0,attention,Hémoglobine dans les normes,5,9,8,True,True,normal,orageux
+2023-08-12 21:12:48,Hôpital Militaire,AB+,34,4,0,30,3.8,12,100.0,normale,Contrôle bactériologique négatif,5,21,8,True,True,normal,nuageux
+2023-08-17 10:11:59,Hôpital Général Douala,AB+,58,6,0,52,3.8,10,100.0,normale,Contrôle bactériologique négatif,3,10,8,False,True,normal,ensoleillé
+2023-08-18 00:10:00,Clinique des Spécialités,AB+,37,10,15,42,3.6,3,75.8,normale,"État satisfaisant, contrôle qualité OK",4,0,8,False,True,normal,ensoleillé
+2023-08-18 20:11:18,Hôpital Militaire,AB+,64,4,25,85,4.4,13,98.3,normale,Urgent: vérifier température stockage,4,20,8,False,True,accident_route,ensoleillé
+2023-08-19 02:11:12,Clinique des Spécialités,AB+,13,4,0,9,4.6,1,57.4,critique,URGENT: Stock critique - Hémoglobine dans les normes,5,2,8,True,True,normal,orageux
+2023-08-21 01:04:42,Hôpital Général Douala,AB+,28,6,0,22,4.1,1,56.0,attention,Hémoglobine dans les normes,0,1,8,False,True,normal,pluvieux
+2023-08-25 01:08:45,Hôpital Militaire,AB+,30,9,0,21,3.8,9,100.0,normale,Attention: proche expiration,4,1,8,False,True,normal,ensoleillé
+2023-08-26 09:11:48,Hôpital de District Bonassama,AB+,31,3,0,28,4.5,1,64.9,attention,Hémoglobine dans les normes,5,9,8,True,True,normal,nuageux
+2023-08-26 11:58:32,Hôpital Militaire,AB+,39,5,0,34,4.7,8,95.3,normale,Hémoglobine dans les normes,5,11,8,True,True,normal,ensoleillé
+2023-08-27 09:15:55,Centre Médical d'Excellence,AB+,41,4,0,37,5.1,39,100.0,normale,Attention: proche expiration,6,9,8,True,True,normal,ensoleillé
+2023-08-28 00:39:49,Clinique des Spécialités,AB+,43,9,0,34,3.5,3,86.9,normale,Hémoglobine dans les normes,0,0,8,False,True,normal,orageux
+2023-08-28 20:36:02,Hôpital Général Douala,AB+,47,6,0,41,4.3,19,100.0,normale,Parfait pour transfusion immédiate,0,20,8,False,True,normal,orageux
+2023-08-29 04:45:53,Centre Médical d'Excellence,AB+,12,8,0,4,4.5,12,92.8,critique,URGENT: Stock critique - Attention: proche expiration,1,4,8,False,True,normal,pluvieux
+2023-08-29 08:44:32,Hôpital Laquintinie,AB+,46,12,0,34,4.5,6,100.0,normale,"Bon état général, légère variation température",1,8,8,False,True,normal,ensoleillé
+2023-09-03 13:36:51,Hôpital de District Bonassama,AB+,46,6,0,40,3.2,17,100.0,normale,"Bon état général, légère variation température",6,13,9,True,False,normal,pluvieux
+2023-09-03 16:54:57,Hôpital Militaire,AB+,13,6,17,24,4.1,11,91.0,normale,"État satisfaisant, contrôle qualité OK",6,16,9,True,False,normal,nuageux
+2023-09-04 12:28:37,Hôpital Militaire,AB+,47,4,0,43,3.9,3,93.5,normale,Hémoglobine dans les normes,0,12,9,False,False,normal,pluvieux
+2023-09-08 11:59:00,Centre Médical d'Excellence,AB+,54,12,0,42,4.8,10,100.0,normale,"État satisfaisant, contrôle qualité OK",4,11,9,False,False,normal,pluvieux
+2023-09-08 13:38:01,Clinique des Spécialités,AB+,41,10,12,43,4.5,1,52.9,attention,Attention: proche expiration,4,13,9,False,False,normal,pluvieux
+2023-09-11 00:07:06,Hôpital Laquintinie,AB+,36,12,14,38,4.3,22,97.3,normale,Hémoglobine dans les normes,0,0,9,False,False,normal,nuageux
+2023-09-11 20:38:29,Hôpital Militaire,AB+,41,9,0,32,4.3,24,100.0,normale,"Excellent état, conservation parfaite",0,20,9,False,False,normal,nuageux
+2023-09-14 07:17:19,Clinique des Spécialités,AB+,59,6,20,73,4.1,17,100.0,normale,Hémoglobine dans les normes,3,7,9,False,False,normal,ensoleillé
+2023-09-14 20:07:33,Hôpital Général Douala,AB+,61,7,0,54,4.2,21,98.5,normale,"Excellent état, conservation parfaite",3,20,9,False,False,normal,ensoleillé
+2023-09-17 16:59:57,Hôpital Laquintinie,AB+,46,1,0,45,4.2,7,100.0,normale,Urgent: vérifier température stockage,6,16,9,True,False,épidémie,ensoleillé
+2023-09-18 16:04:52,Hôpital Général Douala,AB+,37,10,0,27,4.1,7,89.2,normale,Urgent: vérifier température stockage,0,16,9,False,False,normal,ensoleillé
+2023-09-18 18:49:45,Hôpital de District Bonassama,AB+,17,9,22,30,4.4,9,94.9,normale,"Bon état général, légère variation température",0,18,9,False,False,normal,pluvieux
+2023-09-21 03:06:47,Centre Médical d'Excellence,AB+,38,12,0,26,5.0,12,100.0,normale,"État satisfaisant, contrôle qualité OK",3,3,9,False,False,normal,ensoleillé
+2023-09-21 06:54:36,Centre Médical d'Excellence,AB+,66,8,0,58,5.2,1,53.1,attention,Parfait pour transfusion immédiate,3,6,9,False,False,normal,ensoleillé
+2023-09-21 14:25:14,Hôpital Militaire,AB+,82,7,0,75,3.6,19,96.4,normale,Hémoglobine dans les normes,3,14,9,False,False,normal,pluvieux
+2023-09-22 00:03:46,Hôpital Général Douala,AB+,12,2,0,10,3.5,10,100.0,faible,Attention: proche expiration,4,0,9,False,False,normal,nuageux
+2023-09-24 14:20:57,Centre Médical d'Excellence,AB+,39,6,0,33,3.1,12,100.0,normale,"État satisfaisant, contrôle qualité OK",6,14,9,True,False,normal,pluvieux
+2023-09-26 15:21:28,Hôpital Général Douala,AB+,41,9,0,32,4.3,5,94.2,normale,Parfait pour transfusion immédiate,1,15,9,False,False,normal,nuageux
+2023-09-27 00:39:29,Hôpital Général Douala,AB+,31,7,0,24,3.8,3,76.8,normale,"Excellent état, conservation parfaite",2,0,9,False,False,normal,ensoleillé
+2023-09-29 23:34:42,Clinique des Spécialités,AB+,19,7,0,12,5.3,3,86.2,faible,Parfait pour transfusion immédiate,4,23,9,False,False,normal,orageux
+2023-10-03 23:49:18,Hôpital de District Bonassama,AB+,18,8,0,10,4.1,24,93.0,faible,Attention: proche expiration,1,23,10,False,False,normal,pluvieux
+2023-10-06 22:40:53,Hôpital Général Douala,AB+,49,4,0,45,3.7,2,81.5,normale,Attention: proche expiration,4,22,10,False,False,normal,ensoleillé
+2023-10-08 18:43:15,Hôpital Général Douala,AB+,38,2,0,36,4.5,4,89.6,normale,"Bon état général, légère variation température",6,18,10,True,False,normal,pluvieux
+2023-10-08 23:56:56,Hôpital Général Douala,AB+,14,7,0,7,3.1,5,96.2,critique,URGENT: Stock critique - Attention: proche expiration,6,23,10,True,False,normal,pluvieux
+2023-10-09 08:54:16,Hôpital Général Douala,AB+,38,10,0,28,3.6,12,99.1,normale,"Bon état général, légère variation température",0,8,10,False,False,normal,ensoleillé
+2023-10-10 13:09:55,Hôpital de District Bonassama,AB+,28,5,0,23,3.5,24,100.0,normale,Contrôle bactériologique négatif,1,13,10,False,False,normal,ensoleillé
+2023-10-15 22:38:27,Hôpital Militaire,AB+,18,8,0,10,4.1,41,100.0,faible,Parfait pour transfusion immédiate,6,22,10,True,False,normal,pluvieux
+2023-10-18 22:19:46,Hôpital de District Bonassama,AB+,41,9,0,32,3.5,15,97.2,normale,"Excellent état, conservation parfaite",2,22,10,False,False,normal,pluvieux
+2023-10-23 15:43:47,Hôpital Laquintinie,AB+,52,10,0,42,3.2,5,100.0,normale,Parfait pour transfusion immédiate,0,15,10,False,False,normal,pluvieux
+2023-10-25 00:47:38,Hôpital Laquintinie,AB+,29,9,0,20,3.6,12,100.0,normale,Attention: proche expiration,2,0,10,False,False,normal,nuageux
+2023-10-25 21:25:22,Clinique des Spécialités,AB+,62,6,0,56,4.5,13,94.3,normale,"État satisfaisant, contrôle qualité OK",2,21,10,False,False,normal,pluvieux
+2023-10-28 07:58:49,Clinique des Spécialités,AB+,33,4,0,29,3.7,6,95.2,normale,Hémoglobine dans les normes,5,7,10,True,False,normal,pluvieux
+2023-10-28 10:38:33,Hôpital de District Bonassama,AB+,36,10,0,26,3.1,2,80.1,normale,"Bon état général, légère variation température",5,10,10,True,False,normal,ensoleillé
+2023-10-28 15:08:55,Hôpital Laquintinie,AB+,33,5,0,28,3.6,17,100.0,normale,Hémoglobine dans les normes,5,15,10,True,False,normal,ensoleillé
+2023-10-28 17:18:11,Hôpital Militaire,AB+,24,8,19,35,4.9,1,59.4,attention,"Bon état général, légère variation température",5,17,10,True,False,normal,nuageux
+2023-10-30 16:13:51,Hôpital Militaire,AB+,95,9,21,107,3.4,14,100.0,normale,Contrôle bactériologique négatif,0,16,10,False,False,normal,orageux
+2023-10-31 02:40:07,Hôpital Général Douala,AB+,21,7,0,14,3.0,6,98.3,faible,Parfait pour transfusion immédiate,1,2,10,False,False,normal,ensoleillé
+2023-11-02 21:05:55,Hôpital Général Douala,AB+,60,8,23,75,3.4,10,92.9,normale,Hémoglobine dans les normes,3,21,11,False,False,normal,orageux
+2023-11-07 10:53:49,Clinique des Spécialités,AB+,45,9,0,36,3.6,24,99.6,normale,Urgent: vérifier température stockage,1,10,11,False,False,normal,nuageux
+2023-11-08 09:48:16,Hôpital Militaire,AB+,47,5,0,42,4.1,5,100.0,normale,Contrôle bactériologique négatif,2,9,11,False,False,normal,ensoleillé
+2023-11-10 10:28:32,Hôpital Militaire,AB+,50,2,15,63,3.8,44,100.0,normale,Urgent: vérifier température stockage,4,10,11,False,False,campagne_don,pluvieux
+2023-11-13 10:22:51,Hôpital Militaire,AB+,41,7,0,34,3.7,22,99.0,normale,"État satisfaisant, contrôle qualité OK",0,10,11,False,False,normal,pluvieux
+2023-11-13 22:21:48,Hôpital Général Douala,AB+,65,9,0,56,3.9,13,100.0,normale,"Excellent état, conservation parfaite",0,22,11,False,False,normal,pluvieux
+2023-11-14 07:58:15,Clinique des Spécialités,AB+,36,7,0,29,3.5,19,100.0,normale,Urgent: vérifier température stockage,1,7,11,False,False,normal,nuageux
+2023-11-17 09:12:02,Hôpital de District Bonassama,AB+,55,12,0,43,3.4,3,84.5,normale,Urgent: vérifier température stockage,4,9,11,False,False,normal,ensoleillé
+2023-11-18 19:32:54,Hôpital de District Bonassama,AB+,38,3,17,52,4.8,7,97.3,normale,"État satisfaisant, contrôle qualité OK",5,19,11,True,False,normal,nuageux
+2023-11-20 06:47:21,Centre Médical d'Excellence,AB+,31,7,0,24,3.8,19,98.3,normale,"Bon état général, légère variation température",0,6,11,False,False,normal,ensoleillé
+2023-11-24 22:02:45,Centre Médical d'Excellence,AB+,25,8,19,36,3.8,6,100.0,normale,"Excellent état, conservation parfaite",4,22,11,False,False,normal,pluvieux
+2023-11-30 12:23:03,Clinique des Spécialités,AB+,39,3,0,36,3.0,42,99.4,normale,"Excellent état, conservation parfaite",3,12,11,False,False,normal,pluvieux
+2023-12-01 11:55:57,Hôpital de District Bonassama,AB+,99,8,0,91,3.9,15,94.8,normale,Contrôle bactériologique négatif,4,11,12,False,True,normal,pluvieux
+2023-12-08 14:03:09,Centre Médical d'Excellence,AB+,43,5,0,38,3.8,6,95.7,normale,"Bon état général, légère variation température",4,14,12,False,True,normal,ensoleillé
+2023-12-11 21:49:19,Hôpital Militaire,AB+,71,7,0,64,3.1,20,98.8,normale,"État satisfaisant, contrôle qualité OK",0,21,12,False,True,normal,ensoleillé
+2023-12-13 11:36:17,Hôpital Général Douala,AB+,74,8,0,66,3.6,13,98.0,normale,Urgent: vérifier température stockage,2,11,12,False,True,normal,pluvieux
+2023-12-14 22:49:30,Hôpital Laquintinie,AB+,55,10,0,45,3.9,12,100.0,normale,Hémoglobine dans les normes,3,22,12,False,True,normal,orageux
+2023-12-16 09:45:03,Clinique des Spécialités,AB+,63,9,0,54,4.0,1,67.4,attention,"Bon état général, légère variation température",5,9,12,True,True,normal,pluvieux
+2023-12-16 21:12:51,Hôpital Général Douala,AB+,33,10,0,23,5.0,17,97.2,normale,"Bon état général, légère variation température",5,21,12,True,True,normal,ensoleillé
+2023-12-17 00:14:59,Hôpital de District Bonassama,AB+,21,11,0,10,3.7,19,100.0,faible,Contrôle bactériologique négatif,6,0,12,True,True,normal,pluvieux
+2023-12-19 07:12:30,Clinique des Spécialités,AB+,65,16,25,74,3.7,11,100.0,normale,Urgent: vérifier température stockage,1,7,12,False,True,normal,nuageux
+2023-12-19 16:47:16,Centre Médical d'Excellence,AB+,45,17,0,28,4.1,23,100.0,normale,"État satisfaisant, contrôle qualité OK",1,16,12,False,True,normal,ensoleillé
+2023-12-20 04:18:38,Centre Médical d'Excellence,AB+,23,13,23,33,3.9,32,94.2,normale,"Bon état général, légère variation température",2,4,12,False,True,normal,ensoleillé
+2023-12-24 21:13:32,Hôpital Laquintinie,AB+,36,7,0,29,5.0,9,100.0,normale,"Excellent état, conservation parfaite",6,21,12,True,True,normal,orageux
+2023-12-31 03:56:17,Hôpital de District Bonassama,AB+,25,9,0,16,4.3,9,100.0,faible,"Excellent état, conservation parfaite",6,3,12,True,True,normal,ensoleillé

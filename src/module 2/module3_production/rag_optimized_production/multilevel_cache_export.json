@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "export_date": "2025-08-01T16:00:52.880682",
+    "cache_version": "3.0.0",
+    "objective": "Objectif 12 - Cache intelligent multi-niveaux"
+  },
+  "configuration": {
+    "l1_size_mb": 64,
+    "l2_size_mb": 128,
+    "l3_size_mb": 256,
+    "default_ttl_seconds": 1800,
+    "compression_enabled": true,
+    "auto_promotion": true
+  },
+  "statistics": {
+    "global": {
+      "total_requests": 14,
+      "l1_hits": 13,
+      "l2_hits": 0,
+      "l3_hits": 0,
+      "total_misses": 1,
+      "promotions": 0,
+      "average_latency_ms": 0.0,
+      "l1_hit_rate": 0.9285714285714286,
+      "l2_hit_rate": 0.0,
+      "l3_hit_rate": 0.0,
+      "total_hit_rate": 0.9285714285714286,
+      "miss_rate": 0.07142857142857142
+    },
+    "l1": {
+      "level": 

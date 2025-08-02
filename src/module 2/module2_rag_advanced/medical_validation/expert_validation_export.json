@@ -1,0 +1,202 @@
+{
+  "experts": {
+    "expert_001": {
+      "id": "expert_001",
+      "name": "Dr. Marie Dubois",
+      "specialties": [
+        "cardiologie",
+        "médecine interne"
+      ],
+      "expertise_level": "senior_specialist",
+      "institution": "Hôpital Général de Douala",
+      "credentials": [
+        "MD",
+        "PhD",
+        "FESC"
+      ],
+      "years_experience": 15,
+      "validation_count": 2,
+      "consensus_rate": 0.85,
+      "response_time_avg": 2.5,
+      "active": true
+    },
+    "expert_002": {
+      "id": "expert_002",
+      "name": "Prof. Jean-Claude Mbarga",
+      "specialties": [
+        "pédiatrie",
+        "néonatologie"
+      ],
+      "expertise_level": "professor",
+      "institution": "Université de Douala",
+      "credentials": [
+        "MD",
+        "PhD",
+        "FAAP"
+      ],
+      "years_experience": 25,
+      "validation_count": 0,
+      "consensus_rate": 0.92,
+      "response_time_avg": 1.8,
+      "active": true
+    },
+    "expert_003": {
+      "id": "expert_003",
+      "name": "Dr. Fatima Al-Hassan",
+      "specialties": [
+        "gynécologie",
+        "obstétrique"
+      ],
+      "expertise_level": "specialist",
+      "institution": "Centre Médical Spécialisé",
+      "credentials": [
+        "MD",
+        "FRCOG"
+      ],
+      "years_experience": 12,
+      "validation_count": 0,
+      "consensus_rate": 0.78,
+      "response_time_avg": 3.2,
+      "active": true
+    },
+    "expert_004": {
+      "id": "expert_004",
+      "name": "Dr. Paul Nguema",
+      "specialties": [
+        "chirurgie",
+        "traumatologie"
+      ],
+      "expertise_level": "department_head",
+      "institution": "Hôpital Général de Douala",
+      "credentials": [
+        "MD",
+        "FRCS"
+      ],
+      "years_experience": 20,
+      "validation_count": 0,
+      "consensus_rate": 0.88,
+      "response_time_avg": 2.1,
+      "active": true
+    },
+    "expert_005": {
+      "id": "expert_005",
+      "name": "Dr. Aminata Sow",
+      "specialties": [
+        "médecine tropicale",
+        "infectiologie"
+      ],
+      "expertise_level": "senior_specialist",
+      "institution": "Institut de Recherche Médicale",
+      "credentials": [
+        "MD",
+        "DTM&H",
+        "PhD"
+      ],
+      "years_experience": 18,
+      "validation_count": 2,
+      "consensus_rate": 0.91,
+      "response_time_avg": 1.9,
+      "active": true
+    }
+  },
+  "validation_requests": {
+    "def12d9c-1525-44b9-90f4-f6cc5804d6cf": {
+      "id": "def12d9c-1525-44b9-90f4-f6cc5804d6cf",
+      "content_type": "protocol",
+      "requester": "Dr. System",
+      "priority": 2,
+      "language": "fr",
+      "specialties_required": [
+        "médecine tropicale",
+        "infectiologie"
+      ],
+      "min_experts": 2,
+      "created_at": "2025-08-01T14:26:53.592646"
+    },
+    "e4be9d9d-12f0-4717-bcef-e4e6b764c717": {
+      "id": "e4be9d9d-12f0-4717-bcef-e4e6b764c717",
+      "content_type": "treatment",
+      "requester": "Test User",
+      "priority": 1,
+      "language": "fr",
+      "specialties_required": [],
+      "min_experts": 2,
+      "created_at": "2025-08-01T14:26:53.595644"
+    }
+  },
+  "validation_results": {
+    "def12d9c-1525-44b9-90f4-f6cc5804d6cf": {
+      "request_id": "def12d9c-1525-44b9-90f4-f6cc5804d6cf",
+      "status": "approved",
+      "consensus_score": 0.85,
+      "final_score": 0.85,
+      "confidence_interval": [
+        0.82,
+        0.88
+      ],
+      "agreement_metrics": {
+        "agreement_percentage": 1.0,
+        "variance": 0.0009000000000000016,
+        "cohen_kappa": 0.0,
+        "inter_rater_reliability": 0.9991
+      },
+      "recommendations": [
+        "Ajouter posologies pédiatriques",
+        "Préciser critères d'hospitalisation",
+        "Inclure protocole paludisme grave",
+        "Ajouter section interactions médicamenteuses",
+        "Préciser surveillance cardiaque",
+        "Inclure alternatives thérapeutiques"
+      ],
+      "required_changes": [],
+      "approved_by": [
+        "expert_005",
+        "expert_001"
+      ],
+      "rejected_by": [],
+      "completion_time": "2025-08-01T14:26:53.593646"
+    },
+    "e4be9d9d-12f0-4717-bcef-e4e6b764c717": {
+      "request_id": "e4be9d9d-12f0-4717-bcef-e4e6b764c717",
+      "status": "rejected",
+      "consensus_score": 0.275,
+      "final_score": 0.275,
+      "confidence_interval": [
+        0.25,
+        0.3
+      ],
+      "agreement_metrics": {
+        "agreement_percentage": 1.0,
+        "variance": 0.0006249999999999997,
+        "cohen_kappa": 0.0,
+        "inter_rater_reliability": 0.999375
+      },
+      "recommendations": [
+        "Réécriture complète nécessaire",
+        "Ajouter posologies précises",
+        "Inclure contre-indications"
+      ],
+      "required_changes": [],
+      "approved_by": [],
+      "rejected_by": [
+        "expert_005",
+        "expert_001"
+      ],
+      "completion_time": "2025-08-01T14:26:53.596643"
+    }
+  },
+  "report": {
+    "summary": {
+      "total_requests": 2,
+      "completed_validations": 2,
+      "completion_rate": 1.0,
+      "average_consensus_score": 0.5625,
+      "average_completion_time_hours": 2.776388888888889e-07
+    },
+    "status_distribution": {
+      "approved": 1,
+      "rejected": 1
+    },
+    "expert_statistics": {
+      "expert_001": {
+        "expert": 

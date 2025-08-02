@@ -1,0 +1,18 @@
+[core]
+    analytics = false
+    autostage = true
+    remote = storage
+
+['remote "storage"']
+    url = s3://blood-stock-ml-data
+    # Alternative: url = gs://blood-stock-ml-data
+    # Alternative: url = azure://blood-stock-ml-data
+    
+['remote "models"']
+    url = s3://blood-stock-ml-models
+    
+[state]
+    save_dvc_files = false
+    
+[machine]
+    region = us-east-1

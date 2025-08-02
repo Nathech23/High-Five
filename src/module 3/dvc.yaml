@@ -1,0 +1,108 @@
+stages:
+  generate_data:
+    cmd: python src/data_generation/generate_synthetic_data.py
+    deps:
+    - src/data_generation/generate_synthetic_data.py
+    outs:
+    - data/synthetic/blood_stock_data.csv
+    - data/synthetic/
+    metrics:
+    - data/synthetic/data_stats.json
+    
+  preprocess_data:
+    cmd: python src/preprocessing/data_preprocessor.py
+    deps:
+    - src/preprocessing/data_preprocessor.py
+    - data/synthetic/blood_stock_data.csv
+    outs:
+    - data/processed/train.csv
+    - data/processed/val.csv
+    - data/processed/test.csv
+    - models/preprocessor/
+    
+  train_arima:
+    cmd: python src/training/arima_model.py
+    deps:
+    - src/training/arima_model.py
+    - data/processed/train.csv
+    - data/processed/val.csv
+    outs:
+    - models/arima/
+    metrics:
+    - models/arima/metrics.json
+    
+  train_xgboost:
+    cmd: python src/training/xgboost_model.py
+    deps:
+    - src/training/xgboost_model.py
+    - data/processed/train.csv
+    - data/processed/val.csv
+    - data/processed/test.csv
+    - models/preprocessor/
+    outs:
+    - models/xgboost/
+    metrics:
+    - models/xgboost/metrics.json
+    
+  train_lstm:
+    cmd: python src/training/lstm_model.py
+    deps:
+    - src/training/lstm_model.py
+    - data/processed/train.csv
+    - data/processed/val.csv
+    - data/processed/test.csv
+    outs:
+    - models/lstm/
+    metrics:
+    - models/lstm/metrics.json
+    
+  train_ensemble:
+    cmd: python src/training/ensemble_model.py
+    deps:
+    - src/training/ensemble_model.py
+    - data/processed/train.csv
+    - data/processed/val.csv
+    - data/processed/test.csv
+    - models/preprocessor/
+    - models/arima/
+    - models/xgboost/
+    - models/lstm/
+    outs:
+    - models/ensemble/
+    metrics:
+    - models/ensemble/metrics.json
+    
+  llm_analysis:
+    cmd: python src/llm_integration/llm_analyzer.py
+    deps:
+    - src/llm_integration/llm_analyzer.py
+    - data/synthetic/blood_stock_data.csv
+    outs:
+    - data/llm_analysis/
+    - models/llm/
+    metrics:
+    - data/llm_analysis/analysis_stats.json
+    
+  evaluate_models:
+    cmd: python scripts/evaluate_all_models.py
+    deps:
+    - scripts/evaluate_all_models.py
+    - data/processed/test.csv
+    - models/ensemble/
+    - models/xgboost/
+    - models/lstm/
+    - models/arima/
+    metrics:
+    - evaluation/model_comparison.json
+    plots:
+    - evaluation/model_comparison.png
+    - evaluation/feature_importance.png
+    
+  deploy_model:
+    cmd: python scripts/deploy_model.py
+    deps:
+    - scripts/deploy_model.py
+    - models/ensemble/
+    - src/api/
+    outs:
+    - deployment/model_service/

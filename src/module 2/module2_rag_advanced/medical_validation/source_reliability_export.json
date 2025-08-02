@@ -1,0 +1,241 @@
+{
+  "reliability_history": {
+    "f8ea9f29b335": [
+      {
+        "source_id": "f8ea9f29b335",
+        "overall_score": 0.8712677777777778,
+        "reliability_level": "high",
+        "component_scores": {
+          "journal_impact": 1.0,
+          "author_credentials": 0.99,
+          "peer_review_status": 1.0,
+          "content_quality": 0.4017851851851852,
+          "citation_count": 1.0,
+          "recency": 0.8,
+          "methodology": 0.7
+        },
+        "confidence_interval": [
+          0.6851557384432695,
+          0.9982114573239261
+        ],
+        "risk_factors": [],
+        "strengths": [
+          "Publication dans journal à comité de lecture",
+          "Journal à fort impact factor",
+          "Auteurs experts reconnus: 2",
+          "DOI disponible",
+          "Référencé dans PubMed"
+        ],
+        "recommendations": [
+          "Améliorer la qualité du contenu"
+        ],
+        "last_updated": "2025-08-01T14:27:25.240474"
+      }
+    ],
+    "cb938c545ff6": [
+      {
+        "source_id": "cb938c545ff6",
+        "overall_score": 0.4971938603696099,
+        "reliability_level": "low",
+        "component_scores": {
+          "journal_impact": 0.31200000000000006,
+          "author_credentials": 0.8,
+          "peer_review_status": 1.0,
+          "content_quality": 0.3562,
+          "citation_count": 0.027638603696098562,
+          "recency": 0.4,
+          "methodology": 0.3
+        },
+        "confidence_interval": [
+          0.22977751096362772,
+          0.6833192329495433
+        ],
+        "risk_factors": [
+          "Contenu très court"
+        ],
+        "strengths": [
+          "Publication dans journal à comité de lecture"
+        ],
+        "recommendations": [
+          "Privilégier des sources de journaux à plus fort impact",
+          "Améliorer la qualité du contenu",
+          "Rechercher des sources plus récentes"
+        ],
+        "last_updated": "2025-08-01T14:27:25.242477"
+      }
+    ],
+    "2317d125f9a2": [
+      {
+        "source_id": "2317d125f9a2",
+        "overall_score": 0.22843,
+        "reliability_level": "very_low",
+        "component_scores": {
+          "journal_impact": 0.3,
+          "author_credentials": 0.2,
+          "peer_review_status": 0.1,
+          "content_quality": 0.1562,
+          "citation_count": 0.3,
+          "recency": 0.3,
+          "methodology": 0.3
+        },
+        "confidence_interval": [
+          0.1788483319028792,
+          0.29435166809712077
+        ],
+        "risk_factors": [
+          "Auteurs non spécifiés",
+          "Date de publication inconnue",
+          "Journal non spécifié",
+          "Biais commercial détecté",
+          "Contenu très court"
+        ],
+        "strengths": [],
+        "recommendations": [
+          "Privilégier des sources de journaux à plus fort impact",
+          "Vérifier les crédibilités des auteurs",
+          "Améliorer la qualité du contenu",
+          "Rechercher des sources plus récentes",
+          "Vérifier l'indépendance de la source"
+        ],
+        "last_updated": "2025-08-01T14:27:25.242477"
+      }
+    ],
+    "dda07dbbcb56": [
+      {
+        "source_id": "dda07dbbcb56",
+        "overall_score": 0.42042761122518824,
+        "reliability_level": "low",
+        "component_scores": {
+          "journal_impact": 0.3,
+          "author_credentials": 0.6000000000000001,
+          "peer_review_status": 0.3,
+          "content_quality": 0.3556,
+          "citation_count": 0.42087611225188226,
+          "recency": 0.8,
+          "methodology": 0.3
+        },
+        "confidence_interval": [
+          0.3077217604508734,
+          0.5712714144782358
+        ],
+        "risk_factors": [
+          "Journal non spécifié",
+          "Contenu très court"
+        ],
+        "strengths": [],
+        "recommendations": [
+          "Privilégier des sources de journaux à plus fort impact",
+          "Améliorer la qualité du contenu"
+        ],
+        "last_updated": "2025-08-01T14:27:25.245000"
+      }
+    ]
+  },
+  "journal_database": {
+    "the lancet": {
+      "name": "The Lancet",
+      "impact_factor": 79.3,
+      "h_index": 1050,
+      "quartile": "Q1",
+      "peer_reviewed": true,
+      "indexing_databases": [
+        "PubMed",
+        "Scopus",
+        "Web of Science"
+      ],
+      "specialty_areas": [
+        "General Medicine",
+        "Global Health"
+      ],
+      "publisher": "Elsevier"
+    },
+    "new england journal of medicine": {
+      "name": "New England Journal of Medicine",
+      "impact_factor": 91.2,
+      "h_index": 1200,
+      "quartile": "Q1",
+      "peer_reviewed": true,
+      "indexing_databases": [
+        "PubMed",
+        "Scopus",
+        "Web of Science"
+      ],
+      "specialty_areas": [
+        "General Medicine",
+        "Clinical Research"
+      ],
+      "publisher": "Massachusetts Medical Society"
+    },
+    "nature medicine": {
+      "name": "Nature Medicine",
+      "impact_factor": 53.4,
+      "h_index": 850,
+      "quartile": "Q1",
+      "peer_reviewed": true,
+      "indexing_databases": [
+        "PubMed",
+        "Scopus",
+        "Nature Index"
+      ],
+      "specialty_areas": [
+        "Biomedical Research",
+        "Translational Medicine"
+      ],
+      "publisher": "Nature Publishing Group"
+    },
+    "bulletin de l'organisation mondiale de la santé": {
+      "name": "Bulletin de l'Organisation Mondiale de la Santé",
+      "impact_factor": 6.8,
+      "h_index": 180,
+      "quartile": "Q1",
+      "peer_reviewed": true,
+      "indexing_databases": [
+        "PubMed",
+        "Scopus"
+      ],
+      "specialty_areas": [
+        "Public Health",
+        "Global Health"
+      ],
+      "publisher": "World Health Organization"
+    },
+    "médecine tropicale": {
+      "name": "Médecine Tropicale",
+      "impact_factor": 1.2,
+      "h_index": 45,
+      "quartile": "Q3",
+      "peer_reviewed": true,
+      "indexing_databases": [
+        "PubMed",
+        "African Index Medicus"
+      ],
+      "specialty_areas": [
+        "Tropical Medicine",
+        "Infectious Diseases"
+      ],
+      "publisher": "Société de Pathologie Exotique"
+    }
+  },
+  "report": {
+    "summary": {
+      "total_sources_evaluated": 4,
+      "average_reliability_score": 0.504329812343144,
+      "reliability_distribution": {
+        "high": 1,
+        "low": 2,
+        "very_low": 1
+      }
+    },
+    "quality_metrics": {
+      "high_quality_sources": 1,
+      "low_quality_sources": 3,
+      "quality_ratio": 0.25
+    },
+    "recommendations": [
+      "Améliorer la qualité globale des sources",
+      "Privilégier des sources de meilleure qualité",
+      "Inclure des sources de très haute qualité"
+    ]
+  },
+  "export_timestamp": "2025-08-01T14:27:25.246007"
+}

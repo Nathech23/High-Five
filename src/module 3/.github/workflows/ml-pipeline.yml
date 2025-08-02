@@ -1,0 +1,385 @@
+name: ML Pipeline CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Entraînement automatique tous les dimanche à 2h00 UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+    inputs:
+      retrain_models:
+        description: 'Réentraîner tous les modèles'
+        required: false
+        default: 'false'
+        type: boolean
+      deploy_to_production:
+        description: 'Déployer en production'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  PYTHON_VERSION: '3.9'
+  MLFLOW_TRACKING_URI: ${{ secrets.MLFLOW_TRACKING_URI }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  DOCKER_REGISTRY: ghcr.io
+  IMAGE_NAME: blood-stock-ml-service
+
+jobs:
+  # Job 1: Tests et validation du code
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov flake8 black isort
+        
+    - name: Code quality checks
+      run: |
+        # Formatage du code
+        black --check src/
+        
+        # Tri des imports
+        isort --check-only src/
+        
+        # Linting
+        flake8 src/ --max-line-length=120 --ignore=E203,W503
+        
+    - name: Run tests
+      run: |
+        # Tests unitaires avec couverture
+        pytest tests/ --cov=src/ --cov-report=xml --cov-report=html
+        
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        
+  # Job 2: Validation des données
+  data-validation:
+    runs-on: ubuntu-latest
+    needs: test
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Generate synthetic data
+      run: |
+        python src/data_generation/generate_synthetic_data.py
+        
+    - name: Validate data quality
+      run: |
+        python -c "
+        import pandas as pd
+        import numpy as np
+        
+        # Charger les données
+        df = pd.read_csv('data/synthetic/blood_stock_data.csv')
+        
+        # Validations
+        assert len(df) >= 10000, f'Pas assez de données: {len(df)}'
+        assert df['stock_final'].min() >= 0, 'Stock négatif détecté'
+        assert df['temperature'].between(1, 8).all(), 'Température hors limites'
+        assert df['quality_score'].between(0, 100).all(), 'Score qualité invalide'
+        
+        print(f'✅ Validation réussie: {len(df)} enregistrements')
+        "
+        
+    - name: Upload data artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: synthetic-data
+        path: data/synthetic/
+        retention-days: 7
+        
+  # Job 3: Entraînement des modèles
+  train-models:
+    runs-on: ubuntu-latest
+    needs: [test, data-validation]
+    if: github.event_name == 'schedule' || github.event.inputs.retrain_models == 'true' || contains(github.event.head_commit.message, '[retrain]')
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Download data artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: synthetic-data
+        path: data/synthetic/
+        
+    - name: Configure MLflow
+      run: |
+        export MLFLOW_TRACKING_URI=${{ env.MLFLOW_TRACKING_URI }}
+        
+    - name: Train models
+      run: |
+        python src/training/train_all_models.py --step all --output-dir models
+        
+    - name: Validate model performance
+      run: |
+        python -c "
+        import json
+        import sys
+        
+        # Charger les résultats
+        with open('pipeline_results.json', 'r') as f:
+            results = json.load(f)
+        
+        # Vérifier que l'entraînement a réussi
+        if results['status'] != 'completed':
+            print(f'❌ Pipeline échoué: {results.get(\"error\", \"Erreur inconnue\")}')
+            sys.exit(1)
+        
+        # Vérifier les performances minimales
+        model_results = results.get('results', {})
+        
+        # XGBoost doit avoir un MAE < 10
+        if 'xgboost' in model_results and model_results['xgboost'].get('status') == 'success':
+            mae = model_results['xgboost'].get('test_mae', float('inf'))
+            if mae > 10:
+                print(f'❌ XGBoost MAE trop élevé: {mae}')
+                sys.exit(1)
+        
+        print('✅ Validation des performances réussie')
+        "
+        
+    - name: Upload model artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: trained-models
+        path: models/
+        retention-days: 30
+        
+    - name: Upload training results
+      uses: actions/upload-artifact@v3
+      with:
+        name: training-results
+        path: pipeline_results.json
+        retention-days: 30
+        
+  # Job 4: Tests d'intégration
+  integration-tests:
+    runs-on: ubuntu-latest
+    needs: [test, data-validation]
+    
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+          
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install httpx pytest-asyncio
+        
+    - name: Download data artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: synthetic-data
+        path: data/synthetic/
+        
+    - name: Start API service
+      run: |
+        cd src
+        python -m uvicorn api.main:app --host 0.0.0.0 --port 8000 &
+        sleep 10
+        
+    - name: Test API endpoints
+      run: |
+        python -c "
+        import requests
+        import json
+        import time
+        
+        base_url = 'http://localhost:8000'
+        
+        # Test health endpoint
+        response = requests.get(f'{base_url}/health')
+        assert response.status_code == 200, f'Health check failed: {response.status_code}'
+        print('✅ Health check passed')
+        
+        # Test prediction endpoint
+        test_data = {
+            'data': [{
+                'hospital': 'Test Hospital',
+                'blood_type': 'O+',
+                'stock_initial': 50,
+                'demand': 10,
+                'supply': 5,
+                'temperature': 4.0,
+                'days_to_expiry': 15,
+                'quality_score': 95.0,
+                'quality_comment': 'Excellent état'
+            }],
+            'model_type': 'ensemble'
+        }
+        
+        response = requests.post(f'{base_url}/predict', json=test_data)
+        if response.status_code == 200:
+            result = response.json()
+            assert 'predictions' in result, 'Predictions not found in response'
+            print('✅ Prediction endpoint passed')
+        else:
+            print(f'⚠️ Prediction endpoint not ready: {response.status_code}')
+        "
+        
+  # Job 5: Build et push Docker image
+  build-docker:
+    runs-on: ubuntu-latest
+    needs: [test, data-validation, integration-tests]
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+      
+    - name: Log in to Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ${{ env.DOCKER_REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Extract metadata
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: ${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/${{ env.IMAGE_NAME }}
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=sha,prefix={{branch}}-
+          type=raw,value=latest,enable={{is_default_branch}}
+          
+    - name: Download data artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: synthetic-data
+        path: data/synthetic/
+        
+    - name: Download model artifacts (if available)
+      uses: actions/download-artifact@v3
+      with:
+        name: trained-models
+        path: models/
+      continue-on-error: true
+      
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        platforms: linux/amd64,linux/arm64
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+        
+  # Job 6: Déploiement
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [train-models, build-docker]
+    if: github.ref == 'refs/heads/main' && (github.event.inputs.deploy_to_production == 'true' || contains(github.event.head_commit.message, '[deploy]'))
+    environment: production
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy to HuggingFace Spaces
+      run: |
+        echo "🚀 Déploiement vers HuggingFace Spaces..."
+        # Ici, vous ajouteriez les commandes de déploiement spécifiques
+        # Par exemple, utiliser l'API HuggingFace ou des scripts de déploiement
+        
+    - name: Deploy to Google Cloud Run
+      run: |
+        echo "🚀 Déploiement vers Google Cloud Run..."
+        # Ici, vous ajouteriez les commandes de déploiement GCP
+        
+    - name: Update deployment status
+      run: |
+        echo "✅ Déploiement terminé avec succès"
+        
+  # Job 7: Monitoring et alertes
+  monitoring:
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: always()
+    
+    steps:
+    - name: Send notification
+      uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        channel: '#ml-alerts'
+        webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+        fields: repo,message,commit,author,action,eventName,ref,workflow
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+      if: always()

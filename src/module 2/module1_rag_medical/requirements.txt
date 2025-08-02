@@ -1,0 +1,155 @@
+# Requirements pour le Module RAG Médical
+# Système de Récupération et Génération Augmentée pour le domaine médical
+
+# === FRAMEWORKS PRINCIPAUX ===
+# Traitement du langage naturel et embeddings
+sentence-transformers>=2.2.2
+transformers>=4.21.0
+torch>=1.12.0
+numpy>=1.21.0
+scipy>=1.9.0
+
+# Traitement de texte avancé
+spacy>=3.4.0
+nltk>=3.7
+textblob>=0.17.1
+langdetect>=1.0.9
+
+# === RECHERCHE ET INDEXATION ===
+# Recherche vectorielle et similarité
+faiss-cpu>=1.7.2  # ou faiss-gpu pour GPU
+scikit-learn>=1.1.0
+annoy>=1.17.0
+
+# Recherche textuelle
+whoosh>=2.7.4
+elasticsearch>=8.0.0  # optionnel
+
+# === TRAITEMENT DE DONNÉES ===
+# Manipulation de données
+pandas>=1.4.0
+numpy>=1.21.0
+
+# Formats de fichiers
+openpyxl>=3.0.10
+pyarrow>=8.0.0
+
+# === ÉVALUATION ET MÉTRIQUES ===
+# Métriques de performance
+scikit-learn>=1.1.0
+seaborn>=0.11.0
+matplotlib>=3.5.0
+
+# === OPTIMISATION ===
+# Optimisation et recherche de paramètres
+optuna>=3.0.0  # optionnel pour optimisation avancée
+hyperopt>=0.2.7  # optionnel
+
+# === UTILITAIRES ===
+# Configuration et logging
+pyyaml>=6.0
+toml>=0.10.2
+loguru>=0.6.0  # optionnel, alternative à logging
+
+# Gestion des chemins et fichiers
+pathlib2>=2.3.7  # pour compatibilité Python < 3.4
+tqdm>=4.64.0
+
+# === PARALLÉLISATION ===
+# Traitement parallèle
+joblib>=1.1.0
+multiprocessing-logging>=0.3.4
+
+# === CACHE ET PERSISTANCE ===
+# Cache et sérialisation
+pickle5>=0.0.12  # pour Python < 3.8
+dill>=0.3.5
+joblib>=1.1.0
+
+# Base de données (optionnel)
+sqlalchemy>=1.4.0  # optionnel
+
+# === VALIDATION ET TESTS ===
+# Tests unitaires
+pytest>=7.0.0
+pytest-asyncio>=0.19.0
+pytest-cov>=3.0.0
+
+# Validation de données
+pydantic>=1.9.0
+voluptuous>=0.13.1  # optionnel
+
+# === MONITORING ET PROFILING ===
+# Monitoring de performance
+psutil>=5.9.0
+memory-profiler>=0.60.0  # optionnel
+line-profiler>=3.5.0  # optionnel
+
+# === FORMATS D'EXPORT ===
+# Export de rapports
+jinja2>=3.1.0
+markdown>=3.4.0
+weasyprint>=56.0  # optionnel pour PDF
+
+# === DÉVELOPPEMENT ===
+# Outils de développement
+black>=22.0.0  # formatage de code
+flake8>=4.0.0  # linting
+mypy>=0.971  # vérification de types
+isort>=5.10.0  # tri des imports
+
+# Documentation
+sphinx>=5.0.0  # optionnel
+sphinx-rtd-theme>=1.0.0  # optionnel
+
+# === DÉPENDANCES SPÉCIALISÉES MÉDICALES ===
+# Traitement de texte médical (optionnel)
+# scispacy>=0.5.0  # décommentez si nécessaire
+# medspacy>=1.0.0  # décommentez si nécessaire
+
+# === MODÈLES SPACY ===
+# Modèles de langue française pour spaCy
+# Installer avec: python -m spacy download fr_core_news_sm
+# fr-core-news-sm>=3.4.0
+
+# === NOTES D'INSTALLATION ===
+# 
+# Installation recommandée :
+# 1. Créer un environnement virtuel :
+#    python -m venv venv_rag_medical
+#    source venv_rag_medical/bin/activate  # Linux/Mac
+#    venv_rag_medical\Scripts\activate     # Windows
+#
+# 2. Installer les dépendances :
+#    pip install -r requirements.txt
+#
+# 3. Installer les modèles spaCy :
+#    python -m spacy download fr_core_news_sm
+#    python -m spacy download en_core_web_sm  # si support anglais
+#
+# 4. Télécharger les données NLTK :
+#    python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+#
+# === VERSIONS ALTERNATIVES ===
+# Pour GPU (remplacer faiss-cpu par faiss-gpu) :
+# faiss-gpu>=1.7.2
+# torch>=1.12.0+cu116  # version CUDA appropriée
+#
+# Pour environnements contraints (versions minimales) :
+# sentence-transformers>=2.0.0
+# transformers>=4.15.0
+# torch>=1.10.0
+# numpy>=1.19.0
+# scikit-learn>=1.0.0
+# pandas>=1.3.0
+#
+# === DÉPENDANCES SYSTÈME ===
+# Certaines dépendances peuvent nécessiter des packages système :
+# - Ubuntu/Debian: sudo apt-get install python3-dev build-essential
+# - CentOS/RHEL: sudo yum install python3-devel gcc gcc-c++
+# - Windows: Visual Studio Build Tools
+#
+# === COMPATIBILITÉ ===
+# Python >= 3.8 recommandé
+# Python >= 3.7 minimum
+# Testé sur Python 3.8, 3.9, 3.10, 3.11

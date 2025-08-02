@@ -1,0 +1,191 @@
+{
+  "evidence_sources": {
+    "src_meta_001": {
+      "id": "src_meta_001",
+      "citation": {
+        "authors": [
+          "Dr. Aminata Sow",
+          "Prof. Jean-Claude Mbarga",
+          "Dr. Marie Dubois"
+        ],
+        "title": "Efficacité de l'artéméther-luméfantrine: méta-analyse",
+        "journal": "Cochrane Database of Systematic Reviews",
+        "year": 2024,
+        "doi": "10.1002/14651858.CD012345",
+        "pmid": "38123456",
+        "url": null
+      },
+      "source_type": "peer_reviewed_journal",
+      "study_design": "meta_analysis",
+      "evidence_level": "I",
+      "quality_score": 0.975,
+      "sample_size": 8,
+      "statistical_significance": null,
+      "bias_risk": "unknown"
+    },
+    "src_rct_001": {
+      "id": "src_rct_001",
+      "citation": {
+        "authors": [
+          "Dr. Paul Nguema",
+          "Dr. Fatima Al-Hassan"
+        ],
+        "title": "Efficacité de l'artéméther-luméfantrine: essai randomisé",
+        "journal": "The Lancet",
+        "year": 2023,
+        "doi": "10.1016/S0140-6736(23)00123-4",
+        "pmid": null,
+        "url": null
+      },
+      "source_type": "peer_reviewed_journal",
+      "study_design": "randomized_controlled_trial",
+      "evidence_level": "II",
+      "quality_score": 0.97,
+      "sample_size": 200,
+      "statistical_significance": null,
+      "bias_risk": "unknown"
+    },
+    "src_case_001": {
+      "id": "src_case_001",
+      "citation": {
+        "authors": [
+          "Dr. Martin Dupont"
+        ],
+        "title": "Série de cas: paludisme grave traité par artésunate",
+        "journal": "Médecine Tropicale",
+        "year": 2025,
+        "doi": null,
+        "pmid": null,
+        "url": null
+      },
+      "source_type": "peer_reviewed_journal",
+      "study_design": "case_series",
+      "evidence_level": "IV",
+      "quality_score": 0.805,
+      "sample_size": null,
+      "statistical_significance": null,
+      "bias_risk": "unknown"
+    }
+  },
+  "documentation_reports": {
+    "meta_001": {
+      "content_id": "meta_001",
+      "evidence_summary": {
+        "topic": "meta_001",
+        "overall_evidence_level": "I",
+        "strength_of_recommendation": "strong",
+        "quality_of_evidence": "high",
+        "summary_statement": "Preuves de niveau I avec qualité high",
+        "recommendations": [
+          "Recommandation forte basée sur des preuves de haute qualité",
+          "Méta-analyse disponible - preuves synthétisées"
+        ],
+        "limitations": [
+          "Nombre limité de sources",
+          "Tailles d'échantillon limitées"
+        ]
+      },
+      "quality_assessment": {
+        "overall_score": 0.975,
+        "grade": "high",
+        "individual_scores": [
+          0.975
+        ],
+        "source_count": 1,
+        "evidence_levels": [
+          "I"
+        ]
+      },
+      "documentation_date": "2025-08-01T14:24:20.401288",
+      "documenter": "EvidenceDocumenter"
+    },
+    "rct_001": {
+      "content_id": "rct_001",
+      "evidence_summary": {
+        "topic": "rct_001",
+        "overall_evidence_level": "II",
+        "strength_of_recommendation": "strong",
+        "quality_of_evidence": "high",
+        "summary_statement": "Preuves de niveau II avec qualité high",
+        "recommendations": [
+          "Recommandation forte basée sur des preuves de haute qualité",
+          "Essais contrôlés randomisés disponibles"
+        ],
+        "limitations": [
+          "Nombre limité de sources"
+        ]
+      },
+      "quality_assessment": {
+        "overall_score": 0.97,
+        "grade": "high",
+        "individual_scores": [
+          0.97
+        ],
+        "source_count": 1,
+        "evidence_levels": [
+          "II"
+        ]
+      },
+      "documentation_date": "2025-08-01T14:24:20.402291",
+      "documenter": "EvidenceDocumenter"
+    },
+    "case_001": {
+      "content_id": "case_001",
+      "evidence_summary": {
+        "topic": "case_001",
+        "overall_evidence_level": "IV",
+        "strength_of_recommendation": "weak",
+        "quality_of_evidence": "high",
+        "summary_statement": "Preuves de niveau IV avec qualité high",
+        "recommendations": [
+          "Recommandation faible - preuves limitées"
+        ],
+        "limitations": [
+          "Nombre limité de sources",
+          "Inclusion d'études de faible niveau de preuve",
+          "Tailles d'échantillon limitées"
+        ]
+      },
+      "quality_assessment": {
+        "overall_score": 0.805,
+        "grade": "high",
+        "individual_scores": [
+          0.805
+        ],
+        "source_count": 1,
+        "evidence_levels": [
+          "IV"
+        ]
+      },
+      "documentation_date": "2025-08-01T14:24:20.403287",
+      "documenter": "EvidenceDocumenter"
+    }
+  },
+  "statistics": {
+    "total_sources": 3,
+    "total_reports": 3,
+    "evidence_level_distribution": {
+      "I": 1,
+      "II": 1,
+      "III": 0,
+      "IV": 1,
+      "V": 0,
+      "Unknown": 0
+    },
+    "study_design_distribution": {
+      "meta_analysis": 1,
+      "systematic_review": 0,
+      "randomized_controlled_trial": 1,
+      "cohort_study": 0,
+      "case_control_study": 0,
+      "cross_sectional_study": 0,
+      "case_series": 1,
+      "case_report": 0,
+      "expert_opinion": 0,
+      "narrative_review": 0,
+      "guideline": 0,
+      "unknown": 0
+    }
+  },
+  "export_timestamp": "2025-08-01T14:24:20.406288"
+}

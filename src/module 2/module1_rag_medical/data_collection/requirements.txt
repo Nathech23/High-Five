@@ -1,0 +1,123 @@
+# Module 2: Collecte et Préparation des Données Médicales
+# Dépendances Python requises
+
+# === WEB SCRAPING ET COLLECTE ===
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+selenium>=4.15.0
+scrapy>=2.11.0
+lxml>=4.9.0
+html5lib>=1.1
+urllib3>=2.0.0
+
+# === TRAITEMENT DE DOCUMENTS ===
+python-docx>=0.8.11
+PyPDF2>=3.0.0
+pdfplumber>=0.9.0
+python-pptx>=0.6.21
+openpyxl>=3.1.0
+markdown>=3.5.0
+
+# === TRAITEMENT DE TEXTE ET NLP ===
+nltk>=3.8.0
+spacy>=3.7.0
+textblob>=0.17.0
+langdetect>=1.0.9
+fuzzy>=1.2.2
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.21.0
+regex>=2023.10.0
+
+# === TRADUCTION ===
+googletrans>=4.0.0
+translate>=3.6.1
+deep-translator>=1.11.0
+
+# === VALIDATION ET NETTOYAGE ===
+validators>=0.22.0
+bleach>=6.1.0
+html2text>=2020.1.16
+ftfy>=6.1.0
+unidecode>=1.3.0
+
+# === BASE DE DONNÉES ET STOCKAGE ===
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+pandas>=2.1.0
+numpy>=1.24.0
+
+# === CONFIGURATION ET LOGGING ===
+python-dotenv>=1.0.0
+PyYAML>=6.0.0
+toml>=0.10.0
+loguru>=0.7.0
+coloredlogs>=15.0.0
+
+# === UTILITAIRES ===
+tqdm>=4.66.0
+click>=8.1.0
+rich>=13.6.0
+tabulate>=0.9.0
+humanize>=4.8.0
+python-dateutil>=2.8.0
+pytz>=2023.3
+
+# === VALIDATION MÉDICALE ===
+jsonschema>=4.19.0
+cerberus>=1.3.0
+voluptuous>=0.13.0
+
+# === API ET WEB ===
+fastapi>=0.104.0
+uvicorn>=0.24.0
+httpx>=0.25.0
+aiohttp>=3.9.0
+requests-cache>=1.1.0
+
+# === TESTS ===
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+factory-boy>=3.3.0
+responses>=0.23.0
+
+# === FORMATS SPÉCIALISÉS ===
+xml2dict>=0.2.2
+xmltodict>=0.13.0
+jsonlines>=4.0.0
+
+# === MONITORING ET MÉTRIQUES ===
+psutil>=5.9.0
+memory-profiler>=0.61.0
+line-profiler>=4.1.0
+
+# === SÉCURITÉ ===
+cryptography>=41.0.0
+
+# === DÉVELOPPEMENT ===
+black>=23.9.0
+flake8>=6.1.0
+mypy>=1.6.0
+isort>=5.12.0
+pre-commit>=3.5.0
+
+# === FORMATS D'EXPORT ===
+jinja2>=3.1.0
+weasyprint>=60.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.17.0
+
+# === PARALLÉLISATION ===
+joblib>=1.3.0
+
+# === NOTES D'INSTALLATION ===
+# 1. Installer d'abord les dépendances système si nécessaire:
+#    - Pour spaCy: python -m spacy download fr_core_news_sm
+#    - Pour spaCy: python -m spacy download en_core_web_sm
+#    - Pour NLTK: python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
+#
+# 2. Pour installer toutes les dépendances:
+#    pip install -r requirements.txt
+#
+# 3. Python >= 3.8 requis

@@ -1,0 +1,289 @@
+{
+  "metadata": {
+    "export_date": "2025-08-01T15:31:08.227905",
+    "optimizer_version": "3.0.0",
+    "objective": "Objectif 11 - Optimisation latence RAG < 100ms"
+  },
+  "configuration": {
+    "target_latency_ms": 100,
+    "max_latency_ms": 200,
+    "parallel_workers": 4,
+    "enable_async": true,
+    "memory_limit_mb": 512
+  },
+  "current_metrics": {
+    "average_latency_ms": 92.466625,
+    "p50_latency_ms": 93.518,
+    "p95_latency_ms": 96.018,
+    "p99_latency_ms": 96.018,
+    "target_achievement_rate": 1.0,
+    "optimization_effectiveness": 0.0
+  },
+  "optimization_report": {
+    "performance_summary": {
+      "total_queries_analyzed": 8,
+      "target_achievement_rate": 1.0,
+      "average_latency_ms": 92.466625,
+      "p95_latency_ms": 96.018,
+      "target_latency_ms": 100
+    },
+    "latency_distribution": {
+      "excellent": 0,
+      "good": 8,
+      "acceptable": 0,
+      "poor": 0
+    },
+    "strategy_effectiveness": {
+      "result_streaming": {
+        "usage_count": 8,
+        "average_latency_ms": 92.466625,
+        "effectiveness_score": 0.537666875
+      },
+      "memory_optimization": {
+        "usage_count": 8,
+        "average_latency_ms": 92.466625,
+        "effectiveness_score": 0.537666875
+      }
+    },
+    "bottleneck_analysis": {
+      "average_component_times": {
+        "embedding_ms": 0.0,
+        "search_ms": 91.84125065803528,
+        "ranking_ms": 0.0,
+        "post_processing_ms": 0.0
+      },
+      "bottlenecks": [
+        "Recherche vectorielle trop lente"
+      ],
+      "recommendations": [
+        "Optimiser l'index vectoriel ou réduire la dimensionnalité"
+      ],
+      "overall_health": "good"
+    },
+    "optimization_status": {
+      "target_met": true,
+      "performance_level": "good",
+      "needs_optimization": false
+    }
+  },
+  "performance_history": [
+    {
+      "query_id": "query_1754058667_3681",
+      "start_time": "2025-08-01T15:31:07.482183",
+      "end_time": "2025-08-01T15:31:07.568311",
+      "total_latency_ms": 86.128,
+      "embedding_time_ms": 0.0,
+      "search_time_ms": 85.1283073425293,
+      "ranking_time_ms": 0.0,
+      "post_processing_time_ms": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "cache_hit": false,
+      "optimization_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    {
+      "query_id": "query_1754058667_3939",
+      "start_time": "2025-08-01T15:31:07.569294",
+      "end_time": "2025-08-01T15:31:07.661029",
+      "total_latency_ms": 91.735,
+      "embedding_time_ms": 0.0,
+      "search_time_ms": 90.74783325195312,
+      "ranking_time_ms": 0.0,
+      "post_processing_time_ms": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "cache_hit": false,
+      "optimization_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    {
+      "query_id": "query_1754058667_2444",
+      "start_time": "2025-08-01T15:31:07.662029",
+      "end_time": "2025-08-01T15:31:07.754167",
+      "total_latency_ms": 92.13799999999999,
+      "embedding_time_ms": 0.0,
+      "search_time_ms": 92.13829040527344,
+      "ranking_time_ms": 0.0,
+      "post_processing_time_ms": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "cache_hit": false,
+      "optimization_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    {
+      "query_id": "query_1754058667_7573",
+      "start_time": "2025-08-01T15:31:07.755190",
+      "end_time": "2025-08-01T15:31:07.847365",
+      "total_latency_ms": 92.17500000000001,
+      "embedding_time_ms": 0.0,
+      "search_time_ms": 92.17476844787598,
+      "ranking_time_ms": 0.0,
+      "post_processing_time_ms": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "cache_hit": false,
+      "optimization_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    {
+      "query_id": "query_1754058667_3371",
+      "start_time": "2025-08-01T15:31:07.848344",
+      "end_time": "2025-08-01T15:31:07.942839",
+      "total_latency_ms": 94.49499999999999,
+      "embedding_time_ms": 0.0,
+      "search_time_ms": 94.49505805969238,
+      "ranking_time_ms": 0.0,
+      "post_processing_time_ms": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "cache_hit": false,
+      "optimization_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    {
+      "query_id": "query_1754058667_76",
+      "start_time": "2025-08-01T15:31:07.942839",
+      "end_time": "2025-08-01T15:31:08.036357",
+      "total_latency_ms": 93.518,
+      "embedding_time_ms": 0.0,
+      "search_time_ms": 92.49687194824219,
+      "ranking_time_ms": 0.0,
+      "post_processing_time_ms": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "cache_hit": false,
+      "optimization_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    {
+      "query_id": "query_1754058668_3276",
+      "start_time": "2025-08-01T15:31:08.036357",
+      "end_time": "2025-08-01T15:31:08.129883",
+      "total_latency_ms": 93.526,
+      "embedding_time_ms": 0.0,
+      "search_time_ms": 92.52142906188965,
+      "ranking_time_ms": 0.0,
+      "post_processing_time_ms": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "cache_hit": false,
+      "optimization_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    {
+      "query_id": "query_1754058668_5762",
+      "start_time": "2025-08-01T15:31:08.129883",
+      "end_time": "2025-08-01T15:31:08.225901",
+      "total_latency_ms": 96.018,
+      "embedding_time_ms": 0.0,
+      "search_time_ms": 95.02744674682617,
+      "ranking_time_ms": 0.0,
+      "post_processing_time_ms": 0.0,
+      "memory_usage_mb": 0.0,
+      "cpu_usage_percent": 0.0,
+      "cache_hit": false,
+      "optimization_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    }
+  ],
+  "query_profiles": {
+    "-5507779125653036319": {
+      "query_type": "general",
+      "complexity_score": 0.195,
+      "expected_latency_ms": 59.75,
+      "optimization_priority": 1,
+      "preferred_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    "-3292057720450036061": {
+      "query_type": "general",
+      "complexity_score": 0.255,
+      "expected_latency_ms": 62.74999999999999,
+      "optimization_priority": 1,
+      "preferred_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    "3277339930661132444": {
+      "query_type": "general",
+      "complexity_score": 0.2475,
+      "expected_latency_ms": 62.375,
+      "optimization_priority": 1,
+      "preferred_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    "-3940306937585542427": {
+      "query_type": "general",
+      "complexity_score": 0.16749999999999998,
+      "expected_latency_ms": 58.375,
+      "optimization_priority": 1,
+      "preferred_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    "-3828465322817256629": {
+      "query_type": "general",
+      "complexity_score": 0.16249999999999998,
+      "expected_latency_ms": 58.12500000000001,
+      "optimization_priority": 1,
+      "preferred_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    "3667459396665230076": {
+      "query_type": "general",
+      "complexity_score": 0.135,
+      "expected_latency_ms": 56.75,
+      "optimization_priority": 1,
+      "preferred_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    "9009543793114973276": {
+      "query_type": "general",
+      "complexity_score": 0.2175,
+      "expected_latency_ms": 60.875,
+      "optimization_priority": 1,
+      "preferred_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    },
+    "-2526129008692214238": {
+      "query_type": "general",
+      "complexity_score": 0.1625,
+      "expected_latency_ms": 58.12500000000001,
+      "optimization_priority": 1,
+      "preferred_strategies": [
+        "result_streaming",
+        "memory_optimization"
+      ]
+    }
+  }
+}

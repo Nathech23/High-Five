@@ -1,0 +1,128 @@
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+PYTHONPATH
+
+# Environnements virtuels
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE et éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# FICHIERS DE TEST - EXCLUS COMPLÈTEMENT
+# ==========================================
+
+# Tests de templates et personnalisation
+test_templates_personnalisation.py
+test_language_detection_simple.py
+test_templates_results.json
+
+# Tests de communication
+test_communication_endpoint.py
+test_phase3_endpoints.py
+test_phase3_results.json
+
+# Tests API et rappels
+test_reminder_api.py
+test_api_simple.py
+
+# Tests complets
+tests_complets.py
+
+# Tous les autres fichiers de test
+test_*.py
+*_test.py
+*test*.json
+*test*.txt
+
+# ==========================================
+# CONFIGURATION SENSIBLE
+# ==========================================
+
+# Variables d'environnement avec secrets
+.env
+.env.local
+.env.production
+.env.staging
+
+# Fichiers de configuration avec credentials
+*_credentials.json
+*_secrets.json
+twilio_config.json
+
+# ==========================================
+# FICHIERS DE DÉVELOPPEMENT
+# ==========================================
+
+# Scripts d'installation (gardés en exemple)
+# setup_postgresql.py - GARDÉ
+# setup_twilio.py - GARDÉ
+
+# Utilitaires de développement
+fix_twilio_number.py
+
+# ==========================================
+# DOCUMENTATION DE DÉVELOPPEMENT
+# ==========================================
+
+# Documentation technique détaillée (gardée pour référence)
+# README.md - GARDÉ
+# README_Phase4.md - GARDÉ
+# DOCUMENTATION_COMPLETE.md - GARDÉ
+# GUIDE_CONFIGURATION.md - GARDÉ
+# etapes.md - GARDÉ
+
+# ==========================================
+# FICHIERS GÉNÉRÉS ET TEMPORAIRES
+# ==========================================
+
+# Logs d'application
+api_reminders.log
+app.log
+logs/
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*.old
+
+# Fichiers de base de données temporaires
+*.db
+*.sqlite
+*.sqlite3

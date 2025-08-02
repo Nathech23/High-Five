@@ -1,0 +1,116 @@
+{
+  "timestamp": "2025-08-01T16:39:43.067534",
+  "config": {
+    "weights": {
+      "cosine_similarity": 0.25,
+      "bm25": 0.2,
+      "semantic_similarity": 0.25,
+      "medical_relevance": 0.2,
+      "evidence_quality": 0.05,
+      "recency": 0.03,
+      "authority": 0.02
+    },
+    "ranking_strategy": "contextual",
+    "enable_learning": true
+  },
+  "metrics": {
+    "total_queries": 8,
+    "avg_precision_at_k": {},
+    "avg_ndcg": {},
+    "avg_mrr": 0.0,
+    "avg_click_through_rate": 0.42857142857142855,
+    "avg_dwell_time": 120.0,
+    "user_satisfaction": 0.9,
+    "ranking_latency_ms": 1.0600388050079346
+  },
+  "query_history": [
+    {
+      "query": "traitement paludisme enfant artemether",
+      "timestamp": "2025-08-01 16:39:43.052529",
+      "results_count": 5,
+      "top_score": 0.6797216809816519,
+      "user_context": {
+        "user_id": "user_1",
+        "context_type": "research",
+        "urgency": "high"
+      }
+    },
+    {
+      "query": "diagnostic malaria rapide",
+      "timestamp": "2025-08-01 16:39:43.054522",
+      "results_count": 5,
+      "top_score": 0.09400000000000001,
+      "user_context": {
+        "user_id": "user_2",
+        "context_type": "clinical",
+        "urgency": "normal"
+      }
+    },
+    {
+      "query": "guidelines OMS paludisme pédiatrique",
+      "timestamp": "2025-08-01 16:39:43.057523",
+      "results_count": 5,
+      "top_score": 0.8115620726159657,
+      "user_context": {
+        "user_id": "user_3",
+        "context_type": "research",
+        "urgency": "normal"
+      }
+    },
+    {
+      "query": "efficacité artemether-lumefantrine",
+      "timestamp": "2025-08-01 16:39:43.059522",
+      "results_count": 5,
+      "top_score": 0.452925565098879,
+      "user_context": {
+        "user_id": "user_1",
+        "context_type": "clinical",
+        "urgency": "normal"
+      }
+    },
+    {
+      "query": "méta-analyse traitement paludisme",
+      "timestamp": "2025-08-01 16:39:43.062019",
+      "results_count": 5,
+      "top_score": 0.7942870929175279,
+      "user_context": {
+        "user_id": "user_2",
+        "context_type": "research",
+        "urgency": "normal"
+      }
+    },
+    {
+      "query": "traitement paludisme enfant",
+      "timestamp": "2025-08-01 16:39:43.065563",
+      "results_count": 5,
+      "top_score": 0.7942870929175279,
+      "user_context": null
+    },
+    {
+      "query": "traitement paludisme enfant",
+      "timestamp": "2025-08-01 16:39:43.066524",
+      "results_count": 5,
+      "top_score": 0.7942870929175279,
+      "user_context": null
+    },
+    {
+      "query": "traitement paludisme enfant",
+      "timestamp": "2025-08-01 16:39:43.067534",
+      "results_count": 5,
+      "top_score": 0.7942870929175279,
+      "user_context": null
+    }
+  ],
+  "feedback_summary": {
+    "total_feedback": 9,
+    "feedback_types": {
+      "click": 3,
+      "dwell_time": 3,
+      "rating": 3,
+      "bookmark": 0,
+      "share": 0,
+      "negative": 0
+    }
+  },
+  "user_preferences_count": 3
+}

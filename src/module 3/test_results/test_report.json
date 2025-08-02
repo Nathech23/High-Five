@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-08-01T23:59:02.453655",
+  "total_tests": 28,
+  "successes": 10,
+  "failures": 10,
+  "errors": 8,
+  "success_rate": 35.714285714285715,
+  "details": {
+    "failures": [
+      "test_feature_engineering (__main__.TestDataPreprocessing.test_feature_engineering)",
+      "test_arima_model_import (__main__.TestMLModels.test_arima_model_import)",
+      "test_ensemble_model_import (__main__.TestMLModels.test_ensemble_model_import)",
+      "test_lstm_model_import (__main__.TestMLModels.test_lstm_model_import)",
+      "test_model_metrics_calculation (__main__.TestMLModels.test_model_metrics_calculation)",
+      "test_xgboost_model_import (__main__.TestMLModels.test_xgboost_model_import)",
+      "test_llm_analyzer_import (__main__.TestLLMIntegration.test_llm_analyzer_import)",
+      "test_api_import (__main__.TestAPIEndpoints.test_api_import)",
+      "test_config_import (__main__.TestSystemIntegration.test_config_import)",
+      "test_pipeline_script_import (__main__.TestSystemIntegration.test_pipeline_script_import)"
+    ],
+    "errors": [
+      "test_data_generation_basic (__main__.TestDataGeneration.test_data_generation_basic)",
+      "test_data_quality_constraints (__main__.TestDataGeneration.test_data_quality_constraints)",
+      "test_arima_basic_functionality (__main__.TestMLModels.test_arima_basic_functionality)",
+      "test_keyword_extraction (__main__.TestLLMIntegration.test_keyword_extraction)",
+      "test_sentiment_analysis (__main__.TestLLMIntegration.test_sentiment_analysis)",
+      "test_urgency_classification_rules (__main__.TestLLMIntegration.test_urgency_classification_rules)",
+      "test_health_endpoint (__main__.TestAPIEndpoints.test_health_endpoint)",
+      "test_prediction_endpoint_structure (__main__.TestAPIEndpoints.test_prediction_endpoint_structure)"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-08-01T21:23:29.810480",
+  "config": {
+    "feedback_buffer_size": 5000,
+    "analysis_interval_minutes": 1,
+    "alert_cooldown_minutes": 5,
+    "learning_threshold": 10,
+    "auto_adaptation": true
+  },
+  "current_metrics": {
+    "overall_satisfaction": 0.7835002499310728,
+    "dimension_scores": {
+      

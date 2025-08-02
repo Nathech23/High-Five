@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "export_date": "2025-08-01T14:08:25.284308",
+    "backend": "hybrid",
+    "strategy": "adaptive",
+    "version": "2.0.0"
+  },
+  "configuration": {
+    "max_memory_mb": 128,
+    "default_ttl": 1800,
+    "compression_enabled": true,
+    "pattern_detection_window": 3600
+  },
+  "statistics": {
+    "total_requests": 11,
+    "cache_hits": 10,
+    "cache_misses": 1,
+    "hit_rate": 0.9090909090909091,
+    "miss_rate": 0.09090909090909094,
+    "evictions": 0,
+    "memory_usage_bytes": 39788462,
+    "avg_response_time": 0.00010001659393310547,
+    "stats_by_type": {
+      "search": {
+        "hits": 8,
+        "misses": 1
+      },
+      "translation": {
+        "hits": 1,
+        "misses": 0
+      },
+      "embedding": {
+        "hits": 1,
+        "misses": 0
+      }
+    }
+  },
+  "patterns": {
+    "search_ba93b612": {
+      "frequency": 7,
+      "avg_interval": 0.0845165,
+      "confidence": 0.5155803526077422,
+      "suggested_ttl": 0,
+      "last_seen": "2025-08-01T14:08:25.283308"
+    }
+  },
+  "predictions": [],
+  "optimization": {
+    "optimization_needed": false,
+    "current_hit_rate": 0.9090909090909091
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "benchmark_summary": {
+    "benchmark_id": "bench_1754071376_medical_rag_precision_v1",
+    "test_suite": "medical_rag_precision_v1",
+    "timestamp": "2025-08-01T19:02:56.229891",
+    "total_tests": 25,
+    "passed_tests": 0,
+    "failed_tests": 25,
+    "error_tests": 0,
+    "success_rate": 0.0,
+    "execution_time_ms": 362.4460697174072
+  },
+  "quality_metrics": {
+    "precision_at_1": 0.08,
+    "recall_at_1": 0.02333333333333333,
+    "precision_at_3": 0.05333333333333333,
+    "recall_at_3": 0.049999999999999996,
+    "precision_at_5": 0.10400000000000001,
+    "recall_at_5": 0.15333333333333332,
+    "precision_at_10": 0.09836507936507936,
+    "recall_at_10": 0.19999999999999998

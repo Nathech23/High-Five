@@ -1,0 +1,160 @@
+# Requirements pour l'API RAG Médical
+# Hôpital Général de Douala - Hackathon 2024
+# Module 1: RAG & Medical Knowledge
+# Objectifs 25-28: API RAG et validation
+
+# ============================================================================
+# FRAMEWORK API PRINCIPAL
+# ============================================================================
+
+# FastAPI - Framework web moderne et rapide
+fastapi>=0.104.1
+
+# Uvicorn - Serveur ASGI pour FastAPI
+uvicorn[standard]>=0.24.0
+
+# Pydantic - Validation et sérialisation des données
+pydantic>=2.5.0
+
+# ============================================================================
+# DÉPENDANCES HTTP ET RÉSEAU
+# ============================================================================
+
+# Requests - Client HTTP pour les tests
+requests>=2.31.0
+
+# HTTPX - Client HTTP asynchrone (alternative à requests)
+httpx>=0.25.0
+
+# Python-multipart - Support des formulaires multipart
+python-multipart>=0.0.6
+
+# ============================================================================
+# MIDDLEWARE ET SÉCURITÉ
+# ============================================================================
+
+# CORS - Gestion des requêtes cross-origin
+fastapi-cors>=0.0.6
+
+# Starlette - Framework ASGI sous-jacent
+starlette>=0.27.0
+
+# ============================================================================
+# DOCUMENTATION ET VALIDATION
+# ============================================================================
+
+# Swagger/OpenAPI - Documentation automatique
+swagger-ui-bundle>=0.0.9
+
+# Email-validator - Validation des emails
+email-validator>=2.1.0
+
+# ============================================================================
+# UTILITAIRES ET HELPERS
+# ============================================================================
+
+# Python-jose - JWT et sécurité
+python-jose[cryptography]>=3.3.0
+
+# Passlib - Hachage de mots de passe
+passlib[bcrypt]>=1.7.4
+
+# ============================================================================
+# MONITORING ET LOGGING
+# ============================================================================
+
+# Structlog - Logging structuré
+structlog>=23.2.0
+
+# Rich - Affichage enrichi dans le terminal
+rich>=13.7.0
+
+# ============================================================================
+# TESTS ET DÉVELOPPEMENT
+# ============================================================================
+
+# Pytest - Framework de tests
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# TestClient - Client de test pour FastAPI
+httpx>=0.25.0  # Inclus TestClient
+
+# Coverage - Couverture de code
+coverage>=7.3.0
+
+# ============================================================================
+# FORMATS DE DONNÉES
+# ============================================================================
+
+# JSON - Manipulation JSON avancée
+orjson>=3.9.0  # JSON rapide
+
+# YAML - Support YAML
+PyYAML>=6.0.1
+
+# ============================================================================
+# DÉPENDANCES SYSTÈME (OPTIONNELLES)
+# ============================================================================
+
+# Gunicorn - Serveur WSGI pour production (Linux/Mac)
+# gunicorn>=21.2.0
+
+# Waitress - Serveur WSGI pour production (Windows)
+waitress>=2.1.2
+
+# ============================================================================
+# NOTES D'INSTALLATION
+# ============================================================================
+
+# Installation rapide:
+# pip install -r requirements.txt
+
+# Installation pour développement:
+# pip install -r requirements.txt
+# pip install pytest-cov black isort mypy
+
+# Installation pour production:
+# pip install -r requirements.txt
+# pip install gunicorn  # Linux/Mac
+# pip install waitress  # Windows
+
+# ============================================================================
+# COMMANDES UTILES
+# ============================================================================
+
+# Démarrer l'API en développement:
+# python start_api.py
+# ou
+# uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+# Démarrer l'API en production:
+# gunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
+# ou
+# waitress-serve --host=0.0.0.0 --port=8000 main:app
+
+# Tester l'API:
+# python test_api.py
+# ou
+# pytest test_api.py -v
+
+# ============================================================================
+# COMPATIBILITÉ
+# ============================================================================
+
+# Python >= 3.8 requis
+# Testé avec Python 3.8, 3.9, 3.10, 3.11
+
+# Systèmes supportés:
+# - Windows 10/11
+# - Linux (Ubuntu 20.04+, CentOS 8+)
+# - macOS 11+
+
+# ============================================================================
+# OBJECTIFS HACKATHON COUVERTS
+# ============================================================================
+
+# ✅ 25. Créer API FastAPI pour service RAG
+# ✅ 26. Implémenter endpoints de recherche de connaissances
+# ✅ 27. Valider pipeline complet : query → embeddings → search → context
+# ✅ 28. Documenter architecture RAG

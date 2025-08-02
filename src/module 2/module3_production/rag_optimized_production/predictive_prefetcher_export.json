@@ -1,0 +1,373 @@
+{
+  "timestamp": "2025-08-01T21:04:11.473074",
+  "status": {
+    "running": true,
+    "queue_size": 0,
+    "active_prefetches": 0,
+    "cache_size": 2,
+    "metrics": {
+      "total_predictions": 5,
+      "successful_prefetches": 4,
+      "cache_hits_from_prefetch": 5,
+      "total_queries": 18,
+      "avg_prediction_accuracy": 1.0,
+      "avg_prefetch_time": 103.6800742149353,
+      "resource_usage": {
+        "cpu": 0.133,
+        "memory": 0.775
+      },
+      "time_saved": 515.272855758667
+    },
+    "config": {
+      "max_prefetch_requests": 20,
+      "prefetch_strategy": "PrefetchStrategy.ADAPTIVE",
+      "min_confidence_threshold": 0.4,
+      "max_concurrent_prefetches": 3,
+      "cache_ttl_minutes": 15,
+      "resource_limit_cpu": 0.8,
+      "resource_limit_memory": 0.9
+    }
+  },
+  "patterns": {
+    "25ae0cd7": {
+      "pattern_id": "25ae0cd7",
+      "query_template": "traitement paludisme enfant",
+      "frequency": 4,
+      "last_seen": "2025-08-01 21:04:11.359600",
+      "avg_response_time": 81.25,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 4
+      }
+    },
+    "551622c1": {
+      "pattern_id": "551622c1",
+      "query_template": "diagnostic malaria rapide",
+      "frequency": 3,
+      "last_seen": "2025-08-01 21:04:11.359600",
+      "avg_response_time": 70.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 3
+      }
+    },
+    "c5aff059": {
+      "pattern_id": "c5aff059",
+      "query_template": "artemether lumefantrine dosage",
+      "frequency": 2,
+      "last_seen": "2025-08-01 21:04:11.360568",
+      "avg_response_time": 45.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 2
+      }
+    },
+    "40a2e4d6": {
+      "pattern_id": "40a2e4d6",
+      "query_template": "paludisme grave symptômes",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:01.374572",
+      "avg_response_time": 95.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    },
+    "fff8e8d9": {
+      "pattern_id": "fff8e8d9",
+      "query_template": "prévention paludisme grossesse",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:01.975910",
+      "avg_response_time": 100.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    },
+    "62197a26": {
+      "pattern_id": "62197a26",
+      "query_template": "diagnostic tuberculose pulmonaire",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:03.089621",
+      "avg_response_time": 110.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    },
+    "f90516ab": {
+      "pattern_id": "f90516ab",
+      "query_template": "traitement VIH antirétroviral",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:03.706794",
+      "avg_response_time": 115.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    },
+    "6e058002": {
+      "pattern_id": "6e058002",
+      "query_template": "vaccination enfant calendrier",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:04.315853",
+      "avg_response_time": 120.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    },
+    "b18b8d75": {
+      "pattern_id": "b18b8d75",
+      "query_template": "hypertension artérielle traitement",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:05.426307",
+      "avg_response_time": 130.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    },
+    "ddcacf73": {
+      "pattern_id": "ddcacf73",
+      "query_template": "diabète type [NUMBER] gestion",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:06.045547",
+      "avg_response_time": 135.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    },
+    "ae2711be": {
+      "pattern_id": "ae2711be",
+      "query_template": "pneumonie enfant antibiotique",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:07.142163",
+      "avg_response_time": 145.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    },
+    "95f4e17f": {
+      "pattern_id": "95f4e17f",
+      "query_template": "diarrhée aiguë réhydratation",
+      "frequency": 1,
+      "last_seen": "2025-08-01 21:04:07.751763",
+      "avg_response_time": 150.0,
+      "success_rate": 1.0,
+      "related_patterns": [],
+      "time_distribution": {
+        "21": 1
+      }
+    }
+  },
+  "sequence_patterns": {
+    "25ae0cd7": [
+      "551622c1",
+      "62197a26",
+      "ae2711be",
+      "551622c1"
+    ],
+    "551622c1": [
+      "c5aff059",
+      "b18b8d75",
+      "c5aff059"
+    ],
+    "c5aff059": [
+      "40a2e4d6"
+    ],
+    "40a2e4d6": [
+      "fff8e8d9"
+    ],
+    "fff8e8d9": [
+      "25ae0cd7"
+    ],
+    "62197a26": [
+      "f90516ab"
+    ],
+    "f90516ab": [
+      "6e058002"
+    ],
+    "6e058002": [
+      "551622c1"
+    ],
+    "b18b8d75": [
+      "ddcacf73"
+    ],
+    "ddcacf73": [
+      "25ae0cd7"
+    ],
+    "ae2711be": [
+      "95f4e17f"
+    ],
+    "95f4e17f": [
+      "25ae0cd7"
+    ]
+  },
+  "recent_queries": [
+    {
+      "query": "traitement paludisme enfant",
+      "timestamp": "2025-08-01 21:03:59.552568",
+      "response_time": 80,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "diagnostic malaria rapide",
+      "timestamp": "2025-08-01 21:04:00.158468",
+      "response_time": 85,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "artemether lumefantrine dosage",
+      "timestamp": "2025-08-01 21:04:00.762928",
+      "response_time": 90,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "paludisme grave symptômes",
+      "timestamp": "2025-08-01 21:04:01.374572",
+      "response_time": 95,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "prévention paludisme grossesse",
+      "timestamp": "2025-08-01 21:04:01.975910",
+      "response_time": 100,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "traitement paludisme enfant",
+      "timestamp": "2025-08-01 21:04:02.587674",
+      "response_time": 105,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "diagnostic tuberculose pulmonaire",
+      "timestamp": "2025-08-01 21:04:03.089621",
+      "response_time": 110,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "traitement VIH antirétroviral",
+      "timestamp": "2025-08-01 21:04:03.706794",
+      "response_time": 115,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "vaccination enfant calendrier",
+      "timestamp": "2025-08-01 21:04:04.315853",
+      "response_time": 120,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "diagnostic malaria rapide",
+      "timestamp": "2025-08-01 21:04:04.924949",
+      "response_time": 125,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "hypertension artérielle traitement",
+      "timestamp": "2025-08-01 21:04:05.426307",
+      "response_time": 130,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "diabète type 2 gestion",
+      "timestamp": "2025-08-01 21:04:06.045547",
+      "response_time": 135,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "traitement paludisme enfant",
+      "timestamp": "2025-08-01 21:04:06.640986",
+      "response_time": 140,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "pneumonie enfant antibiotique",
+      "timestamp": "2025-08-01 21:04:07.142163",
+      "response_time": 145,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "diarrhée aiguë réhydratation",
+      "timestamp": "2025-08-01 21:04:07.751763",
+      "response_time": 150,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "traitement paludisme enfant",
+      "timestamp": "2025-08-01 21:04:11.359600",
+      "response_time": 0.0,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "diagnostic malaria rapide",
+      "timestamp": "2025-08-01 21:04:11.359600",
+      "response_time": 0.0,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    },
+    {
+      "query": "artemether lumefantrine dosage",
+      "timestamp": "2025-08-01 21:04:11.360568",
+      "response_time": 0.0,
+      "success": true,
+      "hour": 21,
+      "day_of_week": 4
+    }
+  ],
+  "cache_summary": {
+    "total_entries": 2,
+    "cache_keys": [
+      "dedb710621635bf33e32f1055b7d7054",
+      "551622c1acd76dc8c70add6d02d8c086"
+    ]
+  }
+}

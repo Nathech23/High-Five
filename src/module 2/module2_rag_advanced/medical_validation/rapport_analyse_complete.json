@@ -1,0 +1,74 @@
+{
+  "timestamp": "2024-12-20T10:30:00",
+  "articles_analyses": 3,
+  "score_qualite_moyen": 0.7416666666666667,
+  "distribution_niveaux": {
+    "II": 1,
+    "Unknown": 1,
+    "I": 1
+  },
+  "details_articles": [
+    {
+      "fichier": "article_paludisme_exemple.txt",
+      "niveau_preuve": "II",
+      "type_etude": "randomized_controlled_trial",
+      "score_qualite": 0.72,
+      "taille_echantillon": 600,
+      "significativite_statistique": null,
+      "intervalle_confiance": null,
+      "risque_biais": "unknown",
+      "citation_vancouver": "Dr. Aminata Sow, Prof. Jean-Claude Mbarga, Dr. Marie Dubois, et al.. Efficacité de l'Artéméther-Luméfantrine dans le Traitement du Paludisme Simple. The Lancet Global Health. 2024;12(3):e234-e242. doi:10.1016/S2214-109X(24)00123-4.",
+      "recommandations": [
+        "Recommandation forte basée sur des preuves de haute qualité",
+        "Essais contrôlés randomisés disponibles"
+      ],
+      "limitations": [
+        "Nombre limité de sources"
+      ],
+      "force_recommandation": "strong",
+      "qualite_preuves": "moderate"
+    },
+    {
+      "fichier": "revue_systematique_exemple.txt",
+      "niveau_preuve": "I",
+      "type_etude": "meta_analysis",
+      "score_qualite": 0.965,
+      "taille_echantillon": 45,
+      "significativite_statistique": null,
+      "intervalle_confiance": null,
+      "risque_biais": "unknown",
+      "citation_vancouver": "Dr. Fatima Al-Hassan, Prof. Sarah Johnson, Dr. Emmanuel Kouam. Prévention du Paludisme chez la Femme Enceinte: Revue Systématique. Cochrane Database of Systematic Reviews. 2024;2. doi:10.1002/14651858.CD013456.pub2.",
+      "recommandations": [
+        "Recommandation forte basée sur des preuves de haute qualité",
+        "Méta-analyse disponible - preuves synthétisées"
+      ],
+      "limitations": [
+        "Nombre limité de sources",
+        "Tailles d'échantillon limitées"
+      ],
+      "force_recommandation": "strong",
+      "qualite_preuves": "high"
+    },
+    {
+      "fichier": "serie_cas_exemple.txt",
+      "niveau_preuve": "Unknown",
+      "type_etude": "unknown",
+      "score_qualite": 0.54,
+      "taille_echantillon": 3,
+      "significativite_statistique": null,
+      "intervalle_confiance": null,
+      "risque_biais": "unknown",
+      "citation_vancouver": "Dr. Martin Dupont, Dr. Célestine Mballa. Prise en Charge du Paludisme Grave par Artésunate: Série de 45 Cas. Médecine Tropicale et Santé Internationale. 2024;34:78-85.",
+      "recommandations": [
+        "Recommandation faible - preuves limitées"
+      ],
+      "limitations": [
+        "Nombre limité de sources",
+        "Qualité moyenne des sources limitée",
+        "Tailles d'échantillon limitées"
+      ],
+      "force_recommandation": "weak",
+      "qualite_preuves": "low"
+    }
+  ]
+}

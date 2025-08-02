@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-08-01T18:58:53.965977",
+  "config": {
+    "max_context_size": 4096,
+    "min_context_size": 256,
+    "cache_size": 500,
+    "performance_tracking": true,
+    "auto_optimization": true,
+    "learning_rate": 0.1
+  },
+  "metrics": {
+    "avg_context_size": 52.393796,
+    "avg_processing_time": 0.41493796539306643,
+    "avg_relevance_score": 0.46658000000000005,
+    "memory_efficiency": 0.4557675458984376,
+    "adaptation_accuracy": 0.316099344,
+    "user_satisfaction": 0.286657,
+    "total_queries": 6,
+    "strategy_distribution": {
+      

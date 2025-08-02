@@ -1,0 +1,206 @@
+# Requirements pour le Module API Enrichie et Cache
+# Objectifs 19-24: API REST avancée, cache intelligent, monitoring temps réel,
+# dashboard analytique et optimisation des performances
+
+# ===== API REST AVANCÉE (Objectif 19) =====
+# Framework web moderne et performant
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Authentification et sécurité
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+python-multipart>=0.0.6
+
+# Validation et sérialisation
+marshmallow>=3.20.1
+cerberus>=1.3.4
+voluptuous>=0.13.1
+
+# Middleware et utilitaires
+starlette>=0.27.0
+httpx>=0.25.2
+aiofiles>=23.2.1
+
+# ===== CACHE INTELLIGENT (Objectif 20) =====
+# Cache distribué Redis
+redis>=5.0.1
+aioredis>=2.0.1
+hiredis>=2.2.3
+
+# Cache en mémoire
+cachetools>=5.3.2
+diskcache>=5.6.3
+
+# Sérialisation et compression
+pickle5>=0.0.12
+lz4>=4.3.2
+zstandard>=0.22.0
+
+# ===== CACHE RÉSULTATS TTL (Objectif 21) =====
+# Gestion TTL et expiration
+APScheduler>=3.10.4
+celery>=5.3.4
+
+# Stockage persistant
+sqlalchemy>=2.0.23
+alembic>=1.13.1
+
+# ===== MONITORING TEMPS RÉEL (Objectif 22) =====
+# Métriques système
+psutil>=5.9.6
+GPUtil>=1.4.0
+
+# Monitoring et métriques
+prometheus-client>=0.19.0
+grafana-api>=1.0.3
+
+# Alertes et notifications
+slack-sdk>=3.26.1
+twilio>=8.11.0
+smtplib2>=0.2.1
+
+# ===== DASHBOARD ANALYTIQUE (Objectif 23) =====
+# Framework web pour dashboard
+flask>=3.0.0
+flask-cors>=4.0.0
+flask-socketio>=5.3.6
+
+# Visualisation de données
+plotly>=5.17.0
+bokeh>=3.3.2
+matplotlib>=3.8.2
+seaborn>=0.13.0
+
+# Traitement de données
+pandas>=2.1.4
+numpy>=1.26.2
+scipy>=1.11.4
+
+# Templates et interface
+jinja2>=3.1.2
+bootstrap-flask>=2.3.2
+
+# ===== OPTIMISATION PERFORMANCES (Objectif 24) =====
+# Compression et optimisation
+gzip>=1.0
+brotli>=1.1.0
+zlib>=1.0
+
+# Limitation de débit
+slowapi>=0.1.9
+flask-limiter>=3.5.0
+
+# Profiling et optimisation
+cProfile>=1.0
+line-profiler>=4.1.1
+memory-profiler>=0.61.0
+py-spy>=0.3.14
+
+# ===== UTILITAIRES GÉNÉRAUX =====
+# Traitement de données
+json5>=0.9.14
+pyyaml>=6.0.1
+toml>=0.10.2
+
+# Dates et temps
+python-dateutil>=2.8.2
+pytz>=2023.3
+arrow>=1.3.0
+
+# Logging et debugging
+loguru>=0.7.2
+rich>=13.7.0
+coloredlogs>=15.0.1
+
+# Utilitaires système
+click>=8.1.7
+tqdm>=4.66.1
+more-itertools>=10.1.0
+
+# ===== TESTS ET QUALITÉ =====
+# Framework de tests
+pytest>=7.4.3
+pytest-asyncio>=0.21.1
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+
+# Tests de performance
+locust>=2.17.0
+pytest-benchmark>=4.0.0
+
+# Qualité du code
+black>=23.11.0
+flake8>=6.1.0
+mypy>=1.7.1
+isort>=5.12.0
+
+# ===== DÉPENDANCES OPTIONNELLES =====
+# Base de données (optionnel)
+psycopg2-binary>=2.9.9  # PostgreSQL
+pymongo>=4.6.0          # MongoDB
+
+# Message queues (optionnel)
+rabbitmq>=0.2.0
+kafka-python>=2.0.2
+
+# Monitoring avancé (optionnel)
+elasticsearch>=8.11.0
+kibana>=8.11.0
+
+# ===== NOTES D'INSTALLATION =====
+# Installation recommandée:
+# pip install -r requirements.txt
+#
+# Pour le développement:
+# pip install -r requirements.txt -r requirements-dev.txt
+#
+# Dépendances système requises:
+# - Redis Server (pour le cache distribué)
+# - PostgreSQL (optionnel, pour stockage persistant)
+# - Node.js (optionnel, pour outils frontend)
+#
+# Variables d'environnement importantes:
+# - REDIS_URL: URL de connexion Redis
+# - DATABASE_URL: URL de base de données
+# - SECRET_KEY: Clé secrète pour JWT
+# - PROMETHEUS_PORT: Port pour métriques Prometheus
+# - GRAFANA_URL: URL du serveur Grafana
+
+# ===== MAPPING OBJECTIFS -> BIBLIOTHÈQUES =====
+# Objectif 19 (API REST Avancée):
+#   - fastapi, uvicorn: Framework API moderne
+#   - pydantic: Validation et sérialisation
+#   - python-jose: Authentification JWT
+#   - passlib: Hachage de mots de passe
+#   - starlette: Middleware ASGI
+#
+# Objectif 20 (Cache Intelligent):
+#   - redis, aioredis: Cache distribué
+#   - cachetools: Cache en mémoire
+#   - diskcache: Cache sur disque
+#   - lz4, zstandard: Compression
+#
+# Objectif 21 (Cache Résultats TTL):
+#   - APScheduler: Planification de tâches
+#   - celery: Tâches asynchrones
+#   - sqlalchemy: ORM pour persistance
+#
+# Objectif 22 (Monitoring Temps Réel):
+#   - psutil: Métriques système
+#   - prometheus-client: Exposition métriques
+#   - slack-sdk, twilio: Notifications
+#
+# Objectif 23 (Dashboard Analytique):
+#   - flask: Framework web dashboard
+#   - plotly, bokeh: Visualisations
+#   - pandas, numpy: Traitement données
+#   - flask-socketio: Temps réel
+#
+# Objectif 24 (Optimisation Performances):
+#   - gzip, brotli: Compression réponses
+#   - slowapi: Limitation de débit
+#   - cProfile, py-spy: Profiling
+#   - memory-profiler: Analyse mémoire

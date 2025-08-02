@@ -1,0 +1,86 @@
+{
+  "evidence_sources": {
+    "src_article_exemple_001": {
+      "id": "src_article_exemple_001",
+      "citation": {
+        "authors": [
+          "Dr. Jean Mbarga",
+          "Dr. Marie Nkodo",
+          "Prof. Paul Essomba"
+        ],
+        "title": "Efficacité et Sécurité de l'Artéméther-Luméfantrine dans le Traitement du Paludisme",
+        "journal": "The Lancet Infectious Diseases",
+        "year": 2024,
+        "doi": "10.1016/S1473-3099(24)00123-4",
+        "pmid": null,
+        "url": null
+      },
+      "source_type": "peer_reviewed_journal",
+      "study_design": "randomized_controlled_trial",
+      "evidence_level": "II",
+      "quality_score": 0.62,
+      "sample_size": 250,
+      "statistical_significance": null,
+      "bias_risk": "unknown"
+    }
+  },
+  "documentation_reports": {
+    "article_exemple_001": {
+      "content_id": "article_exemple_001",
+      "evidence_summary": {
+        "topic": "article_exemple_001",
+        "overall_evidence_level": "II",
+        "strength_of_recommendation": "weak",
+        "quality_of_evidence": "moderate",
+        "summary_statement": "Preuves de niveau II avec qualité moderate",
+        "recommendations": [
+          "Recommandation faible - preuves limitées",
+          "Essais contrôlés randomisés disponibles"
+        ],
+        "limitations": [
+          "Nombre limité de sources"
+        ]
+      },
+      "quality_assessment": {
+        "overall_score": 0.62,
+        "grade": "moderate",
+        "individual_scores": [
+          0.62
+        ],
+        "source_count": 1,
+        "evidence_levels": [
+          "II"
+        ]
+      },
+      "documentation_date": "2025-08-01T14:50:08.326672",
+      "documenter": "EvidenceDocumenter"
+    }
+  },
+  "statistics": {
+    "total_sources": 1,
+    "total_reports": 1,
+    "evidence_level_distribution": {
+      "I": 0,
+      "II": 1,
+      "III": 0,
+      "IV": 0,
+      "V": 0,
+      "Unknown": 0
+    },
+    "study_design_distribution": {
+      "meta_analysis": 0,
+      "systematic_review": 0,
+      "randomized_controlled_trial": 1,
+      "cohort_study": 0,
+      "case_control_study": 0,
+      "cross_sectional_study": 0,
+      "case_series": 0,
+      "case_report": 0,
+      "expert_opinion": 0,
+      "narrative_review": 0,
+      "guideline": 0,
+      "unknown": 0
+    }
+  },
+  "export_timestamp": "2025-08-01T14:50:08.329676"
+}

@@ -1,0 +1,73 @@
+{
+  "timestamp": "2025-08-02T05:20:54.364523",
+  "success_rate": 100.0,
+  "total_tests": 20,
+  "successful_tests": 20,
+  "categories": {
+    "ml_production": {
+      "success": true,
+      "samples": 1000,
+      "global_mae": 4.909879071631833,
+      "global_r2": 0.9533773175861944,
+      "specialized_models": 8,
+      "blood_type_performance": {
+        "A-": {
+          "mae": 6.793370472200941,
+          "samples": 136
+        },
+        "B-": {
+          "mae": 8.28908391914059,
+          "samples": 126
+        },
+        "O+": {
+          "mae": 7.995825211454583,
+          "samples": 137
+        },
+        "O-": {
+          "mae": 7.304821809934797,
+          "samples": 130
+        },
+        "AB+": {
+          "mae": 10.129361349498952,
+          "samples": 104
+        },
+        "AB-": {
+          "mae": 7.435853052569395,
+          "samples": 107
+        },
+        "B+": {
+          "mae": 8.055577936832382,
+          "samples": 133
+        },
+        "A+": {
+          "mae": 6.340625317537289,
+          "samples": 127
+        }
+      }
+    },
+    "llm_advanced": {
+      "success": true,
+      "analysis_generated": true,
+      "classification_working": true,
+      "alert_priority": "high",
+      "cache_hit_rate": 0.7
+    },
+    "mlops_monitoring": {
+      "success": true,
+      "models_registered": 1,
+      "alerts_generated": 1,
+      "ab_test_completed": true,
+      "business_impact_calculated": true
+    },
+    "api_robust": {
+      "success": true,
+      "authentication_working": true,
+      "prediction_working": true,
+      "cache_working": true,
+      "batch_working": true,
+      "rate_limiting_working": true,
+      "health_check_working": true,
+      "metrics_available": true
+    }
+  }
+}

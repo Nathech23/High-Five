@@ -1,0 +1,166 @@
+# Requirements pour Module 2 - Validation Médicale (Objectifs 25-28)
+# Hôpital Général de Douala - Hackathon IA Médicale
+
+# ============================================================================
+# VALIDATION MÉDICALE - OBJECTIFS 25-28
+# ============================================================================
+
+# Objectif 25: Processus de validation par experts
+# - Gestion des profils d'experts
+# - Système de consensus
+# - Traçabilité des validations
+requests>=2.31.0          # Communication avec APIs externes
+smtplib                    # Notifications email (built-in)
+email-validator>=2.1.0     # Validation adresses email
+
+# Objectif 26: Scoring de fiabilité des sources
+# - Analyse des journaux scientifiques
+# - Évaluation des auteurs
+# - Détection de biais
+scientific-python>=1.0.0  # Analyse bibliométrique (si disponible)
+fuzzy-wuzzy>=0.18.0       # Correspondance floue pour journaux
+python-levenshtein>=0.21.0 # Distance d'édition pour noms
+
+# Objectif 27: Système de mise à jour des connaissances
+# - Détection automatique des changements
+# - Versioning des connaissances
+# - Synchronisation multi-sources
+watchdog>=3.0.0           # Surveillance fichiers
+gitpython>=3.1.40         # Contrôle de version
+APScheduler>=3.10.4       # Tâches programmées
+celery>=5.3.4             # Tâches asynchrones
+redis>=5.0.1              # Backend pour Celery
+
+# Objectif 28: Documentation sources et niveaux de preuve
+# - Classification Evidence-Based Medicine
+# - Citations bibliographiques
+# - Traçabilité complète
+bibtexparser>=1.4.0       # Parsing citations BibTeX
+crossref-commons>=0.0.7   # API CrossRef pour DOI
+habanero>=1.2.3           # Client CrossRef Python
+pubmed-parser>=0.3.1      # Parsing PubMed
+
+# ============================================================================
+# DÉPENDANCES COMMUNES
+# ============================================================================
+
+# Core Python
+requests>=2.31.0
+urllib3>=2.0.7
+json5>=0.9.14
+pyyaml>=6.0.1
+toml>=0.10.2
+
+# Data Processing
+pandas>=2.1.4
+numpy>=1.24.3
+scipy>=1.11.4
+scikit-learn>=1.3.2
+
+# Date/Time
+python-dateutil>=2.8.2
+pytz>=2023.3
+
+# Logging et Monitoring
+loguru>=0.7.2
+rich>=13.7.0
+tqdm>=4.66.1
+
+# Validation et Sérialisation
+pydantic>=2.5.0
+marshmallow>=3.20.1
+jsonschema>=4.20.0
+
+# Cryptographie et Sécurité
+cryptography>=41.0.7
+hashlib                    # Built-in
+secrets                    # Built-in
+
+# Base de données (optionnel)
+sqlalchemy>=2.0.23
+sqlite3                    # Built-in
+
+# Tests
+pytest>=7.4.3
+pytest-asyncio>=0.21.1
+pytest-cov>=4.1.0
+factory-boy>=3.3.0
+
+# ============================================================================
+# DÉPENDANCES OPTIONNELLES
+# ============================================================================
+
+# Interface Web (si nécessaire)
+flask>=3.0.0              # Interface web légère
+streamlit>=1.28.1         # Dashboard interactif
+
+# Analyse de texte avancée
+nltk>=3.8.1               # Traitement langage naturel
+spacy>=3.7.2              # NLP avancé
+textblob>=0.17.1          # Analyse sentiment
+
+# Visualisation
+matplotlib>=3.8.2
+seaborn>=0.13.0
+plotly>=5.17.0
+
+# Export formats
+openpyxl>=3.1.2           # Excel
+reportlab>=4.0.7          # PDF
+markdown>=3.5.1           # Markdown
+
+# APIs externes
+pubmed-lookup>=0.2.3      # Recherche PubMed
+crossref>=1.2.0           # Métadonnées articles
+orcid>=1.0.3              # Profils chercheurs
+
+# ============================================================================
+# INSTALLATION
+# ============================================================================
+
+# Installation de base:
+# pip install -r requirements.txt
+
+# Installation avec dépendances optionnelles:
+# pip install -r requirements.txt
+# pip install nltk spacy plotly streamlit
+
+# Pour spaCy (modèles linguistiques):
+# python -m spacy download en_core_web_sm
+# python -m spacy download fr_core_news_sm
+
+# ============================================================================
+# NOTES D'INSTALLATION
+# ============================================================================
+
+# 1. Certaines dépendances peuvent nécessiter des outils de compilation
+# 2. Redis doit être installé séparément pour Celery
+# 3. Les APIs externes nécessitent des clés d'accès
+# 4. Tester l'installation avec: python -c "import medical_validation"
+
+# ============================================================================
+# VARIABLES D'ENVIRONNEMENT
+# ============================================================================
+
+# CROSSREF_EMAIL=your.email@domain.com     # Pour API CrossRef
+# PUBMED_API_KEY=your_api_key               # Pour PubMed (optionnel)
+# ORCID_CLIENT_ID=your_client_id            # Pour ORCID API
+# REDIS_URL=redis://localhost:6379/0        # Pour Celery
+# SMTP_SERVER=smtp.gmail.com                # Pour notifications
+# SMTP_PORT=587
+# SMTP_USERNAME=your_email
+# SMTP_PASSWORD=your_password
+
+# ============================================================================
+# COMPATIBILITÉ
+# ============================================================================
+
+# Python: >=3.8
+# OS: Windows, Linux, macOS
+# Architecture: x86_64, ARM64
+
+# Testé avec:
+# - Python 3.8, 3.9, 3.10, 3.11
+# - Windows 10/11
+# - Ubuntu 20.04/22.04
+# - macOS 12+

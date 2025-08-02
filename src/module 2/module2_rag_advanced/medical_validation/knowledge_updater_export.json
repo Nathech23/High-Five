@@ -1,0 +1,216 @@
+{
+  "knowledge_base": {
+    "kb_001": {
+      "id": "kb_001",
+      "title": "Protocole de traitement du paludisme",
+      "content": "Protocole de traitement du paludisme (version mise à jour):\nLe paludisme est traité par artéméther-luméfantrine en première ligne.\nPosologie adulte: 20mg/120mg, 2 comprimés 2 fois par jour pendant 3 jours.\nPosologie pédiatrique: 5-15kg: 1 comprimé 2 fois par jour pendant 3 jours.\nSurveillance: contrôle à J3, J7 et J14.\nEffets secondaires: nausées, vomissements, diarrhée (rares).",
+      "metadata": {
+        "specialty": "médecine tropicale",
+        "evidence_level": "I",
+        "last_reviewed": "2024-01-15",
+        "source": "OMS Guidelines 2023",
+        "last_update_request": "34f400e5-1e96-4274-9de7-5e9c96217d5b",
+        "last_update_reason": "Ajout posologie pédiatrique et effets secondaires",
+        "last_update_requester": "Dr. Expert",
+        "rollback_from": "1.1-rollback-backup",
+        "rollback_to": "1.2-restored",
+        "rollback_timestamp": "2025-08-01T14:27:36.278741"
+      },
+      "version": "1.2-restored",
+      "last_updated": "2025-08-01T14:27:36.278741",
+      "source_hash": "d0094b88969868b61a8da18736268265",
+      "tags": [
+        "paludisme",
+        "traitement",
+        "artéméther",
+        "luméfantrine"
+      ],
+      "category": "protocoles",
+      "language": "fr"
+    },
+    "kb_002": {
+      "id": "kb_002",
+      "title": "Diagnostic de la tuberculose",
+      "content": "Diagnostic de la tuberculose pulmonaire:\n1. Examen clinique: toux persistante >2 semaines, fièvre, sueurs nocturnes\n2. Radiographie thoracique: opacités, cavernes\n3. Examen des crachats: bacilloscopie, GeneXpert\n4. Test tuberculinique si nécessaire",
+      "metadata": {
+        "specialty": "pneumologie",
+        "evidence_level": "I",
+        "last_reviewed": "2024-03-15",
+        "source": "OMS Guidelines 2024",
+        "reviewer": "Dr. Expert",
+        "pediatric_dosing": "added",
+        "last_update_request": "59b0c45c-4faa-446a-814b-63d1f8d33567",
+        "last_update_reason": "Mise à jour métadonnées après révision",
+        "last_update_requester": "Dr. Reviewer"
+      },
+      "version": "2.2",
+      "last_updated": "2025-08-01T14:27:36.277740",
+      "source_hash": "4bd9eb174a8ada0c326a439097216322",
+      "tags": [
+        "tuberculose",
+        "diagnostic",
+        "pneumologie"
+      ],
+      "category": "diagnostics",
+      "language": "fr"
+    },
+    "kb_003": {
+      "id": "kb_003",
+      "title": "Prise en charge de l'hypertension",
+      "content": "Prise en charge de l'hypertension artérielle:\n- Objectif tensionnel: <140/90 mmHg (général), <130/80 mmHg (diabète)\n- Première ligne: IEC ou ARA2\n- Deuxième ligne: ajout diurétique thiazidique\n- Troisième ligne: ajout inhibiteur calcique",
+      "metadata": {
+        "specialty": "cardiologie",
+        "evidence_level": "I",
+        "last_reviewed": "2024-02-01",
+        "source": "ESC Guidelines 2023"
+      },
+      "version": "3.0",
+      "last_updated": "2024-02-01T00:00:00",
+      "source_hash": "62809fbe21e770eb1c5c56b4ffe0bc41",
+      "tags": [
+        "hypertension",
+        "cardiologie",
+        "traitement"
+      ],
+      "category": "protocoles",
+      "language": "fr"
+    }
+  },
+  "update_requests": {
+    "34f400e5-1e96-4274-9de7-5e9c96217d5b": {
+      "id": "34f400e5-1e96-4274-9de7-5e9c96217d5b",
+      "item_id": "kb_001",
+      "update_type": "content_revision",
+      "priority": "high",
+      "reason": "Ajout posologie pédiatrique et effets secondaires",
+      "requester": "Dr. Expert",
+      "created_at": "2025-08-01T14:27:36.274739",
+      "scheduled_for": null
+    },
+    "59b0c45c-4faa-446a-814b-63d1f8d33567": {
+      "id": "59b0c45c-4faa-446a-814b-63d1f8d33567",
+      "item_id": "kb_002",
+      "update_type": "metadata_update",
+      "priority": "medium",
+      "reason": "Mise à jour métadonnées après révision",
+      "requester": "Dr. Reviewer",
+      "created_at": "2025-08-01T14:27:36.276756",
+      "scheduled_for": null
+    },
+    "69eea4ef-1443-4eeb-b2c6-96de6b5dc1dd": {
+      "id": "69eea4ef-1443-4eeb-b2c6-96de6b5dc1dd",
+      "item_id": "kb_001",
+      "update_type": "content_revision",
+      "priority": "low",
+      "reason": "Test mise à jour 1",
+      "requester": "Test System",
+      "created_at": "2025-08-01T14:27:36.278741",
+      "scheduled_for": null
+    },
+    "82c9a538-e1b5-4ba0-b563-269d26a2dbf5": {
+      "id": "82c9a538-e1b5-4ba0-b563-269d26a2dbf5",
+      "item_id": "kb_002",
+      "update_type": "content_revision",
+      "priority": "medium",
+      "reason": "Test mise à jour 2",
+      "requester": "Test System",
+      "created_at": "2025-08-01T14:27:36.279753",
+      "scheduled_for": null
+    },
+    "d5cce4b8-ce0c-47da-b2c2-796a7a68c56c": {
+      "id": "d5cce4b8-ce0c-47da-b2c2-796a7a68c56c",
+      "item_id": "kb_003",
+      "update_type": "content_revision",
+      "priority": "high",
+      "reason": "Test mise à jour 3",
+      "requester": "Test System",
+      "created_at": "2025-08-01T14:27:36.279753",
+      "scheduled_for": null
+    }
+  },
+  "update_results": {
+    "34f400e5-1e96-4274-9de7-5e9c96217d5b": {
+      "request_id": "34f400e5-1e96-4274-9de7-5e9c96217d5b",
+      "status": "completed",
+      "old_version": "1.0",
+      "new_version": "1.1",
+      "changes_applied": [
+        "Contenu mis à jour",
+        "Similarité avec version précédente: 63.69%",
+        "Version incrémentée: 1.1"
+      ],
+      "execution_time": 0.0010128021240234375,
+      "completed_at": "2025-08-01T14:27:36.276756",
+      "error_message": null
+    },
+    "59b0c45c-4faa-446a-814b-63d1f8d33567": {
+      "request_id": "59b0c45c-4faa-446a-814b-63d1f8d33567",
+      "status": "completed",
+      "old_version": "2.1",
+      "new_version": "2.2",
+      "changes_applied": [
+        "Métadonnées mises à jour",
+        "Métadonnée 'last_reviewed' modifiée",
+        "Métadonnée 'reviewer' modifiée",
+        "Métadonnée 'evidence_level' modifiée",
+        "Métadonnée 'source' modifiée",
+        "Métadonnée 'pediatric_dosing' modifiée",
+        "Version incrémentée: 2.2"
+      ],
+      "execution_time": 0.0,
+      "completed_at": "2025-08-01T14:27:36.277740",
+      "error_message": null
+    }
+  },
+  "statistics": {
+    "total_updates": 2,
+    "successful_updates": 2,
+    "failed_updates": 0,
+    "pending_updates": 3,
+    "average_execution_time": 0.0005064010620117188,
+    "last_update": "2025-08-01T14:27:36.277740"
+  },
+  "report": {
+    "summary": {
+      "total_requests": 5,
+      "completed_updates": 2,
+      "failed_updates": 0,
+      "pending_updates": 3,
+      "success_rate": 100.0,
+      "average_execution_time": 0.0005064010620117188,
+      "last_update": "2025-08-01T14:27:36.277740"
+    },
+    "statistics": {
+      "by_type": {
+        "content_revision": 4,
+        "metadata_update": 1
+      },
+      "by_priority": {
+        "high": 2,
+        "medium": 2,
+        "low": 1
+      },
+      "by_status": {
+        "completed": 2
+      }
+    },
+    "most_updated_items": [
+      [
+        "kb_001",
+        2
+      ],
+      [
+        "kb_002",
+        2
+      ],
+      [
+        "kb_003",
+        1
+      ]
+    ],
+    "knowledge_base_size": 3,
+    "total_versions": 6,
+    "changes_detected": 4
+  },
+  "export_timestamp": "2025-08-01T14:27:43.289146"
+}
